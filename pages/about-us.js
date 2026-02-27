@@ -108,21 +108,32 @@ export default function AboutUsPage() {
       </Head>
       <div className="min-h-screen bg-forest-800">
         <Navbar />
-        <main className="pt-24 pb-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
+        {/* Hero with full-bleed background */}
+        <section className="relative min-h-[45vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+          <div
+            className="absolute inset-0 w-full h-full bg-no-repeat bg-center"
+            style={{
+              backgroundImage: `url(${foundersClubImages.aboutCta})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-forest-950/60" aria-hidden />
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
               About Us
             </h1>
-            <p className="text-gold-100/90 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
               Our vision is to connect 2,500+ members across every major city in North America and Canada: a trusted circle of builders who share resources, open doors, and raise the bar for what entrepreneurship can look like.
             </p>
-            <div className="text-center mb-16">
-              <Link href="/become-a-member" className="btn-fc-primary">
-                Become a Member
-              </Link>
-            </div>
-
-            <div className="space-y-16">
+            <Link href="/become-a-member" className="btn-fc-primary">
+              Become a Member
+            </Link>
+          </div>
+        </section>
+        <main className="pb-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
               {sections.map((section, index) => (
                 <section key={section.id} className="border-t border-forest-600/50 pt-12">
                   <div className={`grid grid-cols-1 gap-8 ${index % 2 === 1 ? 'md:grid-cols-2' : 'md:grid-cols-2'} md:gap-10 items-center`}>
@@ -149,8 +160,6 @@ export default function AboutUsPage() {
                   </div>
                 </section>
               ))}
-            </div>
-
             <section className="mt-20 pt-12 border-t border-forest-600/50">
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-500 mb-4">
                 Where We&apos;re Headed

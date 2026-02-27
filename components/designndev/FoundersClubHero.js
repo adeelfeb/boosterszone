@@ -7,22 +7,34 @@ import { foundersClubImages } from '../../lib/foundersClubImages'
 export default function FoundersClubHero() {
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-20 overflow-hidden bg-forest-800">
-      {/* Background image from client site */}
+      {/* Full-bleed background image - spans entire hero */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-        style={{ backgroundImage: `url(${foundersClubImages.heroBg})` }}
+        className="absolute inset-0 w-full h-full bg-no-repeat bg-center"
+        style={{
+          backgroundImage: `url(${foundersClubImages.heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
         aria-hidden
       />
-      {/* Subtle texture overlay (client site texture) */}
+      {/* Texture overlay */}
       <div
-        className="absolute inset-0 bg-repeat opacity-[0.12]"
+        className="absolute inset-0 w-full h-full bg-repeat opacity-[0.08]"
         style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-800/85 to-forest-800 pointer-events-none" />
-      <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
-        backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212,175,55,0.12) 0%, transparent 50%)',
-      }} />
+      {/* Gradient overlay for readability */}
+      <div
+        className="absolute inset-0 w-full h-full bg-gradient-to-b from-forest-950/75 via-forest-800/70 to-forest-800"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 w-full h-full opacity-15 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212,175,55,0.15) 0%, transparent 50%)',
+        }}
+        aria-hidden
+      />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.h1

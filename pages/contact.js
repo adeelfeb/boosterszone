@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
 import LetsChatForm from '../components/designndev/LetsChatForm'
+import { foundersClubImages } from '../lib/foundersClubImages'
 
 export default function ContactPage() {
   return (
@@ -11,9 +12,14 @@ export default function ContactPage() {
         <meta name="description" content="Get in touch with The Founders Club. Building something meaningful? Connect with 1000+ serious founders and operators who understand your journey." />
         <meta name="keywords" content="Founders Club, contact, get in touch" />
       </Head>
-      <div className="min-h-screen bg-forest-800">
+      <div className="min-h-screen bg-forest-800 relative">
+        <div
+          className="absolute inset-0 w-full h-full bg-no-repeat bg-center opacity-[0.06] pointer-events-none"
+          style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }}
+          aria-hidden
+        />
         <Navbar />
-        <main className="pt-24 pb-20">
+        <main className="relative z-10 pt-24 pb-20">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
               Let&apos;s Chat

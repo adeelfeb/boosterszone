@@ -103,12 +103,12 @@ export default function Navbar() {
           </div>
 
           {/* CTA buttons */}
-          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-            <Link href="/login" className="btn-fc-primary">
-              LOG IN
+          <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
+            <Link href="/login" className="btn-fc-primary btn-fc-nav">
+              Member Login
             </Link>
-            <Link href="/become-a-member" className="btn-fc-secondary">
-              APPLY NOW
+            <Link href="/become-a-member" className="btn-fc-secondary btn-fc-nav">
+              BECOME A MEMBER
             </Link>
           </div>
 
@@ -151,12 +151,12 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <div className="flex gap-3 pt-4 border-t border-forest-600">
-                <Link href="/login" className="btn-fc-primary flex-1 text-center py-3 rounded-lg" onClick={() => setIsMenuOpen(false)}>
-                  LOG IN
+              <div className="flex gap-2 pt-4 border-t border-forest-600">
+                <Link href="/login" className="btn-fc-primary btn-fc-nav flex-1 text-center rounded-md" onClick={() => setIsMenuOpen(false)}>
+                  Member Login
                 </Link>
-                <Link href="/become-a-member" className="btn-fc-secondary flex-1 text-center py-3 rounded-lg" onClick={() => setIsMenuOpen(false)}>
-                  APPLY NOW
+                <Link href="/become-a-member" className="btn-fc-secondary btn-fc-nav flex-1 text-center rounded-md" onClick={() => setIsMenuOpen(false)}>
+                  BECOME A MEMBER
                 </Link>
               </div>
             </div>

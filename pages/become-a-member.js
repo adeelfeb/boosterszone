@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
 import TestimonialsSection from '../components/designndev/TestimonialsSection'
@@ -41,29 +40,32 @@ export default function BecomeAMemberPage() {
       </Head>
       <div className="min-h-screen bg-forest-800">
         <Navbar />
-        <main className="pt-24 pb-0">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
+        {/* Hero with full-bleed background */}
+        <section className="relative min-h-[50vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+          <div
+            className="absolute inset-0 w-full h-full bg-no-repeat bg-center"
+            style={{
+              backgroundImage: `url(${foundersClubImages.membersGroup})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-forest-950/65" aria-hidden />
+          <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
               Become a Member
             </h1>
-            <p className="text-gold-100/90 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
               Members gain access to a network of 1,000+ peers across North America and Canada, representing over $20 billion in combined revenue, who have built, scaled, and exited global brands.
             </p>
-            <div className="text-center mb-20">
-              <Link href="/signup" className="btn-fc-primary">
-                Apply Now
-              </Link>
-            </div>
-
-            <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden bg-forest-700 mb-20">
-              <Image
-                src={foundersClubImages.membersGroup}
-                alt="Founders Club members"
-                fill
-                className="object-cover"
-                sizes="100vw"
-              />
-            </div>
+            <Link href="/signup" className="btn-fc-primary">
+              Apply Now
+            </Link>
+          </div>
+        </section>
+        <main className="pb-0">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
 
             <section className="mb-20">
               <h2 className="font-serif text-3xl font-semibold text-gold-500 text-center mb-8">
