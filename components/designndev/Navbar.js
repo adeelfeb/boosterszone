@@ -91,9 +91,6 @@ export default function Navbar() {
               height={40}
               className="h-8 w-auto md:h-10 object-contain"
             />
-            <span className="font-serif text-xl md:text-2xl font-semibold text-gold-500 tracking-tight hidden sm:inline">
-              FOUNDERS CLUB
-            </span>
           </Link>
 
           {/* Desktop nav */}
