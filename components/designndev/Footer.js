@@ -23,9 +23,10 @@ export default function Footer() {
               <div>
                 <h4 className="font-semibold text-gold-400 text-sm tracking-wide mb-3">LINKS</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link href="/" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Home</Link></li>
-                  <li><Link href="/information" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">About & Team</Link></li>
-                  <li><Link href="/blogs" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Membership</Link></li>
+                  <li><Link href="/about-us" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">About Us</Link></li>
+                  <li><Link href="/events" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Events</Link></li>
+                  <li><Link href="/partnerships" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Partnerships</Link></li>
+                  <li><Link href="/nominate" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Nominate</Link></li>
                   <li><Link href="/contact" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Contact</Link></li>
                 </ul>
               </div>
@@ -33,15 +34,16 @@ export default function Footer() {
                 <h4 className="font-semibold text-gold-400 text-sm tracking-wide mb-3">LEGAL</h4>
                 <ul className="space-y-2 text-sm">
                   <li><Link href="/privacy-policy" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Privacy Policy</Link></li>
-                  <li><Link href="/information" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Terms of Service</Link></li>
+                  <li><Link href="/privacy-policy" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Terms of Service</Link></li>
+                  <li><Link href="/privacy-policy" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Cookies Settings</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-gold-400 text-sm tracking-wide mb-3">SOCIALS</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">LinkedIn</a></li>
-                  <li><a href="#" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Twitter</a></li>
-                  <li><a href="#" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Instagram</a></li>
+                  <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Instagram</a></li>
+                  <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">LinkedIn</a></li>
+                  <li><a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">X</a></li>
                 </ul>
               </div>
             </div>

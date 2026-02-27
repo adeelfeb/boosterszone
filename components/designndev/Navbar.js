@@ -54,10 +54,10 @@ export default function Navbar() {
 
   const navItems = [
     { href: '/', label: 'HOME' },
-    { href: '/information', label: 'ABOUT & TEAM' },
-    { href: '/blogs', label: 'MEMBERSHIP' },
-    { href: '#impact', label: 'IMPACT' },
-    { href: '/blogs', label: 'NEWS' },
+    { href: '/about-us', label: 'ABOUT US' },
+    { href: '/events', label: 'EVENTS' },
+    { href: '/partnerships', label: 'PARTNERSHIPS' },
+    { href: '/nominate', label: 'NOMINATE' },
     { href: '/contact', label: 'CONTACT' },
   ]
 
@@ -103,7 +103,7 @@ export default function Navbar() {
               LOG IN
             </Link>
             <Link
-              href="/signup"
+              href="/become-a-member"
               className="inline-flex items-center justify-center h-10 px-5 text-sm font-semibold text-gold-400 bg-transparent border border-gold-400 rounded hover:bg-gold-400/10 transition-colors no-underline"
             >
               APPLY NOW
@@ -158,7 +158,7 @@ export default function Navbar() {
                   LOG IN
                 </Link>
                 <Link
-                  href="/signup"
+                  href="/become-a-member"
                   className="flex-1 text-center py-3 text-sm font-semibold text-gold-400 border border-gold-400 rounded-lg no-underline hover:bg-gold-400/10"
                   onClick={() => setIsMenuOpen(false)}
                 >

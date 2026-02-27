@@ -34,7 +34,7 @@ export default function FoundersClubHero() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <Link
-            href="/signup"
+            href="/become-a-member"
             className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
           >
             BECOME A MEMBER
