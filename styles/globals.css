@@ -10,10 +10,15 @@
   --border-color: #eaeaea;
   --background-color: #fafafa;
   --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --forest-800: #1e3d30;
-  --forest-700: #2a4d3d;
-  --gold-500: #D4AF37;
-  --gold-300: #d6c39b;
+  /* Founders Club – match client site */
+  --fc-forest-950: #010704;
+  --fc-forest-800: #1a2e26;
+  --fc-forest-700: #1e3d30;
+  --fc-forest-600: #2a4d3d;
+  --fc-gold-50: #F7F0DE;
+  --fc-gold-400: #c9a227;
+  --fc-gold-500: #D4AF37;
+  --fc-gold-300: #d6c39b;
 }
 
 html {
@@ -134,6 +139,56 @@ a:hover:not(nav a) {
 .page-header a.nav-button:visited {
   color: #fff !important;
   background: #0070f3 !important;
+}
+
+/* ---------- Founders Club: buttons & cards (match client site) ---------- */
+.btn-fc-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--fc-forest-950);
+  background-color: var(--fc-gold-500);
+  border: 1px solid var(--fc-gold-500);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(212, 175, 55, 0.2);
+}
+.btn-fc-primary:hover {
+  background-color: var(--fc-gold-400);
+  border-color: var(--fc-gold-400);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-fc-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--fc-gold-500);
+  background-color: transparent;
+  border: 1px solid var(--fc-gold-500);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn-fc-secondary:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  color: var(--fc-gold-300);
+}
+
+/* Founders Club card/section panel */
+.fc-card {
+  background-color: rgba(30, 61, 48, 0.5);
+  border: 1px solid rgba(42, 77, 61, 0.8);
+  border-radius: 1rem;
 }
 
 /* Skeleton loading animation */

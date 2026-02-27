@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
 import TestimonialsSection from '../components/designndev/TestimonialsSection'
+import { foundersClubImages } from '../lib/foundersClubImages'
 
 const stats = [
   { value: '0+', label: 'Members Nationwide' },
@@ -41,23 +43,30 @@ export default function BecomeAMemberPage() {
         <Navbar />
         <main className="pt-24 pb-0">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-400 mb-6 text-center">
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
               Become a Member
             </h1>
             <p className="text-gold-100/90 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed">
               Members gain access to a network of 1,000+ peers across North America and Canada, representing over $20 billion in combined revenue, who have built, scaled, and exited global brands.
             </p>
             <div className="text-center mb-20">
-              <Link
-                href="/signup"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-              >
+              <Link href="/signup" className="btn-fc-primary">
                 Apply Now
               </Link>
             </div>
 
+            <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden bg-forest-700 mb-20">
+              <Image
+                src={foundersClubImages.membersGroup}
+                alt="Founders Club members"
+                fill
+                className="object-cover"
+                sizes="100vw"
+              />
+            </div>
+
             <section className="mb-20">
-              <h2 className="font-serif text-3xl font-semibold text-gold-400 text-center mb-8">
+              <h2 className="font-serif text-3xl font-semibold text-gold-500 text-center mb-8">
                 Why Join The Founders Club?
               </h2>
               <h3 className="font-serif text-2xl font-semibold text-gold-300 text-center mb-6">
@@ -73,10 +82,7 @@ export default function BecomeAMemberPage() {
                 This is a community of founders who care deeply about their craft, their health, and the people beside them. Here, personal growth fuels collective progress.
               </p>
               <div className="text-center mb-12">
-                <Link
-                  href="/signup"
-                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-                >
+                <Link href="/signup" className="btn-fc-primary">
                   Apply for Membership
                 </Link>
               </div>
@@ -126,10 +132,7 @@ export default function BecomeAMemberPage() {
                 ))}
               </ul>
               <div className="text-center mb-16">
-                <Link
-                  href="/signup"
-                  className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-                >
+                <Link href="/signup" className="btn-fc-primary">
                   Apply for Membership
                 </Link>
               </div>
@@ -153,7 +156,7 @@ export default function BecomeAMemberPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="font-serif text-3xl font-semibold text-gold-400 text-center mb-8">
+              <h2 className="font-serif text-3xl font-semibold text-gold-500 text-center mb-8">
                 Ready to Join The Founders Club?
               </h2>
             </section>
@@ -164,10 +167,7 @@ export default function BecomeAMemberPage() {
           </section>
 
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-            <Link
-              href="/signup"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-            >
+            <Link href="/signup" className="btn-fc-primary">
               Apply for Membership
             </Link>
           </div>

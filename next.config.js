@@ -61,9 +61,12 @@ const nextConfig = {
   // Explicitly use webpack to avoid conflicts
   turbopack: {},
 
-  // Optimize images
+  // Optimize images - allow client CDN (foundersclubofficial.com assets)
   images: {
     formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'cdn.prod.website-files.com', pathname: '/**' },
+    ],
   },
 
   webpack: (config, { isServer, dev }) => {

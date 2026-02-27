@@ -1,22 +1,29 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
+import { foundersClubImages } from '../../lib/foundersClubImages'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-forest-900 text-gold-100/90 border-t border-forest-700 bg-footer-pattern bg-repeat">
-      <section className="py-12 md:py-16">
+    <footer className="bg-forest-900 text-gold-100/90 border-t border-forest-700 bg-footer-pattern relative">
+      {/* Subtle texture from client site */}
+      <div className="absolute inset-0 opacity-[0.035] bg-cover bg-center bg-repeat pointer-events-none" style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }} aria-hidden />
+      <section className="py-12 md:py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div>
-              <Link
-                href="/"
-                className="font-serif text-xl md:text-2xl font-semibold text-gold-400 no-underline hover:text-gold-300 transition-colors"
-              >
-                FOUNDERS CLUB
+              <Link href="/" className="inline-flex items-center no-underline hover:opacity-90 transition-opacity">
+                <Image
+                  src={foundersClubImages.logo}
+                  alt="Founders Club"
+                  width={100}
+                  height={34}
+                  className="h-8 w-auto object-contain"
+                />
+                <span className="font-serif text-xl md:text-2xl font-semibold text-gold-500 ml-2 hidden sm:inline">FOUNDERS CLUB</span>
               </Link>
             </div>
             <div className="flex flex-wrap gap-10 md:gap-12">

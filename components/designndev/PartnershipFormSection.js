@@ -95,7 +95,7 @@ export default function PartnershipFormSection() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gold-400 mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gold-500 mb-4">
             Explore a Strategic Partnership
           </h2>
           <p className="text-gold-100/80 text-base md:text-lg">
@@ -108,7 +108,7 @@ export default function PartnershipFormSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="bg-forest-700/80 border border-forest-600 rounded-2xl p-6 md:p-8 relative"
+          className="bg-forest-700/80 border border-forest-600 rounded-2xl p-6 md:p-8 relative fc-card"
         >
           {isSubmitting && (
             <div className="absolute inset-0 rounded-2xl bg-forest-800/60 backdrop-blur-sm z-10 pointer-events-auto" aria-hidden />
@@ -225,7 +225,7 @@ export default function PartnershipFormSection() {
               disabled={isSubmitting}
               whileHover={!isSubmitting ? { scale: 1.01 } : {}}
               whileTap={!isSubmitting ? { scale: 0.99 } : {}}
-              className="w-full py-4 px-6 font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded-lg hover:bg-gold-300 transition-colors flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full py-4 px-6 font-semibold text-forest-950 bg-gold-500 border border-gold-500 rounded-lg hover:bg-gold-400 hover:border-gold-400 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
             >
               {isSubmitting ? (
                 <>

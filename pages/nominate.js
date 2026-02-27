@@ -30,17 +30,14 @@ export default function NominatePage() {
         <Navbar />
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-400 mb-6 text-center">
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
               Founders Club Nomination Program
             </h1>
             <p className="text-gold-100/90 text-lg text-center max-w-2xl mx-auto mb-8 leading-relaxed">
               We&apos;ve retired the referral program. Because this isn&apos;t about casual invites — it&apos;s about legacy. And legacy is built one extraordinary founder at a time.
             </p>
             <div className="text-center mb-16">
-              <Link
-                href="/become-a-member"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-              >
+              <Link href="/become-a-member" className="btn-fc-primary">
                 Nominate now
               </Link>
             </div>
@@ -89,10 +86,7 @@ export default function NominatePage() {
               <p className="text-gold-100/80 text-sm mb-6">
                 Or, have your nominee apply directly and select &quot;I was nominated,&quot; entering your name when prompted.
               </p>
-              <Link
-                href="/become-a-member"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-              >
+              <Link href="/become-a-member" className="btn-fc-primary">
                 Go to Application
               </Link>
             </section>

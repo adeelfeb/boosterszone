@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { foundersClubImages } from '../../lib/foundersClubImages'
 
 const stats = [
   { value: '1,000+', label: 'Members In Our Network' },
@@ -11,14 +12,16 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="py-16 md:py-24 bg-forest-800 border-t border-forest-700/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-24 bg-forest-800 border-t border-forest-700/50 relative overflow-hidden">
+      {/* Subtle texture */}
+      <div className="absolute inset-0 opacity-[0.04] bg-repeat pointer-events-none" style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }} aria-hidden />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-serif text-2xl md:text-3xl font-semibold text-gold-400 mb-12 md:mb-16"
+          className="font-serif text-2xl md:text-3xl font-semibold text-gold-500 mb-12 md:mb-16"
         >
           Member Insights & Impact
         </motion.h2>
@@ -32,7 +35,7 @@ export default function StatsSection() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="text-center"
             >
-              <div className="font-serif text-4xl md:text-5xl font-semibold text-gold-400 mb-2">
+              <div className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-2">
                 {stat.value}
               </div>
               <div className="text-gold-100/80 text-sm md:text-base">

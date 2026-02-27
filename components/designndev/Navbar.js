@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
+import { foundersClubImages } from '../../lib/foundersClubImages'
 
 function useRouterCompat() {
   const [pathname, setPathname] = useState('')
@@ -63,7 +65,7 @@ export default function Navbar() {
 
   const linkClass = (href) =>
     `px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-200 no-underline ${
-      isActive(href) ? 'text-gold-400' : 'text-gold-200/90 hover:text-gold-300'
+      isActive(href) ? 'text-gold-500' : 'text-gold-200/90 hover:text-gold-300'
     }`
 
   return (
@@ -72,7 +74,7 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-forest-800/98 backdrop-blur-md shadow-lg' : 'bg-forest-800'
+        isScrolled ? 'bg-forest-800/98 backdrop-blur-md shadow-lg border-b border-forest-700/50' : 'bg-forest-800 border-b border-forest-700/30'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,9 +82,18 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-serif text-xl md:text-2xl font-semibold text-gold-400 tracking-tight no-underline hover:text-gold-300 transition-colors"
+            className="flex items-center gap-2 no-underline hover:opacity-90 transition-opacity"
           >
-            FOUNDERS CLUB
+            <Image
+              src={foundersClubImages.logo}
+              alt="Founders Club"
+              width={120}
+              height={40}
+              className="h-8 w-auto md:h-10 object-contain"
+            />
+            <span className="font-serif text-xl md:text-2xl font-semibold text-gold-500 tracking-tight hidden sm:inline">
+              FOUNDERS CLUB
+            </span>
           </Link>
 
           {/* Desktop nav */}
@@ -96,16 +107,10 @@ export default function Navbar() {
 
           {/* CTA buttons */}
           <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-            <Link
-              href="/login"
-              className="inline-flex items-center justify-center h-10 px-5 text-sm font-semibold text-forest-800 bg-gold-400 hover:bg-gold-300 border border-gold-400 rounded transition-colors no-underline"
-            >
+            <Link href="/login" className="btn-fc-primary">
               LOG IN
             </Link>
-            <Link
-              href="/become-a-member"
-              className="inline-flex items-center justify-center h-10 px-5 text-sm font-semibold text-gold-400 bg-transparent border border-gold-400 rounded hover:bg-gold-400/10 transition-colors no-underline"
-            >
+            <Link href="/become-a-member" className="btn-fc-secondary">
               APPLY NOW
             </Link>
           </div>
@@ -150,18 +155,10 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="flex gap-3 pt-4 border-t border-forest-600">
-                <Link
-                  href="/login"
-                  className="flex-1 text-center py-3 text-sm font-semibold text-forest-800 bg-gold-400 rounded-lg no-underline"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                <Link href="/login" className="btn-fc-primary flex-1 text-center py-3 rounded-lg" onClick={() => setIsMenuOpen(false)}>
                   LOG IN
                 </Link>
-                <Link
-                  href="/become-a-member"
-                  className="flex-1 text-center py-3 text-sm font-semibold text-gold-400 border border-gold-400 rounded-lg no-underline hover:bg-gold-400/10"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                <Link href="/become-a-member" className="btn-fc-secondary flex-1 text-center py-3 rounded-lg" onClick={() => setIsMenuOpen(false)}>
                   APPLY NOW
                 </Link>
               </div>

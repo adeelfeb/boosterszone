@@ -40,22 +40,19 @@ export default function PartnershipsPage() {
         <Navbar />
         <main className="pt-24 pb-0">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-400 mb-6 text-center">
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
               Our Founders Run The World&apos;s Best Brands
             </h1>
             <p className="text-gold-100/90 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed">
               Partnering with The Founders Club gives your brand direct access to an exclusive network of 1,200+ founders and over $20B in revenue, who are building and scaling companies across tech, e-commerce, finance, and beyond.
             </p>
             <div className="text-center mb-16">
-              <a
-                href="#partnership-form"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-              >
+              <a href="#partnership-form" className="btn-fc-primary">
                 Become a Partner
               </a>
             </div>
 
-            <h2 className="font-serif text-3xl font-semibold text-gold-400 text-center mb-12">
+            <h2 className="font-serif text-3xl font-semibold text-gold-500 text-center mb-12">
               Partnership Opportunities
             </h2>
             <div className="space-y-12 mb-20">
@@ -68,7 +65,7 @@ export default function PartnershipsPage() {
             </div>
 
             <section className="mb-20">
-              <h2 className="font-serif text-3xl font-semibold text-gold-400 text-center mb-6">
+              <h2 className="font-serif text-3xl font-semibold text-gold-500 text-center mb-6">
                 Partnership Philosophy
               </h2>
               <p className="text-gold-100/90 text-center max-w-3xl mx-auto mb-8 leading-relaxed">

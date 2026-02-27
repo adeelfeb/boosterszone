@@ -1,6 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { foundersClubImages } from '../../lib/foundersClubImages'
 
 export default function VettedForImpact() {
   return (
@@ -13,7 +15,7 @@ export default function VettedForImpact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gold-400 mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gold-500 mb-6">
               Vetted for Impact
             </h2>
             <div className="space-y-4 text-gold-100/90 text-base md:text-lg leading-relaxed">
@@ -35,13 +37,13 @@ export default function VettedForImpact() {
             transition={{ duration: 0.6 }}
             className="relative aspect-[4/3] rounded-xl overflow-hidden bg-forest-700"
           >
-            <div
-              className="absolute inset-0 bg-gradient-to-br from-forest-600 via-forest-700 to-forest-900/50"
-              aria-hidden
+            <Image
+              src={foundersClubImages.community}
+              alt="Founders Club community"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-gold-400/40 font-serif text-lg">Community</span>
-            </div>
           </motion.div>
         </div>
       </div>

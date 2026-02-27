@@ -1,12 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
+import { foundersClubImages } from '../lib/foundersClubImages'
 
 const sections = [
   {
     id: '01',
     title: 'Our Story',
+    image: foundersClubImages.aboutStory,
     body: `When you've built something from scratch, you learn to live with chaos. You build, you sell, you hire, you fire, and somehow you keep moving.
 
 A few years ago, my buddy Aaron and I were in the middle of that storm. He had just exited Hush Blankets for $48 million. I was still deep in the trenches scaling CROSSNET.
@@ -22,6 +25,7 @@ That's where we were.`,
   {
     id: '02',
     title: 'The Problem',
+    image: foundersClubImages.aboutProblem,
     body: `The truth is entrepreneurship is lonely.
 
 Once you pass $1M, $5M, $10M in revenue, you outgrow most "groups" out there. You stop getting advice that's useful and the truth that matters most comes few and far between.
@@ -35,6 +39,7 @@ We decided it was time to build exactly what we were looking for: a place where 
   {
     id: '03',
     title: 'The Spark',
+    image: foundersClubImages.aboutSpark,
     body: `So one night over dinner, we decided to build the thing we always wished existed.
 
 Our vision was the best, highest-quality founders in the world gathered together helping each other build better companies and more fulfilled lives.
@@ -54,6 +59,7 @@ And from there, The Founders Club was born.`,
   {
     id: '04',
     title: 'The Growth',
+    image: foundersClubImages.aboutGrowth,
     body: `What began as a handful of dinners has grown into a nationwide ecosystem: more than 1,000 founders across the country and even some around the world.
 
 Today, The Founders Club hosts over 150 curated experiences every year, including private dinners, local masterminds, weekend getaways, wellness activations, and our signature retreats.
@@ -75,6 +81,7 @@ It's everything we hoped for and more.`,
   {
     id: '05',
     title: 'The Mission',
+    image: foundersClubImages.aboutMission,
     body: `We built The Club because, like so many others, we were tired of doing it alone.
 
 This community exists to help founders win in mind, body, and business.
@@ -103,37 +110,49 @@ export default function AboutUsPage() {
         <Navbar />
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-400 mb-6 text-center">
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
               About Us
             </h1>
             <p className="text-gold-100/90 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed">
               Our vision is to connect 2,500+ members across every major city in North America and Canada: a trusted circle of builders who share resources, open doors, and raise the bar for what entrepreneurship can look like.
             </p>
             <div className="text-center mb-16">
-              <Link
-                href="/become-a-member"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-              >
+              <Link href="/become-a-member" className="btn-fc-primary">
                 Become a Member
               </Link>
             </div>
 
             <div className="space-y-16">
-              {sections.map((section) => (
+              {sections.map((section, index) => (
                 <section key={section.id} className="border-t border-forest-600/50 pt-12">
-                  <span className="text-gold-500/80 font-serif text-lg">{section.id}</span>
-                  <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-300 mt-2 mb-6">
-                    {section.title}
-                  </h2>
-                  <div className="text-gold-100/90 leading-relaxed whitespace-pre-line">
-                    {section.body}
+                  <div className={`grid grid-cols-1 gap-8 ${index % 2 === 1 ? 'md:grid-cols-2' : 'md:grid-cols-2'} md:gap-10 items-center`}>
+                    <div className={index % 2 === 1 ? 'md:order-2' : ''}>
+                      <span className="text-gold-500/80 font-serif text-lg">{section.id}</span>
+                      <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-300 mt-2 mb-6">
+                        {section.title}
+                      </h2>
+                      <div className="text-gold-100/90 leading-relaxed whitespace-pre-line">
+                        {section.body}
+                      </div>
+                    </div>
+                    {section.image && (
+                      <div className={`relative aspect-[4/3] rounded-xl overflow-hidden bg-forest-700 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                        <Image
+                          src={section.image}
+                          alt={section.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      </div>
+                    )}
                   </div>
                 </section>
               ))}
             </div>
 
             <section className="mt-20 pt-12 border-t border-forest-600/50">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-400 mb-4">
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-500 mb-4">
                 Where We&apos;re Headed
               </h2>
               <p className="text-gold-100/90 text-lg leading-relaxed mb-8">
@@ -142,16 +161,13 @@ export default function AboutUsPage() {
               <p className="text-gold-100/80 leading-relaxed mb-10">
                 From startup to exit, from solo founder to seasoned operator, this is where you belong. You&apos;ve done the work. Now it&apos;s time to grow with people who get it.
               </p>
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-400 mb-4">
+              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-500 mb-4">
                 Apply to Join The Club
               </h2>
               <p className="text-gold-100/90 mb-6">
                 The Founders Club is not for everyone. But for the right founder, it can change everything.
               </p>
-              <Link
-                href="/become-a-member"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-              >
+              <Link href="/become-a-member" className="btn-fc-primary">
                 Become a Member
               </Link>
             </section>

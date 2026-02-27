@@ -35,7 +35,7 @@ export default function PartnershipOpportunities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-serif text-3xl md:text-4xl font-semibold text-gold-400 text-center mb-12 md:mb-16"
+          className="font-serif text-3xl md:text-4xl font-semibold text-gold-500 text-center mb-12 md:mb-16"
         >
           Partnership Opportunities
         </motion.h2>
@@ -47,7 +47,7 @@ export default function PartnershipOpportunities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-forest-700/60 border border-forest-600 rounded-xl p-6 md:p-8 flex flex-col"
+              className="fc-card p-6 md:p-8 flex flex-col"
             >
               <div className="mb-4 flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-gold-400/10 text-gold-400">

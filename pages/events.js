@@ -48,7 +48,7 @@ export default function EventsPage() {
         <Navbar />
         <main className="pt-24 pb-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-400 mb-6 text-center">
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
               Events
             </h1>
             <p className="text-gold-100/90 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 leading-relaxed">
@@ -59,10 +59,7 @@ export default function EventsPage() {
               With hundreds of experiences hosted year-round, members have unlimited opportunities to connect, collaborate, and build lifelong friendships.
             </p>
             <div className="text-center mb-16">
-              <Link
-                href="/become-a-member"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-              >
+              <Link href="/become-a-member" className="btn-fc-primary">
                 Apply for Membership
               </Link>
             </div>
@@ -105,10 +102,7 @@ export default function EventsPage() {
               <p className="text-gold-100/90 mb-6 max-w-xl mx-auto">
                 The Founders Club is not for everyone. But for the right founder, it can change everything.
               </p>
-              <Link
-                href="/become-a-member"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-forest-800 bg-gold-400 border border-gold-400 rounded hover:bg-gold-300 transition-colors no-underline"
-              >
+              <Link href="/become-a-member" className="btn-fc-primary">
                 Become a Member
               </Link>
             </section>
