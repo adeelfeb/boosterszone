@@ -33,16 +33,14 @@ export function FormSkeleton() {
 
 export function AuthCardSkeleton() {
   return (
-    <div className="auth-card">
-      <div className="space-y-6">
-        <div className="space-y-3">
-          <Skeleton height="32px" width="200px" />
-          <Skeleton height="20px" width="300px" />
-        </div>
-        <FormSkeleton />
-        <div className="flex justify-center gap-2">
-          <Skeleton height="20px" width="120px" />
-        </div>
+    <div className="flex flex-col gap-6">
+      <div className="space-y-3">
+        <Skeleton height="32px" width="200px" />
+        <Skeleton height="20px" width="280px" />
+      </div>
+      <FormSkeleton />
+      <div className="flex justify-center gap-2">
+        <Skeleton height="20px" width="120px" />
       </div>
     </div>
   );
