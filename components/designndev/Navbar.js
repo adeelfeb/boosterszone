@@ -57,15 +57,13 @@ export default function Navbar() {
   const navItems = [
     { href: '/', label: 'HOME' },
     { href: '/about-us', label: 'ABOUT US' },
-    { href: '/events', label: 'EVENTS' },
-    { href: '/partnerships', label: 'PARTNERSHIPS' },
-    { href: '/nominate', label: 'NOMINATE' },
+    { href: '#practice-areas', label: 'PRACTICE AREAS' },
     { href: '/contact', label: 'CONTACT' },
   ]
 
   const linkClass = (href) =>
     `px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-200 no-underline ${
-      isActive(href) ? 'text-gold-500' : 'text-gold-200/90 hover:text-gold-300'
+      isActive(href) ? 'text-gold-600' : 'text-neutral-700 hover:text-neutral-900'
     }`
 
   return (
@@ -74,22 +72,24 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-forest-800/98 backdrop-blur-md shadow-lg border-b border-forest-700/50' : 'bg-forest-800 border-b border-forest-700/30'
+        isScrolled
+          ? 'bg-white shadow-md border-b border-neutral-200'
+          : 'bg-white border-b border-neutral-100'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-18">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo only – stands out on white */}
           <Link
             href="/"
-            className="flex items-center gap-2 no-underline hover:opacity-90 transition-opacity"
+            className="flex items-center no-underline hover:opacity-90 transition-opacity"
           >
             <Image
               src={foundersClubImages.logo}
-              alt="Founders Club"
-              width={120}
-              height={40}
-              className="h-8 w-auto md:h-10 object-contain"
+              alt="Sahail Law"
+              width={160}
+              height={52}
+              className="h-11 w-auto md:h-12 object-contain"
             />
           </Link>
 
@@ -102,21 +102,23 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA buttons */}
-          <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
-            <Link href="/login" className="btn-fc-primary btn-fc-nav">
-              Member Login
-            </Link>
-            <Link href="/become-a-member" className="btn-fc-secondary btn-fc-nav">
-              BECOME A MEMBER
-            </Link>
+          {/* CTA */}
+          <div className="hidden lg:flex items-center flex-shrink-0">
+            <a
+              href="https://wa.me/13654995551"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-fc-primary btn-fc-nav"
+            >
+              GET A FREE CONSULTATION
+            </a>
           </div>
 
           {/* Mobile menu button */}
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-gold-300 hover:text-gold-400 rounded-lg transition-colors"
+            className="lg:hidden p-2 text-neutral-700 hover:text-neutral-900 rounded-lg transition-colors"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
           >
@@ -138,7 +140,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden overflow-hidden bg-forest-700 border-t border-forest-600"
+            className="lg:hidden overflow-hidden bg-white border-t border-neutral-200"
           >
             <div className="px-4 py-4 space-y-1">
               {navItems.map((item) => (
@@ -151,13 +153,16 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <div className="flex gap-2 pt-4 border-t border-forest-600">
-                <Link href="/login" className="btn-fc-primary btn-fc-nav flex-1 text-center rounded-md" onClick={() => setIsMenuOpen(false)}>
-                  Member Login
-                </Link>
-                <Link href="/become-a-member" className="btn-fc-secondary btn-fc-nav flex-1 text-center rounded-md" onClick={() => setIsMenuOpen(false)}>
-                  BECOME A MEMBER
-                </Link>
+              <div className="pt-4 border-t border-neutral-200">
+                <a
+                  href="https://wa.me/13654995551"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-fc-primary btn-fc-nav w-full text-center rounded-md block"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  GET A FREE CONSULTATION
+                </a>
               </div>
             </div>
           </motion.div>

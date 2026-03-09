@@ -2,71 +2,68 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { foundersClubImages } from '../../lib/foundersClubImages'
+
+// Professional background video – replace with your own when ready (e.g. /video/hero.mp4)
+const HERO_VIDEO_SRC = 'https://assets.mixkit.co/videos/9236/9236-720.mp4'
 
 export default function FoundersClubHero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-20 overflow-hidden bg-forest-800">
-      {/* Full-bleed background image - spans entire hero */}
+    <section className="relative min-h-[85vh] flex items-center justify-start pt-24 pb-20 overflow-hidden bg-neutral-950">
+      {/* Video background – full bleed, muted loop */}
+      <div className="absolute inset-0 w-full h-full bg-neutral-900" aria-hidden>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover scale-105"
+          poster=""
+        >
+          <source src={HERO_VIDEO_SRC} type="video/mp4" />
+        </video>
+      </div>
+      {/* Blur layer so video doesn’t compete with text */}
       <div
-        className="absolute inset-0 w-full h-full bg-no-repeat bg-center"
+        className="absolute inset-0 w-full h-full backdrop-blur-[2px]"
+        aria-hidden
+      />
+      {/* Dark gradient overlay for strong text contrast */}
+      <div
+        className="absolute inset-0 w-full h-full bg-gradient-to-r from-black/90 from-20% via-black/70 via-50% to-transparent"
+        aria-hidden
+      />
+      {/* Subtle gold tint */}
+      <div
+        className="absolute inset-0 w-full h-full opacity-30 pointer-events-none"
         style={{
-          backgroundImage: `url(${foundersClubImages.heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-        aria-hidden
-      />
-      {/* Texture overlay */}
-      <div
-        className="absolute inset-0 w-full h-full bg-repeat opacity-[0.08]"
-        style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }}
-        aria-hidden
-      />
-      {/* Gradient overlay for readability */}
-      <div
-        className="absolute inset-0 w-full h-full bg-gradient-to-b from-forest-950/75 via-forest-800/70 to-forest-800"
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 w-full h-full opacity-15 pointer-events-none"
-        style={{
-          backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212,175,55,0.15) 0%, transparent 50%)',
+          backgroundImage: 'radial-gradient(ellipse 70% 80% at 25% 50%, rgba(212,175,55,0.12) 0%, transparent 55%)',
         }}
         aria-hidden
       />
 
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-gold-50 mb-6 leading-tight"
+          className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-white mb-6 leading-tight max-w-3xl drop-shadow-lg"
         >
-          Our Founders Run The World&apos;s Best Brands
+          Everyone deserves easy and affordable access to law.
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="text-gold-100/95 text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed"
-        >
-          Partnership opportunities and global presence—direct access to an exclusive network of Forbes-listed founders and over $20 Billion in assets under management. A leading global powerhouse built for our members to thrive and succeed.
-        </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <Link href="/become-a-member" className="btn-fc-primary">
-            BECOME A MEMBER
+          <Link href="/contact" className="btn-fc-primary text-base px-8 py-3.5">
+            Book consultation
           </Link>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 h-px w-24 mx-auto rounded-full bg-gold-500/60"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 h-px w-24 rounded-full bg-gold-500/70"
         />
       </div>
     </section>

@@ -4,63 +4,80 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { foundersClubImages } from '../../lib/foundersClubImages'
 
+const services = [
+  { label: 'Wills & Estates', href: '#practice-areas' },
+  { label: 'Corporate Law', href: '#practice-areas' },
+  { label: 'Real Estate Law', href: '#practice-areas' },
+  { label: 'Immigration Law', href: '#practice-areas' },
+]
+
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-forest-900 text-gold-100/90 border-t border-forest-700 bg-footer-pattern relative">
-      {/* Subtle texture from client site */}
-      <div className="absolute inset-0 opacity-[0.035] bg-cover bg-center bg-repeat pointer-events-none" style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }} aria-hidden />
-      <section className="py-12 md:py-16 relative">
+    <footer className="bg-neutral-100 text-neutral-700 border-t border-neutral-300">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
+            {/* Logo only */}
+            <div className="md:col-span-5 lg:col-span-4">
               <Link href="/" className="inline-flex items-center no-underline hover:opacity-90 transition-opacity">
                 <Image
                   src={foundersClubImages.logo}
-                  alt="Founders Club"
-                  width={100}
-                  height={34}
-                  className="h-8 w-auto object-contain"
+                  alt="Sahail Law"
+                  width={140}
+                  height={46}
+                  className="h-10 w-auto md:h-11 object-contain"
                 />
-                <span className="font-heading text-xl md:text-2xl font-semibold text-gold-500 ml-2 hidden sm:inline">FOUNDERS CLUB</span>
               </Link>
             </div>
-            <div className="flex flex-wrap gap-10 md:gap-12">
-              <div>
-                <h4 className="font-semibold text-gold-400 text-sm tracking-wide mb-3">LINKS</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><Link href="/about-us" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">About Us</Link></li>
-                  <li><Link href="/events" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Events</Link></li>
-                  <li><Link href="/partnerships" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Partnerships</Link></li>
-                  <li><Link href="/nominate" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Nominate</Link></li>
-                  <li><Link href="/contact" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Contact</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gold-400 text-sm tracking-wide mb-3">LEGAL</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><Link href="/privacy-policy" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Privacy Policy</Link></li>
-                  <li><Link href="/privacy-policy" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Terms of Service</Link></li>
-                  <li><Link href="/privacy-policy" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Cookies Settings</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gold-400 text-sm tracking-wide mb-3">SOCIALS</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Instagram</a></li>
-                  <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">LinkedIn</a></li>
-                  <li><a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">X</a></li>
-                </ul>
-              </div>
+
+            {/* Menu / Services */}
+            <div className="md:col-span-4 lg:col-span-4">
+              <h4 className="font-medium text-neutral-900 text-sm tracking-wide mb-4">Menu</h4>
+              <ul className="space-y-2.5 text-sm">
+                <li><Link href="/about-us" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">About Us</Link></li>
+                <li><Link href="#practice-areas" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">Services</Link></li>
+                <li><Link href="/contact" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">Team</Link></li>
+                <li><Link href="/contact" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">Contact Us</Link></li>
+              </ul>
+              <h4 className="font-medium text-neutral-900 text-sm tracking-wide mt-6 mb-3">Services</h4>
+              <ul className="space-y-2 text-sm">
+                {services.map((s) => (
+                  <li key={s.label}>
+                    <Link href={s.href} className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">
+                      {s.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Get in touch */}
+            <div className="md:col-span-3 lg:col-span-4">
+              <h4 className="font-medium text-neutral-900 text-sm tracking-wide mb-4">Get in touch</h4>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <a href="mailto:info@sahailaw.ca" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">
+                    info@sahailaw.ca
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+14374515551" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">
+                    +1 437-451-5551
+                  </a>
+                </li>
+                <li className="text-neutral-600">Ontario, Canada</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-      <section className="py-4 border-t border-forest-700/50">
+
+      <section className="py-5 border-t border-neutral-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gold-100/60 text-sm">
-            © {currentYear} Founders Club. All rights reserved.
+          <p className="text-center text-neutral-500 text-sm">
+            © {currentYear} Sahail Law. All rights reserved.
           </p>
         </div>
       </section>

@@ -1,69 +1,121 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { Quote } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
+import { foundersClubImages } from '../../lib/foundersClubImages'
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const testimonials = [
   {
-    name: 'Anne Mahlum',
-    role: 'Founder, SolidCore',
-    quote: "Anne's session on leadership and self-mastery at Founders Forum became one of the most talked-about events of the year. Her story of resilience continues to shape the Club's culture of high performance with empathy.",
-    company: 'SolidCore',
+    name: 'Sahail',
+    role: 'Client',
+    quote: "Professional, clear, and genuinely invested in our outcome. We couldn't have asked for better representation.",
   },
   {
-    name: 'Jake Karls',
-    role: '"Rainmaker", Midday Squares',
-    quote: 'Jake has taken the stage at our Annual Retreat and calls The Club "the only place where founders can speak without filters." His roundtable in Miami inspired dozens of members to take bold creative risks.',
-    company: 'Midday Squares',
+    name: 'Joel',
+    role: 'Client',
+    quote: "The team made a complex process straightforward. Highly recommend for anyone needing reliable legal support.",
   },
   {
-    name: 'Megan Klein',
-    role: 'Little Saints',
-    quote: '"Secured a $2.3M partnership from a dinner introduction." Through a single TFC dinner, Megan connected with a strategic investor who helped scale her beverage brand into national retail within six months.',
-    company: 'Little Saints',
+    name: 'Anne M.',
+    role: 'Client',
+    quote: "At Sahail Law, we believe the law should empower—not overwhelm. They delivered on that promise for us.",
   },
 ]
 
 export default function TestimonialsSection() {
+  const [index, setIndex] = useState(0)
+  const total = testimonials.length
+
+  useEffect(() => {
+    const t = setInterval(() => {
+      setIndex((i) => (i + 1) % total)
+    }, 6000)
+    return () => clearInterval(t)
+  }, [total])
+
+  const goPrev = () => setIndex((i) => (i - 1 + total) % total)
+  const goNext = () => setIndex((i) => (i + 1) % total)
+
   return (
-    <section className="py-16 md:py-24 bg-forest-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+    <section className="py-16 md:py-24 bg-forest-800 relative overflow-hidden">
+      {/* Background image from temp */}
+      <div className="absolute inset-0">
+        <Image
+          src={foundersClubImages.testimonialsBg}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority={false}
+        />
+      </div>
+      <div className="absolute inset-0 bg-forest-900/75" aria-hidden />
+      <div className="absolute inset-0 bg-forest-800/50" aria-hidden />
+
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-2 mb-12 md:mb-16"
+          className="font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-12 md:mb-16"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold text-gold-500 text-center">
-            What Members Are Saying
-          </h2>
-          <Quote className="w-8 h-8 text-gold-500/60 flex-shrink-0" />
-        </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {testimonials.map((t, i) => (
+          Reviews From Clients
+        </motion.h2>
+
+        <div className="relative min-h-[220px] flex items-center justify-center">
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="fc-card p-6 flex flex-col"
+              key={index}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.35 }}
+              className="absolute inset-0 flex flex-col items-center justify-center px-4"
             >
-                <div className="w-12 h-12 rounded-full bg-gold-500/20 flex items-center justify-center mb-4 flex-shrink-0">
-                <span className="font-subheading text-lg font-semibold text-gold-500">
-                  {t.name.charAt(0)}
-                </span>
-              </div>
-              <p className="text-gold-100/90 text-sm md:text-base leading-relaxed mb-4 flex-1">
-                {t.quote}
+              <Quote className="w-12 h-12 md:w-14 md:h-14 text-gold-500/70 mb-4" strokeWidth={1.2} />
+              <p className="text-gold-100/95 text-base md:text-lg leading-relaxed max-w-2xl">
+                {testimonials[index].quote}
               </p>
-              <div className="pt-3 border-t border-forest-600">
-                <p className="font-semibold text-gold-200 text-sm">{t.name}</p>
-                <p className="text-gold-100/70 text-xs">{t.role}</p>
-                <p className="text-gold-500/80 text-xs mt-1">{t.company}</p>
-              </div>
+              <p className="mt-6 text-gold-200 font-medium">
+                — {testimonials[index].name}
+              </p>
             </motion.div>
-          ))}
+          </AnimatePresence>
+        </div>
+
+        {/* Carousel controls */}
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <button
+            type="button"
+            onClick={goPrev}
+            className="p-2 rounded-full border border-gold-500/50 text-gold-400 hover:bg-gold-500/10 transition-colors"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <div className="flex gap-2">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setIndex(i)}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                  i === index ? 'bg-gold-500' : 'bg-gold-500/40 hover:bg-gold-500/60'
+                }`}
+                aria-label={`Go to testimonial ${i + 1}`}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={goNext}
+            className="p-2 rounded-full border border-gold-500/50 text-gold-400 hover:bg-gold-500/10 transition-colors"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>
