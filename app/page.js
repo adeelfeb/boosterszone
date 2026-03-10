@@ -29,9 +29,9 @@ export default function Home() {
       <div className="w-full max-w-[420px] sm:max-w-none mx-auto sm:mx-0">
         <FoundersClubHero />
         <PracticeAreasSection />
+        <VettedForImpact />
         <StatsSection />
         <PartnershipOpportunities />
-        <VettedForImpact />
         <TestimonialsSection />
         <PartnershipFormSection />
       </div>

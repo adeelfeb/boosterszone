@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { foundersClubImages } from '../../lib/foundersClubImages'
 
 export default function VettedForImpact() {
@@ -26,6 +27,9 @@ export default function VettedForImpact() {
                 Our firm is built on clarity, integrity, and a commitment to delivering practical legal solutions that protect what matters most to you.
               </p>
             </div>
+            <Link href="/about-us" className="btn-fc-primary mt-6 inline-block">
+              Learn more about us
+            </Link>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 24 }}

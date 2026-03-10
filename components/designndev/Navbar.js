@@ -56,14 +56,14 @@ export default function Navbar() {
 
   const navItems = [
     { href: '/', label: 'HOME' },
+    { href: '/practice-areas', label: 'PRACTICE AREAS' },
     { href: '/about-us', label: 'ABOUT US' },
-    { href: '#practice-areas', label: 'PRACTICE AREAS' },
     { href: '/contact', label: 'CONTACT' },
   ]
 
   const linkClass = (href) =>
     `px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-200 no-underline ${
-      isActive(href) ? 'text-gold-600' : 'text-neutral-700 hover:text-neutral-900'
+      isActive(href) ? 'text-gold-600' : 'text-forest-800 hover:text-forest-950'
     }`
 
   return (
@@ -108,7 +108,7 @@ export default function Navbar() {
               href="https://wa.me/13654995551"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-fc-primary btn-fc-nav"
+              className="btn-fc-primary"
             >
               GET A FREE CONSULTATION
             </a>
@@ -118,7 +118,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-neutral-700 hover:text-neutral-900 rounded-lg transition-colors"
+            className="lg:hidden p-2 text-forest-800 hover:text-forest-950 rounded-lg transition-colors"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
           >
@@ -158,7 +158,7 @@ export default function Navbar() {
                   href="https://wa.me/13654995551"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-fc-primary btn-fc-nav w-full text-center rounded-md block"
+                  className="btn-fc-primary w-full text-center rounded-md block"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   GET A FREE CONSULTATION
