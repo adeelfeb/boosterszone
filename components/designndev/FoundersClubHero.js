@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { SiWhatsapp } from 'react-icons/si'
 
 // Professional background video – replace with your own when ready (e.g. /video/hero.mp4)
 const HERO_VIDEO_SRC = 'https://assets.mixkit.co/videos/9236/9236-720.mp4'
@@ -55,7 +56,8 @@ export default function FoundersClubHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <Link href="/contact" className="btn-fc-primary text-base px-8 py-3.5 no-underline">
+          <Link href="/contact" className="btn-fc-primary text-base px-8 py-3.5 no-underline inline-flex items-center gap-2">
+            <SiWhatsapp className="w-5 h-5 shrink-0 text-gold-600" aria-hidden />
             Book consultation
           </Link>
         </motion.div>
