@@ -54,6 +54,8 @@ export default function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/practice-areas', label: 'Practice areas' },
     { href: '/about-us', label: 'About us' },
+    { href: '/our-team', label: 'Our Team' },
+    { href: '/faq', label: 'FAQ' },
     { href: '/contact', label: 'Contact' },
   ]
 
