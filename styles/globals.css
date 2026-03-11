@@ -93,8 +93,8 @@ nav a:active {
   text-decoration: none !important;
 }
 
-/* Global link hover - only for non-nav links */
-a:hover:not(nav a) {
+/* Global link hover - only for non-nav, non-button links */
+a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   text-decoration: underline;
 }
 
@@ -193,7 +193,7 @@ a:hover:not(nav a) {
   background-color: var(--fc-gold-500);
   border: 2px solid var(--fc-gold-400);
   border-radius: 0;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
 }
@@ -201,6 +201,7 @@ a:hover:not(nav a) {
   background-color: var(--fc-gold-400);
   border-color: var(--fc-gold-300);
   box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+  text-decoration: none !important;
 }
 
 .btn-fc-secondary {

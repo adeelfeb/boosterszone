@@ -55,16 +55,10 @@ export default function FoundersClubHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <Link href="/contact" className="btn-fc-primary text-base px-8 py-3.5">
+          <Link href="/contact" className="btn-fc-primary text-base px-8 py-3.5 no-underline">
             Book consultation
           </Link>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 h-px w-24 rounded-full bg-gold-500/70"
-        />
       </div>
     </section>
   )
