@@ -91,13 +91,13 @@ export default function LetsChatForm() {
           <label className="flex items-start gap-3 cursor-pointer">
             <input type="checkbox" name="consentTransactional" checked={formData.consentTransactional} onChange={handleChange} className="mt-1 rounded border-forest-600 bg-forest-700 text-gold-500 focus:ring-gold-500/50" />
             <span className="text-gold-100/80 text-sm">
-              I consent to receive transactional messages from The Founders Club related to my account, orders, or services I have requested. These messages may include appointment reminders, order confirmations, and account notifications among others. Message frequency may vary. Message &amp; Data rates may apply. Reply HELP for help or STOP to opt-out.
+              I consent to transactional messages (e.g. appointment reminders, order confirmations). Message &amp; data rates may apply. Reply HELP for help or STOP to opt-out.
             </span>
           </label>
           <label className="flex items-start gap-3 cursor-pointer">
             <input type="checkbox" name="consentMarketing" checked={formData.consentMarketing} onChange={handleChange} className="mt-1 rounded border-forest-600 bg-forest-700 text-gold-500 focus:ring-gold-500/50" />
             <span className="text-gold-100/80 text-sm">
-              I consent to receive marketing and promotional messages from The Founders Club, including special offers, discounts, new product updates among others. Message frequency may vary. Message &amp; Data rates may apply. Reply HELP for help or STOP to opt-out.
+              I consent to marketing messages (offers, updates). Message &amp; data rates may apply. Reply HELP for help or STOP to opt-out.
             </span>
           </label>
         </div>

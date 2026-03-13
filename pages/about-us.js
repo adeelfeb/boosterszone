@@ -109,7 +109,7 @@ export default function AboutUsPage() {
       <div className="min-h-screen bg-forest-900 bg-gradient-forest">
         <Navbar />
         {/* Hero with full-bleed background */}
-        <section className="relative min-h-[45vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        <section className="relative min-h-[45vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">
           <div
             className="absolute inset-0 w-full h-full bg-no-repeat bg-center"
             style={{

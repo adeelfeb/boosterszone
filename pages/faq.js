@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
+import { foundersClubImages } from '../lib/foundersClubImages'
 import { Plus, Minus } from 'lucide-react'
 
 const faqs = [
@@ -50,15 +51,29 @@ export default function FAQPage() {
       </Head>
       <div className="min-h-screen bg-forest-900 bg-gradient-forest">
         <Navbar />
-        <main className="pt-24 pb-20">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-4 text-left normal-case">
+        {/* Hero with full-bleed background (same as About Us) */}
+        <section className="relative min-h-[45vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">
+          <div
+            className="absolute inset-0 w-full h-full bg-no-repeat bg-center"
+            style={{
+              backgroundImage: `url(${foundersClubImages.aboutCta})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-forest-950/60" aria-hidden />
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-gold-100/80 text-lg mb-12">
+            <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
               Quick answers to common questions about our services and how we work.
             </p>
-
+          </div>
+        </section>
+        <main className="pb-20">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
             <div className="space-y-0">
               {faqs.map((item, index) => {
                 const isOpen = openIndex === index

@@ -39,7 +39,7 @@ export default function OurTeamPage() {
       <div className="min-h-screen bg-forest-900 bg-gradient-forest">
         <Navbar />
         {/* Hero section with image */}
-        <section className="relative min-h-[45vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        <section className="relative min-h-[45vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">
           <div className="absolute inset-0">
             <Image
               src={foundersClubImages.membersGroup}
