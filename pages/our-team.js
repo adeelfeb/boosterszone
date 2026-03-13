@@ -36,7 +36,7 @@ export default function OurTeamPage() {
         <meta name="description" content="Meet the team at Sahail Law. Experienced lawyers and support staff dedicated to clear, practical legal solutions in Ontario." />
         <meta name="keywords" content="Sahail Law, team, lawyers, Ontario, legal" />
       </Head>
-      <div className="min-h-screen bg-forest-900 bg-gradient-forest">
+      <div className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
         <Navbar />
         {/* Hero section with image */}
         <section className="relative min-h-[45vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">

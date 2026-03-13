@@ -12,7 +12,7 @@ export default function ContactPage() {
         <meta name="description" content="Get in touch with The Founders Club. Building something meaningful? Connect with 1000+ serious founders and operators who understand your journey." />
         <meta name="keywords" content="Founders Club, contact, get in touch" />
       </Head>
-      <div className="min-h-screen bg-forest-900 bg-gradient-forest relative">
+      <div className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep relative">
         <div
           className="absolute inset-0 w-full h-full bg-no-repeat bg-center opacity-[0.08] mix-blend-overlay pointer-events-none"
           style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }}

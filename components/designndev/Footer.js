@@ -15,37 +15,41 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-neutral-100 text-neutral-700 border-t border-neutral-300">
-      <section className="py-12 md:py-16">
+    <footer className="bg-forest-950 text-gold-100/90 border-t border-forest-800">
+      <section className="py-8 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
-            {/* Logo only */}
-            <div className="md:col-span-5 lg:col-span-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-10">
+            {/* Logo */}
+            <div className="col-span-2 sm:col-span-1 order-first">
               <Link href="/" className="inline-flex items-center no-underline hover:opacity-90 transition-opacity">
                 <Image
                   src={foundersClubImages.logo}
-                  alt="Sahail Law"
+                  alt="Founders Club"
                   width={140}
                   height={46}
-                  className="h-10 w-auto md:h-11 object-contain"
+                  className="h-9 w-auto object-contain"
                 />
               </Link>
             </div>
 
-            {/* Menu / Services */}
-            <div className="md:col-span-4 lg:col-span-4">
-              <h4 className="font-medium text-neutral-900 text-sm tracking-wide mb-4">Menu</h4>
-              <ul className="space-y-2.5 text-sm">
-                <li><Link href="/about-us" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">About Us</Link></li>
-                <li><Link href="#practice-areas" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">Services</Link></li>
-                <li><Link href="/contact" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">Team</Link></li>
-                <li><Link href="/contact" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">Contact Us</Link></li>
+            {/* Menu */}
+            <div>
+              <h4 className="font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Menu</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/about-us" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">About Us</Link></li>
+                <li><Link href="/our-team" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Team</Link></li>
+                <li><Link href="/contact" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Contact Us</Link></li>
+                <li><Link href="/partnerships" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Partnerships</Link></li>
               </ul>
-              <h4 className="font-medium text-neutral-900 text-sm tracking-wide mt-6 mb-3">Services</h4>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Services</h4>
               <ul className="space-y-2 text-sm">
                 {services.map((s) => (
                   <li key={s.label}>
-                    <Link href={s.href} className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">
+                    <Link href={s.href} className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
                       {s.label}
                     </Link>
                   </li>
@@ -54,30 +58,30 @@ export default function Footer() {
             </div>
 
             {/* Get in touch */}
-            <div className="md:col-span-3 lg:col-span-4">
-              <h4 className="font-medium text-neutral-900 text-sm tracking-wide mb-4">Get in touch</h4>
-              <ul className="space-y-3 text-sm">
+            <div>
+              <h4 className="font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Get in touch</h4>
+              <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="mailto:info@sahailaw.ca" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">
+                  <a href="mailto:info@sahailaw.ca" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
                     info@sahailaw.ca
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+14374515551" className="text-neutral-600 hover:text-neutral-900 transition-colors no-underline">
+                  <a href="tel:+14374515551" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
                     +1 437-451-5551
                   </a>
                 </li>
-                <li className="text-neutral-600">Ontario, Canada</li>
+                <li className="text-gold-100/70">Ontario, Canada</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-5 border-t border-neutral-300">
+      <section className="py-3 md:py-4 border-t border-forest-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-neutral-500 text-sm">
-            © {currentYear} Sahail Law. All rights reserved.
+          <p className="text-center text-gold-200/60 text-xs">
+            © {currentYear} Founders Club. All rights reserved.
           </p>
         </div>
       </section>

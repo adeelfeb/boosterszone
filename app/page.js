@@ -22,7 +22,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-forest-800 bg-gradient-forest">
+    <main className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
       <Navbar />
       <div className="w-full mx-auto">
         <FoundersClubHero />

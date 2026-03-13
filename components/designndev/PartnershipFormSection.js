@@ -86,7 +86,7 @@ export default function PartnershipFormSection() {
   const labelClass = 'block text-sm font-medium text-gold-200/90 mb-2'
 
   return (
-    <section className="py-16 md:py-24 bg-forest-900 bg-gradient-forest relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep relative overflow-hidden">
       <div className="absolute inset-0 bg-forest-950/40 pointer-events-none" />
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">

@@ -49,7 +49,7 @@ export default function FAQPage() {
         <meta name="description" content="Frequently asked questions about Sahail Law services, consultations, and legal support in Ontario." />
         <meta name="keywords" content="FAQ, Sahail Law, legal advice, consultation, Ontario" />
       </Head>
-      <div className="min-h-screen bg-forest-900 bg-gradient-forest">
+      <div className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
         <Navbar />
         {/* Hero with full-bleed background (same as About Us) */}
         <section className="relative min-h-[45vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">

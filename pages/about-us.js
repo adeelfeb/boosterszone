@@ -106,7 +106,7 @@ export default function AboutUsPage() {
         <meta name="description" content="Our vision is to connect 2,500+ members across every major city in North America and Canada: a trusted circle of builders who share resources, open doors, and raise the bar for entrepreneurship." />
         <meta name="keywords" content="Founders Club, about us, founders, entrepreneurship, community" />
       </Head>
-      <div className="min-h-screen bg-forest-900 bg-gradient-forest">
+      <div className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
         <Navbar />
         {/* Hero with full-bleed background */}
         <section className="relative min-h-[45vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">
