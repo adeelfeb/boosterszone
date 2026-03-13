@@ -86,30 +86,34 @@ export default function PartnershipFormSection() {
   const labelClass = 'block text-sm font-medium text-gold-200/90 mb-2'
 
   return (
-    <section className="py-16 md:py-24 bg-forest-800 relative overflow-hidden">
-      <div className="absolute inset-0 bg-forest-900/50 pointer-events-none" />
-      <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-left mb-10"
-        >
+    <section className="py-16 md:py-24 bg-forest-900 bg-gradient-forest relative overflow-hidden">
+      <div className="absolute inset-0 bg-forest-950/40 pointer-events-none" />
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-left"
+          >
             <h2 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-4 normal-case">
-            Explore a Strategic Partnership
-          </h2>
-          <p className="text-gold-100/80 text-base md:text-lg">
-            Interested in learning more about how you can become a member or partner of The Founders Club? Get in touch about available opportunities.
-          </p>
-        </motion.div>
+              Explore a Strategic Partnership
+            </h2>
+            <p className="text-gold-100/85 text-base md:text-lg leading-relaxed mb-4">
+              Add a few details about your company and what you&apos;re looking for. Fill out the form on the right to schedule a conversation with our partnerships team.
+            </p>
+            <p className="text-gold-100/70 text-sm md:text-base leading-relaxed">
+              Whether you&apos;re exploring event sponsorships, media opportunities, or a long-term strategic alliance, this is the easiest way to start the discussion.
+            </p>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="bg-forest-700/80 border border-forest-600 rounded-2xl p-6 md:p-8 relative fc-card"
-        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="bg-forest-700/85 border border-forest-600 rounded-2xl p-6 md:p-8 relative fc-card"
+          >
           {isSubmitting && (
             <div className="absolute inset-0 rounded-2xl bg-forest-800/60 backdrop-blur-sm z-10 pointer-events-auto" aria-hidden />
           )}
@@ -254,6 +258,7 @@ export default function PartnershipFormSection() {
             </AnimatePresence>
           </form>
         </motion.div>
+        </div>
       </div>
     </section>
   )

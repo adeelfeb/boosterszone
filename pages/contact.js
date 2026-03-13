@@ -12,24 +12,31 @@ export default function ContactPage() {
         <meta name="description" content="Get in touch with The Founders Club. Building something meaningful? Connect with 1000+ serious founders and operators who understand your journey." />
         <meta name="keywords" content="Founders Club, contact, get in touch" />
       </Head>
-      <div className="min-h-screen bg-forest-800 relative">
+      <div className="min-h-screen bg-forest-900 bg-gradient-forest relative">
         <div
-          className="absolute inset-0 w-full h-full bg-no-repeat bg-center opacity-[0.06] pointer-events-none"
+          className="absolute inset-0 w-full h-full bg-no-repeat bg-center opacity-[0.08] mix-blend-overlay pointer-events-none"
           style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }}
           aria-hidden
         />
         <Navbar />
         <main className="relative z-10 pt-24 pb-20">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
-              Let&apos;s Chat
-            </h1>
-            <p className="text-gold-100/90 text-lg text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-              If you&apos;re building something meaningful and want to do it alongside 1000+ serious founders and operators who understand your journey, congratulations. You&apos;ve finally found the room you&apos;ve been looking for.
-            </p>
-            <div className="bg-forest-700/60 border border-forest-600 rounded-2xl p-6 md:p-8 fc-card">
-              <LetsChatForm />
-            </div>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+              <div>
+                <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-left">
+                  Let&apos;s Chat
+                </h1>
+                <p className="text-gold-100/90 text-lg mb-4 leading-relaxed">
+                  Add a few details about what you&apos;re working on and what you need help with. Fill out the form on the right to schedule a time to talk with our team.
+                </p>
+                <p className="text-gold-100/75 text-base leading-relaxed">
+                  Whether you have a quick question or are ready to move forward, we&apos;ll review your message and get back to you with next steps and available times.
+                </p>
+              </div>
+              <div className="bg-forest-700/70 border border-forest-600 rounded-2xl p-6 md:p-8 fc-card">
+                <LetsChatForm />
+              </div>
+            </section>
           </div>
         </main>
         <Footer />

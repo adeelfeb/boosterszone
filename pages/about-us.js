@@ -106,7 +106,7 @@ export default function AboutUsPage() {
         <meta name="description" content="Our vision is to connect 2,500+ members across every major city in North America and Canada: a trusted circle of builders who share resources, open doors, and raise the bar for entrepreneurship." />
         <meta name="keywords" content="Founders Club, about us, founders, entrepreneurship, community" />
       </Head>
-      <div className="min-h-screen bg-forest-800">
+      <div className="min-h-screen bg-forest-900 bg-gradient-forest">
         <Navbar />
         {/* Hero with full-bleed background */}
         <section className="relative min-h-[45vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
@@ -133,10 +133,10 @@ export default function AboutUsPage() {
           </div>
         </section>
         <main className="pb-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
               {sections.map((section, index) => (
-                <section key={section.id} className="border-t border-forest-600/50 pt-12">
-                  <div className={`grid grid-cols-1 gap-8 ${index % 2 === 1 ? 'md:grid-cols-2' : 'md:grid-cols-2'} md:gap-10 items-center`}>
+                <section key={section.id} className="border-t border-forest-600/50 pt-16">
+                  <div className={`grid grid-cols-1 gap-10 ${index % 2 === 1 ? 'md:grid-cols-2' : 'md:grid-cols-2'} md:gap-12 lg:gap-16 items-center`}>
                     <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                       <span className="text-gold-500/80 font-subheading text-lg">{section.id}</span>
                       <h2 className="font-heading text-2xl md:text-3xl font-semibold text-gold-300 mt-2 mb-6">
@@ -147,7 +147,7 @@ export default function AboutUsPage() {
                       </div>
                     </div>
                     {section.image && (
-                      <div className={`relative aspect-[4/3] rounded-xl overflow-hidden bg-forest-700 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                      <div className={`relative aspect-[16/11] overflow-hidden bg-forest-700 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
                         <Image
                           src={section.image}
                           alt={section.title}

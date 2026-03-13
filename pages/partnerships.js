@@ -37,7 +37,7 @@ export default function PartnershipsPage() {
         <meta name="description" content="Partner with The Founders Club for direct access to 1,200+ founders and over $20B in revenue. Events, retreats, preferred partner status, and media sponsorship." />
         <meta name="keywords" content="Founders Club, partnerships, sponsorship, events, preferred partner" />
       </Head>
-      <div className="min-h-screen bg-forest-800">
+      <div className="min-h-screen bg-forest-900 bg-gradient-forest">
         <Navbar />
         {/* Hero with full-bleed background */}
         <section className="relative min-h-[55vh] flex items-center justify-center pt-24 pb-20 overflow-hidden">
