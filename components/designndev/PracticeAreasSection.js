@@ -8,7 +8,7 @@ export default function PracticeAreasSection() {
   const areas = foundersClubImages.practiceAreas
 
   return (
-    <section id="practice-areas" className="py-16 md:py-24 bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
+    <section id="practice-areas" className="py-16 md:py-24 relative">
       <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}

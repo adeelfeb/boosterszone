@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
+    <main className="relative min-h-screen">
       <TextureOverlay />
       <Navbar />
       <div className="relative w-full mx-auto">

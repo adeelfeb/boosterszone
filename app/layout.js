@@ -34,8 +34,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable} ${cormorant.variable}`} suppressHydrationWarning>
-      <body className={`${poppins.className} antialiased bg-forest-900`} suppressHydrationWarning>
-        {children}
+      <body className={`${poppins.className} antialiased relative min-h-screen`} suppressHydrationWarning>
+        {/* Static full-viewport background – all pages share this */}
+        <div
+          className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/images/bg.png)' }}
+          aria-hidden
+        />
+        <div className="relative z-10 min-h-screen">
+          {children}
+        </div>
       </body>
     </html>
   )
