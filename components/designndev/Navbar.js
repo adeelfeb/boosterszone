@@ -72,7 +72,7 @@ export default function Navbar() {
         <div className="relative z-[60] w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           <div className="grid grid-cols-3 items-center py-0 min-h-[5rem] md:min-h-[5.5rem] gap-4 sm:gap-8 lg:gap-12">
             {/* Left: Menu toggle – generous tap target */}
-            <div className="flex justify-start min-w-[3rem]">
+            <div className="flex justify-start min-w-[3rem] items-center gap-3">
               <button
                 type="button"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -88,6 +88,17 @@ export default function Navbar() {
                   )}
                 </svg>
               </button>
+
+              {/* Desktop-only label + quick link */}
+              <div className="hidden lg:flex items-center gap-4">
+                <span className="font-subheading text-white/90 tracking-wide">Menu</span>
+                <Link
+                  href="/our-team"
+                  className="btn-fc-secondary font-heading text-sm py-2 px-4"
+                >
+                  Our Team
+                </Link>
+              </div>
             </div>
 
             {/* Center: Logo – on mobile larger and pushed right; on sm+ centered */}
