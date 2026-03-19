@@ -216,7 +216,7 @@ export default function SignupPage() {
             aria-hidden
           />
           <Navbar />
-          <main className="relative z-10 pt-24 pb-20 flex items-center justify-center min-h-[50vh]">
+          <main className="relative z-10 pt-20 pb-20 flex items-center justify-center min-h-[50vh]">
             <div className="w-full max-w-md mx-auto px-4">
               <div className="fc-card rounded-2xl border border-forest-600 bg-forest-700/60 p-6 md:p-8">
                 <AuthCardSkeleton />
@@ -243,7 +243,7 @@ export default function SignupPage() {
           aria-hidden
         />
         <Navbar />
-        <main className="relative z-10 pt-24 pb-20">
+        <main className="relative z-10 pt-20 pb-20">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
             <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-4">
               Create Your Account

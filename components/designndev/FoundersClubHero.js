@@ -10,7 +10,7 @@ const HERO_VIDEO_SRC = 'https://assets.mixkit.co/videos/9236/9236-720.mp4'
 
 export default function FoundersClubHero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-start pt-24 pb-20 overflow-hidden bg-neutral-950">
+    <section className="relative min-h-[85vh] flex items-center justify-start pt-20 pb-20 overflow-hidden bg-neutral-950">
       {/* Video background – full bleed, muted loop */}
       <div className="absolute inset-0 w-full h-full bg-neutral-900" aria-hidden>
         <video

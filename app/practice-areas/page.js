@@ -14,7 +14,7 @@ export default function PracticeAreasPage() {
     <main className="relative min-h-screen">
       <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
       <Navbar />
-      <div className="w-full max-w-[420px] sm:max-w-none mx-auto sm:mx-0 pt-24">
+      <div className="w-full max-w-[420px] sm:max-w-none mx-auto sm:mx-0 pt-20">
         <PracticeAreasSection />
       </div>
       <Footer />

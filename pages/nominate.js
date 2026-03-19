@@ -30,7 +30,7 @@ export default function NominatePage() {
       <div className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep relative">
         <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
         <Navbar />
-        <main className="pt-24 pb-20 relative z-10">
+        <main className="pt-20 pb-20 relative z-10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center normal-case">
               Founders Club Nomination Program

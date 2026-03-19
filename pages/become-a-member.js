@@ -43,7 +43,7 @@ export default function BecomeAMemberPage() {
         <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
         <Navbar />
         {/* Hero with full-bleed background */}
-        <section className="relative min-h-[50vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        <section className="relative min-h-[50vh] flex items-center justify-center pt-20 pb-16 overflow-hidden">
           <div
             className="absolute inset-0 w-full h-full bg-no-repeat bg-center"
             style={{

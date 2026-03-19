@@ -67,20 +67,26 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/40 backdrop-blur-sm nav-gold-line"
+        className="fixed top-0 left-0 right-0 z-50 overflow-visible transition-all duration-300"
       >
-        <div className="relative z-[60] w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-          <div className="grid grid-cols-3 items-center py-0 min-h-[5rem] md:min-h-[5.5rem] gap-4 sm:gap-8 lg:gap-12">
+        {/* Slim bar only; logo can extend past it (previous size) without growing the strip */}
+        <div
+          className="h-[var(--fc-navbar-height)] w-full bg-black/40 backdrop-blur-sm nav-gold-line"
+          aria-hidden
+        />
+        <div className="absolute inset-x-0 top-0 z-[60] pointer-events-none">
+          <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pointer-events-auto">
+            <div className="grid grid-cols-3 items-center gap-3 sm:gap-6 lg:gap-10 h-[var(--fc-navbar-height)] py-0">
             {/* Left: Menu toggle – generous tap target */}
-            <div className="flex justify-start min-w-[3rem] items-center gap-3">
+            <div className="flex justify-start min-w-[2.75rem] items-center gap-2.5 sm:gap-3">
               <button
                 type="button"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-3 text-white hover:text-gold-200 rounded-lg transition-colors -ml-1"
+                className="p-2 -ml-0.5 text-white hover:text-gold-200 rounded-lg transition-colors touch-manipulation"
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMenuOpen}
               >
-                <svg className="w-7 h-7 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="w-6 h-6 md:w-7 md:h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   {isMenuOpen ? (
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                   ) : (
@@ -90,11 +96,11 @@ export default function Navbar() {
               </button>
 
               {/* Desktop-only label + quick link */}
-              <div className="hidden lg:flex items-center gap-4">
-                <span className="font-subheading text-white/90 tracking-wide">Menu</span>
+              <div className="hidden lg:flex items-center gap-3 pl-1">
+                <span className="font-subheading text-sm text-white/90 tracking-wide">Menu</span>
                 <Link
                   href="/our-team"
-                  className="btn-fc-secondary font-heading text-sm py-2 px-4"
+                  className="btn-fc-secondary font-heading text-sm py-1.5 px-3.5"
                 >
                   Our Team
                 </Link>
@@ -102,10 +108,10 @@ export default function Navbar() {
             </div>
 
             {/* Center: Logo – on mobile larger and pushed right; on sm+ centered */}
-            <div className="flex justify-end sm:justify-center col-span-2 sm:col-span-1">
+            <div className="flex justify-end sm:justify-center col-span-2 sm:col-span-1 min-h-0">
               <Link
                 href="/"
-                className="flex items-center no-underline hover:opacity-90 transition-opacity"
+                className="flex items-center leading-none no-underline hover:opacity-90 transition-opacity"
               >
                 <Image
                   src={foundersClubImages.logo}
@@ -113,22 +119,24 @@ export default function Navbar() {
                   width={280}
                   height={94}
                   className="h-24 w-auto sm:h-[4.25rem] md:h-[4.5rem] lg:h-20 xl:h-24 object-contain"
+                  priority
                 />
               </Link>
             </div>
 
             {/* Right: CTA */}
-          <div className="hidden sm:flex justify-end min-w-[3rem]">
+            <div className="hidden sm:flex justify-end items-center min-w-[2.75rem] pl-1">
               <a
                 href="https://wa.me/13654995551"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2.5 px-4 md:py-3 md:px-5 md:text-base"
+                className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-4"
               >
                 Get a free consultation
               </a>
             </div>
           </div>
+        </div>
         </div>
       </motion.nav>
 
@@ -140,10 +148,10 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-[5rem] md:top-[5.5rem] left-0 right-0 bottom-0 z-40 bg-black/92 backdrop-blur-md overflow-auto"
+            className="fixed left-0 right-0 bottom-0 z-40 bg-black/92 backdrop-blur-md overflow-auto top-[var(--fc-navbar-height)]"
             aria-hidden="false"
           >
-            <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pt-10 pb-16">
+            <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pt-8 pb-16">
               {/* Mobile: CTA inside menu as full-width button */}
               <div className="sm:hidden mb-8">
                 <a

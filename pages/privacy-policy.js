@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
       </Head>
       <div className="min-h-screen bg-slate-50">
         <Navbar />
-        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 pt-24">
+        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 pt-20">
           <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">Privacy Policy</h1>
           <p className="text-slate-500 text-sm mb-10">Last updated: February 2025</p>
 

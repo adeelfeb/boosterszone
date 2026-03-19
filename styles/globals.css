@@ -40,6 +40,14 @@
   --fc-gold-400: #D4AF37;
   --fc-gold-500: #C9A227;
   --fc-gold-300: #E2CF9E;
+  /* Fixed Navbar – menu overlay top; ≈ vertical padding + logo (see components/designndev/Navbar.js) */
+  --fc-navbar-height: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fc-navbar-height: 3.75rem;
+  }
 }
 
 html {
