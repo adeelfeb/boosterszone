@@ -2,41 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom fonts: Luxerie (headings), Dragon-Serial (subheadings) */
-@font-face {
-  font-family: 'Luxerie';
-  src: url('/fonts/luxerie-regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Dragon-Serial';
-  src: url('/fonts/Dragon-Serial-Regular.otf') format('opentype'),
-       url('/fonts/Dragon-Serial-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Global Styles */
+/* Headings / body: Source Serif 4 + Source Sans 3 via next/font (app/layout.js, pages/_app.js) */
 
 :root {
-  --primary-color: #0070f3;
+  --primary-color: #b45309;
   --secondary-color: #666;
   --border-color: #eaeaea;
   --background-color: #fafafa;
-  /* Ensures same font across App Router and Pages Router (App Router may override via next/font) */
-  --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading: 'Luxerie', var(--font-serif), Georgia, Cambria, serif;
-  --font-subheading: 'Dragon-Serial', var(--font-serif), Georgia, Cambria, serif;
+  --font-heading: var(--font-serif);
+  --font-subheading: var(--font-sans);
   /* Light theme — ink + amber */
   --fc-ink: #0f172a;
-  --fc-forest-950: #ffffff;
-  --fc-forest-800: #e2e8f0;
-  --fc-forest-700: #cbd5e1;
-  --fc-forest-600: #94a3b8;
+  --fc-forest-950: #fdfbf7;
+  --fc-forest-800: #e8dfd4;
+  --fc-forest-700: #ddd4c6;
+  --fc-forest-600: #c9bdae;
   --fc-gold-50: #fffbeb;
   --fc-gold-400: #f59e0b;
   --fc-gold-500: #d97706;
@@ -64,9 +44,9 @@ body {
   padding: 0;
   min-height: 100%;
   overflow-x: hidden;
-  color: #475569;
+  color: #3f3a36;
   line-height: 1.6;
-  font-family: var(--font-poppins), 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-sans), 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,7 +54,9 @@ body {
 
 /* Header: light bar shadow */
 .nav-gold-line {
-  box-shadow: 0 1px 0 0 rgba(15, 23, 42, 0.06), 0 4px 24px -4px rgba(15, 23, 42, 0.08);
+  box-shadow:
+    0 1px 0 0 rgba(201, 189, 174, 0.55),
+    0 8px 32px -8px rgba(45, 40, 35, 0.1);
 }
 
 /* Header nav links: subtle white glow on hover */
@@ -86,34 +68,34 @@ body {
   text-shadow: none;
 }
 
-/* Headings: Luxerie Regular – preserve title case (no all-caps) */
+/* Headings: Source Serif 4 – preserve title case (no all-caps) */
 h1, h2,
 .font-heading {
   font-family: var(--font-heading);
   text-transform: none !important;
 }
 
-/* Section headings: use same heading font as home (Luxerie) */
+/* Section headings */
 main .section-heading {
   font-family: var(--font-heading), Georgia, Cambria, serif !important;
   text-transform: none !important;
 }
 
 .section-divider-gold {
-  border-top: 1px solid rgba(226, 232, 240, 0.95);
-  box-shadow: 0 -1px 0 0 rgba(248, 250, 252, 0.8);
+  border-top: 1px solid rgba(201, 189, 174, 0.65);
+  box-shadow: 0 -1px 0 0 rgba(255, 252, 248, 0.9);
 }
 
-/* Subheadings and body text: Dragon-Serial – same as home page sub-sections */
+/* Subheadings and UI text: Source Sans 3 */
 h3, h4, h5, h6,
 .font-subheading {
   font-family: var(--font-subheading);
 }
 
-/* Main content paragraphs and lists: sub font + larger, readable size site-wide */
+/* Main content paragraphs and lists */
 main p,
 main li {
-  font-family: var(--font-subheading), var(--font-poppins), sans-serif;
+  font-family: var(--font-sans), 'Source Sans 3', system-ui, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.7;
 }
@@ -293,10 +275,13 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
 
 /* Card/section panel – no border radius, clear border */
 .fc-card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(253, 251, 247, 0.98) 100%);
+  border: 1px solid rgba(201, 189, 174, 0.55);
   border-radius: 0;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.75) inset,
+    0 1px 2px rgba(45, 40, 35, 0.05),
+    0 14px 40px -18px rgba(45, 40, 35, 0.12);
 }
 
 /* Skeleton loading animation */

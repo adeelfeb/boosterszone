@@ -2,25 +2,10 @@ import '../styles/globals.css';
 import 'ag-grid-community/styles/ag-grid.min.css';
 import 'ag-grid-community/styles/ag-theme-quartz.min.css';
 import Head from 'next/head';
-import { Poppins, Cormorant_Garamond } from 'next/font/google';
+import { sourceSans, sourceSerif } from '../lib/fonts';
 import { ToastProvider } from '../components/ToastProvider';
 import ErrorBoundary from '../components/ErrorBoundary';
 import RecaptchaPreloader from '../components/RecaptchaPreloader';
-
-// Same font setup as app/layout.js so header, footer and content match the home page
-const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: ['300', '400', '500', '600', '700'],
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-serif',
-  weight: ['400', '500', '600', '700'],
-});
 
 export default function App({ Component, pageProps }) {
   return (
@@ -37,7 +22,7 @@ export default function App({ Component, pageProps }) {
         </Head>
         <RecaptchaPreloader />
         <div
-          className={`${poppins.variable} ${cormorant.variable} ${poppins.className}`}
+          className={`${sourceSans.variable} ${sourceSerif.variable} ${sourceSans.className}`}
           style={{ minHeight: '100vh' }}
         >
           <Component {...pageProps} />

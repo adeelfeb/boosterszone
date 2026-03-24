@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-white">
+    <main className="relative min-h-screen">
       <Navbar />
       <div className="relative w-full mx-auto">
         <BoostersHomeContent />

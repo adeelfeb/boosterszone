@@ -1,20 +1,6 @@
-import { Poppins, Cormorant_Garamond } from 'next/font/google'
 import '../styles/globals.css'
+import { sourceSans, sourceSerif } from '../lib/fonts'
 import { siteName, siteTagline, siteUrl } from '../lib/siteConfig'
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: ['300', '400', '500', '600', '700'],
-})
-
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-serif',
-  weight: ['400', '500', '600', '700'],
-})
 
 export const metadata = {
   title: `${siteName} | Fundraising books for schools & communities`,
@@ -36,13 +22,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${cormorant.variable}`} suppressHydrationWarning>
-      <body className={`${poppins.className} antialiased relative min-h-screen`} suppressHydrationWarning>
+    <html lang="en" className={`${sourceSans.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
+      <body className={`${sourceSans.className} antialiased relative min-h-screen`} suppressHydrationWarning>
         {/* Static full-viewport background – all pages share this */}
-        <div className="fixed inset-0 z-0 bg-white" aria-hidden />
+        <div className="fixed inset-0 z-0 bg-gradient-bz-page" aria-hidden />
         <div
-          className="fixed inset-0 z-0 opacity-[0.04] pointer-events-none bg-[url('/images/bz-texture.svg')] bg-repeat mix-blend-multiply"
-          style={{ backgroundSize: '400px 400px' }}
+          className="fixed inset-0 z-0 pointer-events-none bg-[url('/images/bz-texture.svg')] bg-repeat opacity-[0.72] mix-blend-multiply"
+          style={{ backgroundSize: '320px 320px' }}
+          aria-hidden
+        />
+        <div
+          className="fixed inset-0 z-0 pointer-events-none opacity-[0.14] bg-footer-pattern"
           aria-hidden
         />
         <div className="relative z-10 min-h-screen">

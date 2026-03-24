@@ -50,7 +50,7 @@ function FooterNewsletter() {
 
   return (
     <div className="mt-5 max-w-sm">
-      <p className="font-subheading text-xs tracking-wide text-slate-500 uppercase mb-2">
+      <p className="font-subheading text-xs tracking-wide text-stone-500 uppercase mb-2">
         Stay in the loop
       </p>
       <form onSubmit={handleSubmit} className="relative flex flex-col gap-2 sm:flex-row sm:items-stretch">
@@ -73,7 +73,7 @@ function FooterNewsletter() {
           }}
           placeholder="Your email"
           disabled={status === 'loading'}
-          className="flex-1 min-w-0 rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-400/40 font-subheading"
+          className="flex-1 min-w-0 rounded-lg border border-parchment-400/80 bg-white/90 px-3 py-2.5 text-sm text-stone-900 placeholder:text-stone-400 focus:border-amber-600 focus:outline-none focus:ring-1 focus:ring-amber-400/35 font-subheading shadow-sm"
         />
         <input
           type="text"
@@ -109,7 +109,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-slate-50 text-slate-700 border-t border-slate-200">
+    <footer className="relative text-stone-700 border-t-[3px] border-amber-700/35 bg-gradient-to-b from-parchment-200/95 via-parchment-300/60 to-parchment-400/50 shadow-[inset_0_1px_0_rgba(255,252,248,0.65)]">
       <section className="py-8 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-12 lg:justify-between lg:items-start">
@@ -130,23 +130,23 @@ export default function Footer() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-10 flex-1 lg:max-w-3xl">
               {/* Menu */}
               <div>
-                <h4 className="font-subheading font-medium text-slate-500 text-xs tracking-wide uppercase mb-3">Menu</h4>
+                <h4 className="font-subheading font-medium text-stone-600 text-xs tracking-wide uppercase mb-3">Menu</h4>
                 <ul className="space-y-2 text-sm font-subheading">
-                  <li><Link href="/" className="text-slate-600 hover:text-amber-700 transition-colors no-underline">Home</Link></li>
-                  <li><Link href="/fundraising" className="text-slate-600 hover:text-amber-700 transition-colors no-underline">Fundraising</Link></li>
-                  <li><Link href="/books" className="text-slate-600 hover:text-amber-700 transition-colors no-underline">Books</Link></li>
-                  <li><Link href="/about" className="text-slate-600 hover:text-amber-700 transition-colors no-underline">About</Link></li>
-                  <li><Link href="/contact" className="text-slate-600 hover:text-amber-700 transition-colors no-underline">Contact</Link></li>
+                  <li><Link href="/" className="text-stone-700 hover:text-amber-900 transition-colors no-underline">Home</Link></li>
+                  <li><Link href="/fundraising" className="text-stone-700 hover:text-amber-900 transition-colors no-underline">Fundraising</Link></li>
+                  <li><Link href="/books" className="text-stone-700 hover:text-amber-900 transition-colors no-underline">Books</Link></li>
+                  <li><Link href="/about" className="text-stone-700 hover:text-amber-900 transition-colors no-underline">About</Link></li>
+                  <li><Link href="/contact" className="text-stone-700 hover:text-amber-900 transition-colors no-underline">Contact</Link></li>
                 </ul>
               </div>
 
               {/* Programs */}
               <div>
-                <h4 className="font-subheading font-medium text-slate-500 text-xs tracking-wide uppercase mb-3">Programs</h4>
+                <h4 className="font-subheading font-medium text-stone-600 text-xs tracking-wide uppercase mb-3">Programs</h4>
                 <ul className="space-y-2 text-sm font-subheading">
                   {products.map((s) => (
                     <li key={s.label}>
-                      <Link href={s.href} className="text-slate-600 hover:text-amber-700 transition-colors no-underline">
+                      <Link href={s.href} className="text-stone-700 hover:text-amber-900 transition-colors no-underline">
                         {s.label}
                       </Link>
                     </li>
@@ -156,19 +156,19 @@ export default function Footer() {
 
               {/* Get in touch */}
               <div className="col-span-2 sm:col-span-1">
-                <h4 className="font-subheading font-medium text-slate-500 text-xs tracking-wide uppercase mb-3">Get in touch</h4>
+                <h4 className="font-subheading font-medium text-stone-600 text-xs tracking-wide uppercase mb-3">Get in touch</h4>
                 <ul className="space-y-2 text-sm font-subheading">
                   <li>
-                    <a href={`mailto:${contact.email}`} className="text-slate-600 hover:text-amber-700 transition-colors no-underline">
+                    <a href={`mailto:${contact.email}`} className="text-stone-700 hover:text-amber-900 transition-colors no-underline">
                       {contact.email}
                     </a>
                   </li>
                   <li>
-                    <a href={`tel:${contact.phoneTel}`} className="text-slate-600 hover:text-amber-700 transition-colors no-underline">
+                    <a href={`tel:${contact.phoneTel}`} className="text-stone-700 hover:text-amber-900 transition-colors no-underline">
                       {contact.phoneDisplay}
                     </a>
                   </li>
-                  <li className="text-slate-500">{contact.location}</li>
+                  <li className="text-stone-600">{contact.location}</li>
                 </ul>
               </div>
             </div>
@@ -176,9 +176,9 @@ export default function Footer() {
         </div>
       </section>
 
-      <section className="py-3 md:py-4 border-t border-slate-200">
+      <section className="py-3 md:py-4 border-t border-parchment-400/50 bg-stone-900/[0.04]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-slate-400 text-xs font-subheading">
+          <p className="text-center text-stone-500 text-xs font-subheading">
             © {currentYear} {siteName}. All rights reserved.
           </p>
         </div>

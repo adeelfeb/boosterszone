@@ -1,29 +1,36 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
 import TextureOverlay from '../../components/designndev/TextureOverlay'
+import MarketingPageHero from '../../components/boosters/MarketingPageHero'
 import { siteName, siteTagline } from '../../lib/siteConfig'
+import { marketingImages } from '../../lib/marketingImages'
 
 const team = [
   {
     name: 'Team member one',
     role: 'Role title',
-    bio: 'Replace with a short bio. Photo slots can be added later if you extend this layout.',
+    bio: 'Replace with a short bio. Swap the photo URL in the team array when you have real headshots.',
+    image: marketingImages.teamPortrait1,
   },
   {
     name: 'Team member two',
     role: 'Role title',
     bio: 'Another placeholder bio. Keep entries consistent in length for a balanced grid.',
+    image: marketingImages.teamPortrait2,
   },
   {
     name: 'Team member three',
     role: 'Role title',
     bio: 'Use real names and titles when you are ready; this file is the single source for the Our Team page.',
+    image: marketingImages.teamPortrait3,
   },
   {
     name: 'Team member four',
     role: 'Role title',
     bio: 'Optional fourth slot. Remove or duplicate the map in the team array as needed.',
+    image: marketingImages.teamPortrait4,
   },
 ]
 
@@ -35,44 +42,49 @@ export const metadata = {
 
 export default function OurTeamPage() {
   return (
-    <main className="relative min-h-screen bg-white">
-      <TextureOverlay opacity={0.035} className="mix-blend-multiply" />
+    <main className="relative min-h-screen">
+      <TextureOverlay opacity={0.055} className="mix-blend-multiply" />
       <Navbar />
-      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16 bg-gradient-to-b from-amber-50/40 to-white">
-        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="section-heading font-heading text-4xl md:text-5xl font-medium text-amber-700 normal-case mb-4">
-            Our team
-          </h1>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed font-subheading">
-            Introduce the people behind {siteName}.
-          </p>
-        </div>
-      </section>
+      <MarketingPageHero
+        eyebrow="People"
+        title="Our team"
+        subtitle={`Introduce the people behind ${siteName}.`}
+        imageKey="team"
+        imageAlt="Team collaboration"
+      />
       <div className="pb-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-          <p className="text-slate-600 text-lg mb-4 max-w-2xl font-subheading">
-            This page is a structural draft: headings, spacing, and typography match the rest of the site. Swap in your real roster and bios when you launch.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+          <p className="text-stone-600 text-lg mb-12 max-w-3xl font-subheading">
+            This layout uses a photo card grid—swap placeholder portraits and bios when you launch.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10">
             {team.map((member, index) => (
-              <div key={index} className="py-0">
-                <h2 className="font-subheading text-xl md:text-2xl font-medium text-slate-900 mb-2">
-                  {member.name}
-                </h2>
-                <p className="text-amber-700 text-sm font-medium mb-3 font-subheading">
-                  {member.role}
-                </p>
-                <p className="text-slate-600 leading-relaxed font-subheading">
-                  {member.bio}
-                </p>
-              </div>
+              <article
+                key={index}
+                className="flex flex-col border border-parchment-300/80 bg-white/80 shadow-bz-soft overflow-hidden rounded-sm hover:shadow-bz-card transition-shadow duration-300"
+              >
+                <div className="relative aspect-[4/5] bg-parchment-200">
+                  <Image
+                    src={member.image}
+                    alt={`${member.name} portrait`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h2 className="font-heading text-xl text-stone-900 mb-1">{member.name}</h2>
+                  <p className="text-amber-800 text-sm font-medium mb-4 font-subheading">{member.role}</p>
+                  <p className="text-stone-600 leading-relaxed font-subheading text-base m-0 flex-1">{member.bio}</p>
+                </div>
+              </article>
             ))}
           </div>
-          <div className="mt-16 pt-8">
-            <p className="text-slate-600 mb-6 font-subheading">
-              Add a closing line about how you collaborate, then send people to contact or signup.
+          <div className="mt-16 pt-10 border-t border-parchment-300/70 max-w-3xl">
+            <p className="text-stone-600 mb-6 font-subheading text-lg">
+              Add a closing line about how you collaborate, then send people to contact.
             </p>
-            <Link href="/contact" className="btn-fc-primary inline-block">
+            <Link href="/contact" className="btn-fc-primary inline-flex no-underline">
               Contact us
             </Link>
           </div>

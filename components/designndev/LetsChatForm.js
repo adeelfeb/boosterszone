@@ -59,8 +59,8 @@ export default function LetsChatForm() {
     }
   }
 
-  const inputClass = 'w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-amber-400/50 focus:border-amber-500 outline-none transition-all'
-  const labelClass = 'block text-sm font-medium text-slate-700 mb-2'
+  const inputClass = 'w-full px-4 py-3 bg-white/95 border border-parchment-400/90 rounded-md text-stone-900 placeholder-stone-400 focus:ring-2 focus:ring-amber-400/45 focus:border-amber-600 outline-none transition-all shadow-sm'
+  const labelClass = 'block text-sm font-medium text-stone-700 mb-2'
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -125,7 +125,7 @@ export default function LetsChatForm() {
           disabled={isSubmitting}
           whileHover={!isSubmitting ? { scale: 1.01 } : {}}
           whileTap={!isSubmitting ? { scale: 0.99 } : {}}
-          className="w-full py-2.5 px-4 text-sm font-medium text-slate-900 bg-amber-500 border border-amber-600 rounded-lg hover:bg-amber-400 hover:border-amber-500 transition-all flex items-center justify-center gap-1.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
+          className="w-full py-2.5 px-4 text-sm font-medium text-stone-900 bg-gradient-to-b from-amber-400 to-amber-500 border border-amber-700/40 rounded-md hover:from-amber-300 hover:to-amber-400 transition-all flex items-center justify-center gap-1.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-bz-soft"
         >
           {isSubmitting ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Submitting…</>

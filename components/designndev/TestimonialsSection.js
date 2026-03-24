@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
   const goNext = () => setIndex((i) => (i + 1) % total)
 
   return (
-    <section className="py-16 md:py-24 bg-slate-50 relative overflow-hidden border-t border-slate-200">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-parchment-100/80 to-parchment-50 relative overflow-hidden border-t border-parchment-300/70">
       <div className="absolute inset-0 opacity-[0.06]">
         <Image
           src={siteAssets.texture}
@@ -50,16 +50,16 @@ export default function TestimonialsSection() {
           priority={false}
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-slate-50/90" aria-hidden />
+      <div className="absolute inset-0 bg-gradient-to-b from-parchment-50/90 to-transparent" aria-hidden />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-heading font-heading text-4xl md:text-5xl font-medium text-amber-700 mb-12 md:mb-16 text-left normal-case"
+          className="section-heading font-heading text-4xl md:text-5xl font-medium text-amber-900 mb-12 md:mb-16 text-left normal-case"
         >
-          <span className="text-slate-900">Reviews</span> From Clients
+          <span className="text-stone-900">Reviews</span> From Clients
         </motion.h2>
 
         <div className="relative min-h-[220px] flex items-center justify-center">
@@ -73,10 +73,10 @@ export default function TestimonialsSection() {
               className="absolute inset-0 flex flex-col items-center justify-center px-4"
             >
               <Quote className="w-12 h-12 md:w-14 md:h-14 text-amber-500/80 mb-4" strokeWidth={1.2} />
-              <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl text-center">
+              <p className="text-stone-600 text-base md:text-lg leading-relaxed max-w-2xl text-center">
                 {testimonials[index].quote}
               </p>
-              <p className="mt-6 text-slate-800 font-medium">
+              <p className="mt-6 text-stone-800 font-medium">
                 — {testimonials[index].name}
               </p>
             </motion.div>

@@ -2,7 +2,8 @@ import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
 import FreeConsultationSection from '../../components/designndev/FreeConsultationSection'
 import TextureOverlay from '../../components/designndev/TextureOverlay'
-import { siteName, siteTagline } from '../../lib/siteConfig'
+import MarketingPageHero from '../../components/boosters/MarketingPageHero'
+import { siteName, contact } from '../../lib/siteConfig'
 
 export const metadata = {
   title: `Contact | ${siteName}`,
@@ -12,23 +13,48 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="relative min-h-screen bg-white">
-      <TextureOverlay opacity={0.035} className="mix-blend-multiply" />
+    <main className="relative min-h-screen">
+      <TextureOverlay opacity={0.055} className="mix-blend-multiply" />
       <Navbar />
-      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16 bg-gradient-to-b from-amber-50/40 to-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-amber-700 mb-6 normal-case">
-            Ready to launch?
-          </h1>
-          <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-subheading">
-            Tell us about your organization—we&apos;ll outline a custom book idea and how the fundraiser can work for
-            your timeline and goals.
-          </p>
-        </div>
-      </section>
+      <MarketingPageHero
+        eyebrow="Get started"
+        title="Ready to launch?"
+        subtitle="Tell us about your organization—we will outline a custom book idea and how the fundraiser can work for your timeline and goals."
+        imageKey="contact"
+        imageAlt="Reach out to plan your fundraiser"
+      />
+
       <div id="free-fundraising-plan" className="pb-20 scroll-mt-28">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-          <FreeConsultationSection animated={false} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+            <aside className="lg:col-span-4 space-y-8 order-2 lg:order-1">
+              <div className="fc-card p-6 border border-parchment-300/80 shadow-bz-soft">
+                <h2 className="font-heading text-lg text-amber-900 mb-3">What to include</h2>
+                <ul className="text-stone-600 font-subheading space-y-2 m-0 pl-4 list-disc text-base">
+                  <li>Your school or organization name</li>
+                  <li>Rough timeline for the drive</li>
+                  <li>Whether you want history, coloring, trivia, or a mix</li>
+                </ul>
+              </div>
+              <div className="fc-card p-6 border border-parchment-300/80 shadow-bz-soft">
+                <h2 className="font-heading text-lg text-amber-900 mb-3">Direct contact</h2>
+                <p className="text-stone-600 font-subheading text-base m-0 mb-2">
+                  <a href={`mailto:${contact.email}`} className="text-amber-900 hover:underline">
+                    {contact.email}
+                  </a>
+                </p>
+                <p className="text-stone-600 font-subheading text-base m-0 mb-2">
+                  <a href={`tel:${contact.phoneTel}`} className="text-amber-900 hover:underline">
+                    {contact.phoneDisplay}
+                  </a>
+                </p>
+                <p className="text-stone-500 font-subheading text-sm m-0">{contact.location}</p>
+              </div>
+            </aside>
+            <div className="lg:col-span-8 order-1 lg:order-2 w-full min-w-0">
+              <FreeConsultationSection animated={false} />
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

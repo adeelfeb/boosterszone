@@ -63,7 +63,9 @@ const nextConfig = {
 
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
+    ],
   },
 
   webpack: (config, { isServer, dev }) => {
