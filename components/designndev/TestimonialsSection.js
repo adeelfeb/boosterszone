@@ -3,24 +3,24 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
-import { foundersClubImages } from '../../lib/foundersClubImages'
+import { siteAssets } from '../../lib/siteAssets'
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const testimonials = [
   {
-    name: 'Sahail',
-    role: 'Client',
-    quote: "Professional, clear, and genuinely invested in our outcome. We couldn't have asked for better representation.",
+    name: 'Client A',
+    role: 'Member',
+    quote: 'Replace with a real testimonial when you have one. This slot shows how the carousel works on the home page.',
   },
   {
-    name: 'Joel',
-    role: 'Client',
-    quote: "The team made a complex process straightforward. Highly recommend for anyone needing reliable legal support.",
+    name: 'Client B',
+    role: 'Member',
+    quote: 'Another placeholder quote — swap names and copy to match your organization.',
   },
   {
-    name: 'Anne M.',
-    role: 'Client',
-    quote: "At Sahail Law, we believe the law should empower—not overwhelm. They delivered on that promise for us.",
+    name: 'Client C',
+    role: 'Member',
+    quote: 'Short, credible quotes work best here. You can add or remove entries in TestimonialsSection.js.',
   },
 ]
 
@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
       {/* Background image from temp */}
       <div className="absolute inset-0">
         <Image
-          src={foundersClubImages.testimonialsBg}
+          src={siteAssets.testimonialsBg}
           alt=""
           fill
           className="object-cover"

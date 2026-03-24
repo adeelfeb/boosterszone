@@ -45,21 +45,21 @@ const iconTailored = (
 const items = [
   {
     icon: iconClientCentric,
-    title: 'Client First Approach',
+    title: 'People first',
     description:
-      'Your goals are our priority. We take the time to understand your situation and provide personalized legal solutions designed around your needs.',
+      'Placeholder: describe how you prioritize users, members, or clients. Swap the icon set if these metaphors do not fit.',
   },
   {
     icon: iconTransparent,
-    title: 'Trusted Advocacy',
+    title: 'Trust and clarity',
     description:
-      'We stand firmly by our clients, offering reliable and ethical representation every step of the way.',
+      'Placeholder: explain transparency, security, or how you communicate expectations.',
   },
   {
     icon: iconTailored,
-    title: 'Strategic Excellence',
+    title: 'Built for your workflow',
     description:
-      'Every case is handled with a focused strategy, ensuring strong representation and attention to detail.',
+      'Placeholder: tie your product or service to the outcomes your audience cares about.',
   },
 ]
 

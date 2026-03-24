@@ -2,11 +2,12 @@ import Navbar from '../../components/designndev/Navbar'
 import PracticeAreasSection from '../../components/designndev/PracticeAreasSection'
 import Footer from '../../components/designndev/Footer'
 import TextureOverlay from '../../components/designndev/TextureOverlay'
+import { siteName, siteTagline } from '../../lib/siteConfig'
 
 export const metadata = {
-  title: 'Practice Areas | Founders Club',
-  description: 'Explore our practice areas and how we support founders and entrepreneurs.',
-  keywords: 'Founders Club, practice areas, legal, entrepreneurship',
+  title: `Services | ${siteName}`,
+  description: siteTagline,
+  keywords: 'services, offerings, draft template',
 }
 
 export default function PracticeAreasPage() {

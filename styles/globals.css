@@ -31,7 +31,7 @@
   --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-heading: 'Luxerie', var(--font-serif), Georgia, Cambria, serif;
   --font-subheading: 'Dragon-Serial', var(--font-serif), Georgia, Cambria, serif;
-  /* Founders Club – vibrant gold + forest with gradient/texture */
+  /* Draft theme – gold + forest */
   --fc-forest-950: #020c08;
   --fc-forest-800: #1a3328;
   --fc-forest-700: #1e4234;
@@ -224,7 +224,7 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   background: #0070f3 !important;
 }
 
-/* ---------- Founders Club: buttons & cards (no border-radius, clear borders) ---------- */
+/* ---------- Buttons & cards (no border-radius, clear borders) ---------- */
 .btn-fc-primary {
   display: inline-flex;
   align-items: center;
@@ -291,7 +291,7 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   border-color: var(--fc-gold-400);
 }
 
-/* Founders Club card/section panel – no border radius, clear border */
+/* Card/section panel – no border radius, clear border */
 .fc-card {
   background-color: rgba(30, 66, 52, 0.5);
   border: 1px solid rgba(37, 85, 64, 0.9);

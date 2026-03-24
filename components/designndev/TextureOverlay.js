@@ -1,6 +1,6 @@
 'use client'
 
-import { foundersClubImages } from '../../lib/foundersClubImages'
+import { siteAssets } from '../../lib/siteAssets'
 
 /**
  * Same texture as contact page form section – use on all pages/sections for consistent background.
@@ -9,10 +9,9 @@ import { foundersClubImages } from '../../lib/foundersClubImages'
 export default function TextureOverlay({ opacity = 0.08, className = '' }) {
   return (
     <div
-      className={`absolute inset-0 w-full h-full bg-no-repeat bg-center pointer-events-none ${className}`}
+      className={`absolute inset-0 w-full h-full bg-cover bg-center pointer-events-none ${className}`}
       style={{
-        backgroundImage: `url(${foundersClubImages.texture})`,
-        backgroundSize: 'auto',
+        backgroundImage: `url(${siteAssets.texture})`,
         opacity,
       }}
       aria-hidden

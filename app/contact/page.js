@@ -2,11 +2,12 @@ import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
 import FreeConsultationSection from '../../components/designndev/FreeConsultationSection'
 import TextureOverlay from '../../components/designndev/TextureOverlay'
+import { siteName, siteTagline } from '../../lib/siteConfig'
 
 export const metadata = {
-  title: 'Contact Us | Founders Club',
-  description: 'Get in touch with The Founders Club. Building something meaningful? Connect with 1000+ serious founders and operators who understand your journey.',
-  keywords: 'Founders Club, contact, get in touch',
+  title: `Contact | ${siteName}`,
+  description: siteTagline,
+  keywords: 'contact, get in touch, draft template',
 }
 
 export default function ContactPage() {

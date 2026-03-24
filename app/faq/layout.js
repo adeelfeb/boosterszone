@@ -1,7 +1,9 @@
+import { siteName, siteTagline } from '../../lib/siteConfig'
+
 export const metadata = {
-  title: 'FAQ | Founders Club',
-  description: 'Frequently asked questions about our services, consultations, and legal support in Ontario.',
-  keywords: 'FAQ, Founders Club, legal advice, consultation, Ontario',
+  title: `FAQ | ${siteName}`,
+  description: siteTagline,
+  keywords: 'FAQ, draft template, help',
 }
 
 export default function FAQLayout({ children }) {

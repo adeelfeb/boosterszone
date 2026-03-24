@@ -1,5 +1,6 @@
 import { Poppins, Cormorant_Garamond } from 'next/font/google'
 import '../styles/globals.css'
+import { siteName, siteTagline, siteUrl } from '../lib/siteConfig'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -16,17 +17,18 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata = {
-  title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
-  description: 'The Modern Day Members Only Community. For Founders and Entrepreneurs focused on Mind, Body, and Business.',
-  keywords: 'founders club, entrepreneurs, private network, membership, mastermind',
+  title: `${siteName} | Draft template`,
+  description: siteTagline,
+  keywords: 'draft, template, web app',
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
-    description: 'The Modern Day Members Only Community. For Founders and Entrepreneurs focused on Mind, Body, and Business.',
-    siteName: 'Founders Club',
+    title: `${siteName} | Draft template`,
+    description: siteTagline,
+    url: siteUrl,
+    siteName,
     type: 'website',
   },
 }

@@ -8,12 +8,36 @@ import TextureOverlay from '../../components/designndev/TextureOverlay'
 import { Plus, Minus } from 'lucide-react'
 
 const faqs = [
-  { question: 'What areas of law does Sahail Law cover?', answer: 'We offer legal services across wills and estates, corporate law, real estate, immigration, family law, and dispute resolution. Our team can advise on the right approach for your situation and refer you to specialists when needed.' },
-  { question: 'How do I book a consultation?', answer: 'You can book a consultation by clicking the "Book consultation" button on our website, contacting us via the contact page, or reaching out on WhatsApp. We aim to respond within one business day and will arrange a time that works for you.' },
-  { question: 'What should I bring to my first meeting?', answer: 'For your first meeting, bring any relevant documents (e.g. existing wills, contracts, or correspondence), a short summary of your situation, and a list of questions. We will guide you on anything else needed once we know your matter.' },
-  { question: 'Do you offer fixed fees or only hourly billing?', answer: 'We offer both fixed fees and hourly billing depending on the type of matter. For straightforward work such as wills or certain corporate filings, we often quote a fixed fee. For more open-ended matters we can discuss hourly rates and estimates upfront.' },
-  { question: 'Are consultations confidential?', answer: 'Yes. All communications with our firm are confidential and protected by solicitor–client privilege. We do not share your information with third parties without your consent, except where required by law.' },
-  { question: 'Do you serve clients outside Ontario?', answer: 'Our physical office is in Ontario, and we are licensed to practise law in Ontario. For matters in other provinces or countries we can often work with local counsel or refer you to a trusted lawyer in that jurisdiction.' },
+  {
+    question: 'What is this project?',
+    answer:
+      'A Next.js draft with a marketing shell (home, about, team, services, FAQ, contact) plus member login, signup, and a dashboard area. Replace copy and assets with your own before production.',
+  },
+  {
+    question: 'How do I change the site name and contact info?',
+    answer:
+      'Update the values exported from the site config module in the lib folder. Logo and favicon live under public; hero and section images use files under public/images or paths you configure in the site assets module.',
+  },
+  {
+    question: 'How do members sign in?',
+    answer:
+      'Use the Login page linked from your navigation or bookmarks. After authentication, users are sent to the dashboard. Adjust redirects in the login flow if you need a different default landing page.',
+  },
+  {
+    question: 'Can I remove sections from the home page?',
+    answer:
+      'Yes. Edit the home page component in the app folder and delete or reorder imports (hero, icon row, service grid, testimonials, contact block, and so on).',
+  },
+  {
+    question: 'Is content in the FAQ legally binding?',
+    answer:
+      'No. Everything here is placeholder text for development. Replace with accurate information for your organization and have it reviewed as appropriate.',
+  },
+  {
+    question: 'How do I get help with deployment?',
+    answer:
+      'Refer to your hosting provider’s Next.js guide and the deployment notes in this repository if present. Environment variables for the database and auth layer must be set in each environment.',
+  },
 ]
 
 export default function FAQPage() {
@@ -30,10 +54,10 @@ export default function FAQPage() {
       <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 normal-case">
-            Frequently Asked Questions
+            Frequently asked questions
           </h1>
           <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-subheading">
-            Quick answers to common questions about our services and how we work.
+            Draft answers for developers and stakeholders. Replace with questions your real users ask.
           </p>
         </div>
       </section>
@@ -78,9 +102,9 @@ export default function FAQPage() {
             })}
           </div>
           <p className="mt-12 text-gold-200/80 font-subheading">
-            Can&apos;t find your answer?{' '}
-            <Link href="/contact" className="text-gold-400 hover:text-gold-300 underline">
-              Get in touch
+            Still stuck?{' '}
+            <Link href="/contact" className="text-gold-400 hover:text-gold-300 underline-offset-2 hover:underline">
+              Contact us
             </Link>
             .
           </p>

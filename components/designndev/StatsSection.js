@@ -1,20 +1,20 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { foundersClubImages } from '../../lib/foundersClubImages'
+import { siteAssets } from '../../lib/siteAssets'
 
 const stats = [
-  { value: '1,000+', label: 'Members In Our Network' },
-  { value: '150+', label: 'Partnered Founders' },
-  { value: '$20B+', label: 'Combined Assets Under Management' },
-  { value: '35+', label: 'Advisory Board Members' },
+  { value: '—', label: 'Metric one (replace)' },
+  { value: '—', label: 'Metric two (replace)' },
+  { value: '—', label: 'Metric three (replace)' },
+  { value: '—', label: 'Metric four (replace)' },
 ]
 
 export default function StatsSection() {
   return (
     <section className="py-16 md:py-24 bg-forest-800 border-t border-forest-700/50 relative overflow-hidden">
       {/* Subtle texture */}
-      <div className="absolute inset-0 opacity-[0.04] bg-repeat pointer-events-none" style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }} aria-hidden />
+      <div className="absolute inset-0 opacity-[0.04] bg-repeat pointer-events-none" style={{ backgroundImage: `url(${siteAssets.texture})`, backgroundSize: 'cover' }} aria-hidden />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
@@ -23,7 +23,7 @@ export default function StatsSection() {
           transition={{ duration: 0.6 }}
           className="section-heading font-heading text-2xl md:text-3xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
         >
-          Member Insights & Impact
+          At a glance
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {stats.map((stat, i) => (

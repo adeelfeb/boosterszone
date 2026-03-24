@@ -8,7 +8,8 @@ import Footer from '../components/designndev/Footer'
 import { AuthCardSkeleton } from '../components/Skeleton'
 import { useRecaptcha } from '../utils/useRecaptcha'
 import { safeParseJsonResponse } from '../utils/safeJsonResponse'
-import { foundersClubImages } from '../lib/foundersClubImages'
+import { siteAssets } from '../lib/siteAssets'
+import { siteName } from '../lib/siteConfig'
 
 function formatErrorMessage(payload, fallback) {
   if (!payload) return fallback
@@ -206,13 +207,13 @@ export default function SignupPage() {
     return (
       <>
         <Head>
-          <title>Create Account | Founders Club</title>
-          <meta name="description" content="Create your Founders Club account." />
+          <title>{`Create account | ${siteName}`}</title>
+          <meta name="description" content={`Create your ${siteName} account.`} />
         </Head>
         <div className="min-h-screen bg-forest-800">
           <div
             className="absolute inset-0 w-full h-full bg-no-repeat bg-center opacity-[0.06] pointer-events-none"
-            style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }}
+            style={{ backgroundImage: `url(${siteAssets.texture})`, backgroundSize: 'cover' }}
             aria-hidden
           />
           <Navbar />
@@ -232,14 +233,14 @@ export default function SignupPage() {
   return (
     <>
       <Head>
-        <title>Create Account | Founders Club</title>
-        <meta name="description" content="Create your Founders Club account and apply for membership." />
-        <meta name="keywords" content="Founders Club, sign up, create account, membership" />
+        <title>{`Create account | ${siteName}`}</title>
+        <meta name="description" content={`Create your ${siteName} account to access the member area.`} />
+        <meta name="keywords" content="sign up, create account, registration" />
       </Head>
       <div className="min-h-screen bg-forest-800 relative">
         <div
           className="absolute inset-0 w-full h-full bg-no-repeat bg-center opacity-[0.06] pointer-events-none"
-          style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }}
+          style={{ backgroundImage: `url(${siteAssets.texture})`, backgroundSize: 'cover' }}
           aria-hidden
         />
         <Navbar />
@@ -249,7 +250,7 @@ export default function SignupPage() {
               Create Your Account
             </h1>
             <p className="text-gold-100/90 text-lg">
-              Join The Founders Club. Create an account to apply for membership and access the network.
+              Create an account to access the member area and dashboard.
             </p>
           </div>
           <div className="max-w-md mx-auto px-4">

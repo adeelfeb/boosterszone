@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { foundersClubImages } from '../../lib/foundersClubImages'
+import { siteAssets } from '../../lib/siteAssets'
 
 export default function PracticeAreasSection() {
-  const areas = foundersClubImages.practiceAreas
+  const areas = siteAssets.practiceAreas
 
   return (
     <section id="practice-areas" className="py-16 md:py-24 relative">
@@ -17,7 +17,7 @@ export default function PracticeAreasSection() {
           transition={{ duration: 0.6 }}
           className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-10 md:mb-14 text-left normal-case"
         >
-          <span className="text-white">Practice</span> Areas
+          <span className="text-white">Service</span> areas
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {areas.map((item, i) => (

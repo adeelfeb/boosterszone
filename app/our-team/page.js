@@ -2,18 +2,35 @@ import Link from 'next/link'
 import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
 import TextureOverlay from '../../components/designndev/TextureOverlay'
+import { siteName, siteTagline } from '../../lib/siteConfig'
 
 const team = [
-  { name: 'Sahail', role: 'Founder & Lead Counsel', bio: 'Focused on making legal services clear and accessible. Experienced in corporate, real estate, and estate planning.' },
-  { name: 'Sarah Chen', role: 'Associate Lawyer', bio: 'Practises in family law and immigration. Committed to guiding clients through complex processes with clarity and care.' },
-  { name: 'Michael Torres', role: 'Associate Lawyer', bio: 'Specializes in corporate and commercial matters. Helps businesses and founders with structure, contracts, and compliance.' },
-  { name: 'Emily Park', role: 'Legal Assistant', bio: 'Supports the team with client intake, document preparation, and scheduling so your matter runs smoothly from start to finish.' },
+  {
+    name: 'Team member one',
+    role: 'Role title',
+    bio: 'Replace with a short bio. Photo slots can be added later if you extend this layout.',
+  },
+  {
+    name: 'Team member two',
+    role: 'Role title',
+    bio: 'Another placeholder bio. Keep entries consistent in length for a balanced grid.',
+  },
+  {
+    name: 'Team member three',
+    role: 'Role title',
+    bio: 'Use real names and titles when you are ready; this file is the single source for the Our Team page.',
+  },
+  {
+    name: 'Team member four',
+    role: 'Role title',
+    bio: 'Optional fourth slot. Remove or duplicate the map in the team array as needed.',
+  },
 ]
 
 export const metadata = {
-  title: 'Our Team | Founders Club',
-  description: 'Meet the team. Experienced lawyers and support staff dedicated to clear, practical legal solutions in Ontario.',
-  keywords: 'Founders Club, team, lawyers, Ontario, legal',
+  title: `Our Team | ${siteName}`,
+  description: siteTagline,
+  keywords: 'team, people, draft template',
 }
 
 export default function OurTeamPage() {
@@ -24,17 +41,17 @@ export default function OurTeamPage() {
       <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16">
         <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 normal-case drop-shadow-lg mb-4">
-            Our Team
+            Our team
           </h1>
           <p className="text-gold-100/90 text-lg max-w-2xl mx-auto leading-relaxed font-subheading">
-            The people behind Sahail Law — dedicated to clear, practical legal solutions.
+            Introduce the people behind {siteName}.
           </p>
         </div>
       </section>
       <div className="pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
           <p className="text-gold-100/80 text-lg mb-4 max-w-2xl font-subheading">
-            We are a small team of lawyers and support staff who believe in clear communication, integrity, and practical solutions. Get to know the people behind Sahail Law.
+            This page is a structural draft: headings, spacing, and typography match the rest of the site. Swap in your real roster and bios when you launch.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mt-12">
             {team.map((member, index) => (
@@ -53,7 +70,7 @@ export default function OurTeamPage() {
           </div>
           <div className="mt-16 pt-8">
             <p className="text-gold-100/80 mb-6 font-subheading">
-              We work together to deliver consistent, reliable advice across our practice areas. If you would like to discuss your matter with our team, we are happy to arrange a consultation.
+              Add a closing line about how you collaborate, then send people to contact or signup.
             </p>
             <Link href="/contact" className="btn-fc-primary inline-block">
               Contact us

@@ -3,13 +3,14 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { foundersClubImages } from '../../lib/foundersClubImages'
+import { siteAssets } from '../../lib/siteAssets'
+import { siteName, contact } from '../../lib/siteConfig'
 
 const services = [
-  { label: 'Wills & Estates', href: '#practice-areas' },
-  { label: 'Corporate Law', href: '#practice-areas' },
-  { label: 'Real Estate Law', href: '#practice-areas' },
-  { label: 'Immigration Law', href: '#practice-areas' },
+  { label: 'Service area one', href: '/practice-areas' },
+  { label: 'Service area two', href: '/practice-areas' },
+  { label: 'Service area three', href: '/practice-areas' },
+  { label: 'Service area four', href: '/practice-areas' },
 ]
 
 /** Matches pre–slim-header navbar logo scale (footer stays slightly more prominent than header) */
@@ -117,10 +118,10 @@ export default function Footer() {
             <div className="max-w-md shrink-0">
               <Link href="/" className="inline-flex items-center leading-none no-underline hover:opacity-90 transition-opacity">
                 <Image
-                  src={foundersClubImages.logo}
-                  alt="Founders Club"
+                  src={siteAssets.logo}
+                  alt={siteName}
                   width={128}
-                  height={38}
+                  height={40}
                   className={FOOTER_LOGO_CLASS}
                 />
               </Link>
@@ -135,7 +136,6 @@ export default function Footer() {
                   <li><Link href="/about-us" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">About Us</Link></li>
                   <li><Link href="/our-team" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Team</Link></li>
                   <li><Link href="/contact" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Contact Us</Link></li>
-                  <li><Link href="/partnerships" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Partnerships</Link></li>
                 </ul>
               </div>
 
@@ -158,16 +158,16 @@ export default function Footer() {
                 <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Get in touch</h4>
                 <ul className="space-y-2 text-sm font-subheading">
                   <li>
-                    <a href="mailto:info@sahailaw.ca" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
-                      info@sahailaw.ca
+                    <a href={`mailto:${contact.email}`} className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
+                      {contact.email}
                     </a>
                   </li>
                   <li>
-                    <a href="tel:+14374515551" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
-                      +1 437-451-5551
+                    <a href={`tel:${contact.phoneTel}`} className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
+                      {contact.phoneDisplay}
                     </a>
                   </li>
-                  <li className="text-gold-100/70">Ontario, Canada</li>
+                  <li className="text-gold-100/70">{contact.location}</li>
                 </ul>
               </div>
             </div>
@@ -178,7 +178,7 @@ export default function Footer() {
       <section className="py-3 md:py-4 border-t border-forest-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gold-200/60 text-xs font-subheading">
-            © {currentYear} Founders Club. All rights reserved.
+            © {currentYear} {siteName}. All rights reserved.
           </p>
         </div>
       </section>

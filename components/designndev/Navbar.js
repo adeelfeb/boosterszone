@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { foundersClubImages } from '../../lib/foundersClubImages'
+import { siteAssets } from '../../lib/siteAssets'
+import { siteName } from '../../lib/siteConfig'
 
 function useRouterCompat() {
   const [pathname, setPathname] = useState('')
@@ -54,7 +55,7 @@ export default function Navbar() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/practice-areas', label: 'Practice areas' },
+    { href: '/practice-areas', label: 'Services' },
     { href: '/about-us', label: 'About us' },
     { href: '/our-team', label: 'Our Team' },
     { href: '/faq', label: 'FAQ' },
@@ -108,7 +109,7 @@ export default function Navbar() {
                     href="/practice-areas"
                     className="font-heading text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
                   >
-                    Practice areas
+                    Services
                   </Link>
                 </div>
               </div>
@@ -121,10 +122,10 @@ export default function Navbar() {
                 className="flex items-center leading-none no-underline hover:opacity-90 transition-opacity"
               >
                 <Image
-                  src={foundersClubImages.logo}
-                  alt="Founders Club"
+                  src={siteAssets.logo}
+                  alt={siteName}
                   width={128}
-                  height={38}
+                  height={40}
                   className="h-7 w-auto sm:h-7 md:h-8 lg:h-9 xl:h-9 object-contain"
                   priority
                 />
@@ -133,14 +134,12 @@ export default function Navbar() {
 
             {/* Right: CTA */}
             <div className="hidden sm:flex justify-end items-center min-w-[2.75rem] pl-1">
-              <a
-                href="https://wa.me/13654995551"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-4"
+              <Link
+                href="/contact"
+                className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-4 no-underline"
               >
-                Free Consultation
-              </a>
+                Contact
+              </Link>
             </div>
           </div>
         </div>
@@ -161,15 +160,13 @@ export default function Navbar() {
             <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pt-8 pb-16">
               {/* Mobile: CTA inside menu as full-width button */}
               <div className="sm:hidden mb-8">
-                <a
-                  href="https://wa.me/13654995551"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-fc-primary font-heading w-full justify-center text-base py-3.5"
+                <Link
+                  href="/contact"
+                  className="btn-fc-primary font-heading w-full justify-center text-base py-3.5 no-underline"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Free Consultation
-                </a>
+                  Contact
+                </Link>
               </div>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 w-full max-w-[1200px]">
                 {navItems.map((item) => (

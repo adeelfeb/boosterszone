@@ -14,20 +14,20 @@ export default function VettedForImpact() {
           className="max-w-6xl mx-auto"
         >
           <h2 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-6 text-center normal-case">
-            <span className="text-white">About</span> Sahai Law
+            <span className="text-white">About</span> us
           </h2>
           <div className="text-gold-100/90 text-base md:text-lg leading-relaxed lg:grid lg:grid-cols-2 lg:gap-x-10 lg:gap-y-6">
             <p>
-              At Sahai Law, support is embedded in the way we practice. Our name reflects a clear and ongoing commitment to stand with our clients, provide sound guidance, and deliver advocacy without compromise.
+              This is placeholder copy for a short “about” block on the home page. Use it to summarize what you do, who you serve, and why it matters.
             </p>
             <p>
-              We approach every matter with a disciplined and strategic mindset. From the outset, we focus on understanding your objectives, assessing risk, and positioning your case for the strongest possible outcome. Our work is deliberate, precise, and tailored to the complexities of each matter we handle.
+              Keep paragraphs scannable: one idea each. Replace this block with your own story, or remove the section if you do not need it on the home page.
             </p>
             <p>
-              We believe effective legal representation goes beyond advice. It requires clarity, responsiveness, and a consistent focus on advancing our clients&apos; interests. At Sahai Law, we prioritize communication, attention to detail, and practical solutions that align with your goals.
+              The layout, styling, and animation patterns are ready; only the words and imagery need to reflect your brand.
             </p>
             <p className="text-gold-200 font-medium mt-4 lg:mt-2 lg:col-span-2 text-center">
-              Defined by support. Proven through results.
+              Replace this tagline with yours.
             </p>
           </div>
         </motion.div>

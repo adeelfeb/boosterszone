@@ -5,23 +5,27 @@ import { Calendar, Users, Hexagon, Mic } from 'lucide-react'
 
 const opportunities = [
   {
-    title: 'Accessible Justice',
-    description: "At Stellar Law Professional Corporation, we believe that quality legal support should be accessible to everyone. That's why we offer a free, no-obligation case review to help you understand your rights and legal options.",
+    title: 'Clear positioning',
+    description:
+      'Use this grid to highlight three or four reasons people choose you. Replace each title and paragraph with copy that fits your organization.',
     Icon: Calendar,
   },
   {
-    title: 'Dedicated Support',
-    description: 'Our lawyers are readily available to meet with you and provide clear, practical guidance tailored to your situation. Early legal advice can be crucial in protecting your interests and strengthening your position.',
+    title: 'Responsive support',
+    description:
+      'Draft placeholder: explain how you stay in touch with members or clients — response times, channels, or onboarding.',
     Icon: Users,
   },
   {
-    title: 'Act Without Delay',
-    description: 'Delaying legal advice, or relying on incorrect guidance, can negatively impact your case. Take the first step with confidence. Contact us today to schedule your confidential, no-obligation consultation with one of our experienced legal professionals.',
+    title: 'Take the next step',
+    description:
+      'Draft placeholder: invite visitors to contact you or sign up. Point them to your contact page or member application flow.',
     Icon: Hexagon,
   },
   {
-    title: 'Results That Matter',
-    description: 'We are committed to delivering results that truly matter. We approach every case with precision, strategy, and dedication to achieve the best possible outcome for our clients.',
+    title: 'Outcomes you care about',
+    description:
+      'Draft placeholder: summarize what success looks like for the people you serve, without naming specific brands or past projects unless you want to.',
     Icon: Mic,
   },
 ]
@@ -37,7 +41,7 @@ export default function PartnershipOpportunities() {
           transition={{ duration: 0.6 }}
           className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 text-left mb-12 md:mb-16 normal-case"
         >
-          <span className="text-white">Partnership</span> Opportunities
+          <span className="text-white">Highlights</span>
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {opportunities.map((item, i) => (

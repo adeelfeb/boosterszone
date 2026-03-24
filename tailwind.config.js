@@ -20,7 +20,7 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
-        // Founders Club – vibrant forest + gold with gradient-friendly shades
+        // Draft theme – forest + gold (adjust in tailwind.config.js for your brand)
         forest: {
           950: '#020c08',
           900: '#0d261c',
