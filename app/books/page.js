@@ -32,15 +32,15 @@ export const metadata = {
 
 export default function BooksPage() {
   return (
-    <main className="relative min-h-screen">
-      <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
+    <main className="relative min-h-screen bg-white">
+      <TextureOverlay opacity={0.035} className="mix-blend-multiply" />
       <Navbar />
-      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16">
+      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16 bg-gradient-to-b from-amber-50/40 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-gold-400 mb-6 normal-case">
+          <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-amber-700 mb-6 normal-case">
             Products that actually sell
           </h1>
-          <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-subheading">
+          <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-subheading">
             Custom books and materials built for schools, booster clubs, PTOs, teams, historical societies, and civic
             groups—not another forgettable catalog item.
           </p>
@@ -49,20 +49,20 @@ export default function BooksPage() {
 
       <div className="pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-0 border-t border-forest-600/50">
+          <div className="space-y-0 border-t border-slate-200">
             {lines.map((item, i) => (
               <article
                 key={item.title}
-                className={`py-12 ${i > 0 ? 'border-t border-forest-600/40' : ''}`}
+                className={`py-12 ${i > 0 ? 'border-t border-slate-200' : ''}`}
               >
-                <h2 className="font-heading text-2xl md:text-3xl text-white mb-4">{item.title}</h2>
-                <p className="text-gold-100/90 leading-relaxed font-subheading m-0">{item.body}</p>
+                <h2 className="font-heading text-2xl md:text-3xl text-slate-900 mb-4">{item.title}</h2>
+                <p className="text-slate-600 leading-relaxed font-subheading m-0">{item.body}</p>
               </article>
             ))}
           </div>
 
-          <section className="mt-16 pt-12 border-t border-forest-600/50 text-center">
-            <p className="text-gold-100/90 text-lg font-subheading mb-8 max-w-xl mx-auto">
+          <section className="mt-16 pt-12 border-t border-slate-200 text-center">
+            <p className="text-slate-600 text-lg font-subheading mb-8 max-w-xl mx-auto">
               Ready to see what a book could look like for your group? Request a free fundraising plan—no obligation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

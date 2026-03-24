@@ -12,15 +12,15 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="relative min-h-screen">
-      <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
+    <main className="relative min-h-screen bg-white">
+      <TextureOverlay opacity={0.035} className="mix-blend-multiply" />
       <Navbar />
-      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16">
+      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16 bg-gradient-to-b from-amber-50/40 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-gold-400 mb-6 normal-case">
+          <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-amber-700 mb-6 normal-case">
             Ready to launch?
           </h1>
-          <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-subheading">
+          <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-subheading">
             Tell us about your organization—we&apos;ll outline a custom book idea and how the fundraiser can work for
             your timeline and goals.
           </p>

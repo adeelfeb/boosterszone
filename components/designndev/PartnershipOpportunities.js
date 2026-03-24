@@ -39,9 +39,9 @@ export default function PartnershipOpportunities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 text-left mb-12 md:mb-16 normal-case"
+          className="section-heading font-heading text-4xl md:text-5xl font-medium text-amber-700 text-left mb-12 md:mb-16 normal-case"
         >
-          <span className="text-white">Highlights</span>
+          <span className="text-slate-900">Highlights</span>
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {opportunities.map((item, i) => (
@@ -54,14 +54,14 @@ export default function PartnershipOpportunities() {
               className="fc-card p-6 md:p-8 flex flex-col"
             >
               <div className="mb-4 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-gold-400/10 text-gold-400">
+                <div className="p-2 rounded-lg bg-amber-50 text-amber-700 border border-amber-200">
                   <item.Icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-subheading text-xl font-medium text-gold-200">
+                <h3 className="font-subheading text-xl font-medium text-slate-900">
                   {item.title}
                 </h3>
               </div>
-              <p className="text-gold-100/80 text-sm md:text-base leading-relaxed flex-1">
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed flex-1">
                 {item.description}
               </p>
             </motion.div>
@@ -73,7 +73,7 @@ export default function PartnershipOpportunities() {
           viewport={{ once: true }}
           className="flex justify-center mt-12"
         >
-          <svg className="w-6 h-6 text-gold-500/60" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-amber-600/70" fill="currentColor" viewBox="0 0 24 24">
             <path d="M7 10l5 5 5-5z" />
           </svg>
         </motion.div>

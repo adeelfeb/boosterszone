@@ -35,41 +35,41 @@ export const metadata = {
 
 export default function OurTeamPage() {
   return (
-    <main className="relative min-h-screen">
-      <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
+    <main className="relative min-h-screen bg-white">
+      <TextureOverlay opacity={0.035} className="mix-blend-multiply" />
       <Navbar />
-      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16">
+      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16 bg-gradient-to-b from-amber-50/40 to-white">
         <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 normal-case drop-shadow-lg mb-4">
+          <h1 className="section-heading font-heading text-4xl md:text-5xl font-medium text-amber-700 normal-case mb-4">
             Our team
           </h1>
-          <p className="text-gold-100/90 text-lg max-w-2xl mx-auto leading-relaxed font-subheading">
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed font-subheading">
             Introduce the people behind {siteName}.
           </p>
         </div>
       </section>
       <div className="pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-          <p className="text-gold-100/80 text-lg mb-4 max-w-2xl font-subheading">
+          <p className="text-slate-600 text-lg mb-4 max-w-2xl font-subheading">
             This page is a structural draft: headings, spacing, and typography match the rest of the site. Swap in your real roster and bios when you launch.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mt-12">
             {team.map((member, index) => (
               <div key={index} className="py-0">
-                <h2 className="font-subheading text-xl md:text-2xl font-medium text-gold-200 mb-2">
+                <h2 className="font-subheading text-xl md:text-2xl font-medium text-slate-900 mb-2">
                   {member.name}
                 </h2>
-                <p className="text-gold-400/90 text-sm font-medium mb-3 font-subheading">
+                <p className="text-amber-700 text-sm font-medium mb-3 font-subheading">
                   {member.role}
                 </p>
-                <p className="text-gold-100/90 leading-relaxed font-subheading">
+                <p className="text-slate-600 leading-relaxed font-subheading">
                   {member.bio}
                 </p>
               </div>
             ))}
           </div>
           <div className="mt-16 pt-8">
-            <p className="text-gold-100/80 mb-6 font-subheading">
+            <p className="text-slate-600 mb-6 font-subheading">
               Add a closing line about how you collaborate, then send people to contact or signup.
             </p>
             <Link href="/contact" className="btn-fc-primary inline-block">

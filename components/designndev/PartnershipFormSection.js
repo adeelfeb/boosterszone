@@ -7,7 +7,7 @@ import FreeConsultationSection from './FreeConsultationSection'
  */
 export default function PartnershipFormSection() {
   return (
-    <section id="free-fundraising-plan" className="py-16 md:py-24 relative overflow-hidden scroll-mt-28">
+    <section id="free-fundraising-plan" className="py-16 md:py-24 relative overflow-hidden scroll-mt-28 bg-slate-50 border-t border-slate-200">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <FreeConsultationSection animated />
       </div>

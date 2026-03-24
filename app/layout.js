@@ -39,12 +39,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${poppins.variable} ${cormorant.variable}`} suppressHydrationWarning>
       <body className={`${poppins.className} antialiased relative min-h-screen`} suppressHydrationWarning>
         {/* Static full-viewport background – all pages share this */}
+        <div className="fixed inset-0 z-0 bg-white" aria-hidden />
         <div
-          className="fixed inset-0 z-0 bg-gradient-to-br from-forest-950 via-forest-900 to-[#0a1a2e]"
-          aria-hidden
-        />
-        <div
-          className="fixed inset-0 z-0 opacity-40 pointer-events-none bg-[url('/images/bz-texture.svg')] bg-repeat"
+          className="fixed inset-0 z-0 opacity-[0.04] pointer-events-none bg-[url('/images/bz-texture.svg')] bg-repeat mix-blend-multiply"
           style={{ backgroundSize: '400px 400px' }}
           aria-hidden
         />
