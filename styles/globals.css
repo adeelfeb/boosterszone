@@ -31,15 +31,15 @@
   --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-heading: 'Luxerie', var(--font-serif), Georgia, Cambria, serif;
   --font-subheading: 'Dragon-Serial', var(--font-serif), Georgia, Cambria, serif;
-  /* Draft theme – gold + forest */
-  --fc-forest-950: #020c08;
-  --fc-forest-800: #1a3328;
-  --fc-forest-700: #1e4234;
-  --fc-forest-600: #255540;
-  --fc-gold-50: #FBF6E8;
-  --fc-gold-400: #D4AF37;
-  --fc-gold-500: #C9A227;
-  --fc-gold-300: #E2CF9E;
+  /* Boosters Zone — navy + amber */
+  --fc-forest-950: #050d18;
+  --fc-forest-800: #132f4c;
+  --fc-forest-700: #1a3d5c;
+  --fc-forest-600: #245078;
+  --fc-gold-50: #fffbeb;
+  --fc-gold-400: #fbbf24;
+  --fc-gold-500: #f59e0b;
+  --fc-gold-300: #fcd34d;
   /* Fixed Navbar – menu overlay top; ≈ vertical padding + logo (see components/designndev/Navbar.js) */
   --fc-navbar-height: 3.5rem;
 }
@@ -293,8 +293,8 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
 
 /* Card/section panel – no border radius, clear border */
 .fc-card {
-  background-color: rgba(30, 66, 52, 0.5);
-  border: 1px solid rgba(37, 85, 64, 0.9);
+  background-color: rgba(19, 47, 76, 0.55);
+  border: 1px solid rgba(36, 80, 120, 0.85);
   border-radius: 0;
 }
 

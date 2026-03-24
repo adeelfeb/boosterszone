@@ -2,10 +2,31 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { siteAssets } from '../../lib/siteAssets'
+
+/** Fallback grid for legacy routes; marketing site uses /fundraising and /books. */
+const DEFAULT_AREAS = [
+  {
+    image: '/logo.svg',
+    title: 'Custom history books',
+    intro: 'Local stories',
+    description: 'Turn your community narrative into a sellable book.',
+  },
+  {
+    image: '/logo.svg',
+    title: 'Coloring & trivia',
+    intro: 'Student-friendly',
+    description: 'High-margin products schools reorder year after year.',
+  },
+  {
+    image: '/logo.svg',
+    title: 'Fundraising support',
+    intro: 'We help you sell',
+    description: 'Simple pricing, strong margins, proven in the Merrimack Valley.',
+  },
+]
 
 export default function PracticeAreasSection() {
-  const areas = siteAssets.practiceAreas
+  const areas = DEFAULT_AREAS
 
   return (
     <section id="practice-areas" className="py-16 md:py-24 relative">

@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
       {/* Background image from temp */}
       <div className="absolute inset-0">
         <Image
-          src={siteAssets.testimonialsBg}
+          src={siteAssets.texture}
           alt=""
           fill
           className="object-cover"

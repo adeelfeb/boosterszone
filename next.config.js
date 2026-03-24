@@ -125,6 +125,13 @@ const nextConfig = {
   // Production optimizations
   poweredByHeader: false, // Remove X-Powered-By header
   compress: true, // Enable gzip compression
+
+  async redirects() {
+    return [
+      { source: '/about-us', destination: '/about', permanent: true },
+      { source: '/practice-areas', destination: '/fundraising', permanent: true },
+    ]
+  },
 }
 
 module.exports = nextConfig

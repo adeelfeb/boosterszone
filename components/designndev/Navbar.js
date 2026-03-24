@@ -55,10 +55,9 @@ export default function Navbar() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/practice-areas', label: 'Services' },
-    { href: '/about-us', label: 'About us' },
-    { href: '/our-team', label: 'Our Team' },
-    { href: '/faq', label: 'FAQ' },
+    { href: '/fundraising', label: 'Fundraising' },
+    { href: '/books', label: 'Books' },
+    { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ]
 
@@ -100,16 +99,16 @@ export default function Navbar() {
               <div className="hidden lg:flex items-center gap-2 pl-3">
                 <div className="flex items-center gap-8">
                   <Link
-                    href="/about-us"
+                    href="/fundraising"
                     className="font-heading text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
                   >
-                    About us
+                    Fundraising
                   </Link>
                   <Link
-                    href="/practice-areas"
+                    href="/books"
                     className="font-heading text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
                   >
-                    Services
+                    Books
                   </Link>
                 </div>
               </div>
@@ -124,9 +123,9 @@ export default function Navbar() {
                 <Image
                   src={siteAssets.logo}
                   alt={siteName}
-                  width={128}
-                  height={40}
-                  className="h-7 w-auto sm:h-7 md:h-8 lg:h-9 xl:h-9 object-contain"
+                  width={200}
+                  height={44}
+                  className="h-8 w-auto sm:h-8 md:h-9 lg:h-10 xl:h-10 object-contain object-left"
                   priority
                 />
               </Link>
@@ -138,7 +137,7 @@ export default function Navbar() {
                 href="/contact"
                 className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-4 no-underline"
               >
-                Contact
+                Start a fundraiser
               </Link>
             </div>
           </div>
@@ -165,7 +164,7 @@ export default function Navbar() {
                   className="btn-fc-primary font-heading w-full justify-center text-base py-3.5 no-underline"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact
+                  Start a fundraiser
                 </Link>
               </div>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 w-full max-w-[1200px]">

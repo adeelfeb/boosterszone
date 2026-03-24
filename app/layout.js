@@ -17,15 +17,16 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata = {
-  title: `${siteName} | Draft template`,
+  title: `${siteName} | Fundraising books for schools & communities`,
   description: siteTagline,
-  keywords: 'draft, template, web app',
+  keywords:
+    'fundraising, school fundraiser, custom books, coloring books, local history books, booster club, PTO, PTA',
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: `${siteName} | Draft template`,
+    title: `${siteName} | Fundraising books for schools & communities`,
     description: siteTagline,
     url: siteUrl,
     siteName,
@@ -39,8 +40,12 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.className} antialiased relative min-h-screen`} suppressHydrationWarning>
         {/* Static full-viewport background – all pages share this */}
         <div
-          className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/images/bg.png)' }}
+          className="fixed inset-0 z-0 bg-gradient-to-br from-forest-950 via-forest-900 to-[#0a1a2e]"
+          aria-hidden
+        />
+        <div
+          className="fixed inset-0 z-0 opacity-40 pointer-events-none bg-[url('/images/bz-texture.svg')] bg-repeat"
+          style={{ backgroundSize: '400px 400px' }}
           aria-hidden
         />
         <div className="relative z-10 min-h-screen">

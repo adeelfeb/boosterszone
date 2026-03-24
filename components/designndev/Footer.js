@@ -6,11 +6,10 @@ import Link from 'next/link'
 import { siteAssets } from '../../lib/siteAssets'
 import { siteName, contact } from '../../lib/siteConfig'
 
-const services = [
-  { label: 'Service area one', href: '/practice-areas' },
-  { label: 'Service area two', href: '/practice-areas' },
-  { label: 'Service area three', href: '/practice-areas' },
-  { label: 'Service area four', href: '/practice-areas' },
+const products = [
+  { label: 'How fundraising works', href: '/fundraising' },
+  { label: 'Books & products', href: '/books' },
+  { label: 'Free fundraising plan', href: '/contact#free-fundraising-plan' },
 ]
 
 /** Matches pre–slim-header navbar logo scale (footer stays slightly more prominent than header) */
@@ -52,7 +51,7 @@ function FooterNewsletter() {
   return (
     <div className="mt-5 max-w-sm">
       <p className="font-subheading text-xs tracking-wide text-gold-200/90 uppercase mb-2">
-        Email updates
+        Stay in the loop
       </p>
       <form onSubmit={handleSubmit} className="relative flex flex-col gap-2 sm:flex-row sm:items-stretch">
         <label htmlFor="footer-newsletter-email" className="sr-only">
@@ -120,8 +119,8 @@ export default function Footer() {
                 <Image
                   src={siteAssets.logo}
                   alt={siteName}
-                  width={128}
-                  height={40}
+                  width={200}
+                  height={44}
                   className={FOOTER_LOGO_CLASS}
                 />
               </Link>
@@ -133,17 +132,19 @@ export default function Footer() {
               <div>
                 <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Menu</h4>
                 <ul className="space-y-2 text-sm font-subheading">
-                  <li><Link href="/about-us" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">About Us</Link></li>
-                  <li><Link href="/our-team" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Team</Link></li>
-                  <li><Link href="/contact" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Contact Us</Link></li>
+                  <li><Link href="/" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Home</Link></li>
+                  <li><Link href="/fundraising" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Fundraising</Link></li>
+                  <li><Link href="/books" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Books</Link></li>
+                  <li><Link href="/about" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">About</Link></li>
+                  <li><Link href="/contact" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Contact</Link></li>
                 </ul>
               </div>
 
-              {/* Services */}
+              {/* Programs */}
               <div>
-                <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Services</h4>
+                <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Programs</h4>
                 <ul className="space-y-2 text-sm font-subheading">
-                  {services.map((s) => (
+                  {products.map((s) => (
                     <li key={s.label}>
                       <Link href={s.href} className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
                         {s.label}
