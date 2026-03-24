@@ -25,7 +25,7 @@ MONGODB_URI=mongodb://localhost:27017/your-database-name
 
 Or for MongoDB Atlas:
 ```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database-name
+MONGODB_URI=<use the connection string from MongoDB Atlas; never commit it>
 ```
 
 ### 3. Check MongoDB Service

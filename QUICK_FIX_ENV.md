@@ -80,19 +80,19 @@ npm run dev
 3. **Check format**: No spaces around `=`
    ```env
    # ✅ Correct
-   SMTP2GO_API_KEY=api-xxxxx
+   SMTP2GO_API_KEY=<paste from SMTP2Go dashboard>
    
    # ❌ Wrong
-   SMTP2GO_API_KEY = api-xxxxx
+   SMTP2GO_API_KEY = <paste from SMTP2Go dashboard>
    ```
 
 4. **Check quotes**: Don't use quotes (they'll be stripped automatically)
    ```env
    # ✅ Correct
-   SMTP2GO_API_KEY=api-xxxxx
+   SMTP2GO_API_KEY=<paste from SMTP2Go dashboard>
    
    # ⚠️ Will work but quotes are unnecessary
-   SMTP2GO_API_KEY="api-xxxxx"
+   SMTP2GO_API_KEY="<paste from SMTP2Go dashboard>"
    ```
 
 5. **Restart server**: Always restart after changing `.env` files
@@ -112,7 +112,7 @@ JWT_SECRET=your_jwt_secret_key_here
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
 
 # SMTP2Go Email (Required for email verification)
-SMTP2GO_API_KEY=api-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SMTP2GO_API_KEY=
 SMTP2GO_FROM_EMAIL=noreply@yourdomain.com
 SMTP2GO_FROM_NAME=The Server
 

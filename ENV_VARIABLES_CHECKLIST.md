@@ -95,7 +95,7 @@ NEXT_PUBLIC_BASE_URL=http://localhost:8000
 NODE_ENV=development
 
 # SMTP2Go Email Configuration
-SMTP2GO_API_KEY=api-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SMTP2GO_API_KEY=
 SMTP2GO_FROM_EMAIL=noreply@yourdomain.com
 SMTP2GO_FROM_NAME=The Server
 

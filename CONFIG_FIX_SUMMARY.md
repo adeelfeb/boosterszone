@@ -90,19 +90,19 @@ Try signing up a new user. The OTP email should now be sent successfully.
 3. **Check file format**: No spaces around `=`
    ```env
    # ✅ Correct
-   SMTP2GO_API_KEY=api-xxxxx
+   SMTP2GO_API_KEY=<paste from SMTP2Go dashboard>
    
    # ❌ Wrong
-   SMTP2GO_API_KEY = api-xxxxx
+   SMTP2GO_API_KEY = <paste from SMTP2Go dashboard>
    ```
 
 4. **Check for quotes**: Values should not have quotes (the code will strip them automatically)
    ```env
    # ✅ Correct
-   SMTP2GO_API_KEY=api-xxxxx
+   SMTP2GO_API_KEY=<paste from SMTP2Go dashboard>
    
    # ⚠️ Will work but quotes will be stripped
-   SMTP2GO_API_KEY="api-xxxxx"
+   SMTP2GO_API_KEY="<paste from SMTP2Go dashboard>"
    ```
 
 5. **Use the debug endpoint**: Visit `/api/debug/env` to see what's actually loaded

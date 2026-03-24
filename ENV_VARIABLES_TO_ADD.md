@@ -11,7 +11,7 @@ Create or update your `.env.local` file with the following content:
 # Database Configuration
 MONGODB_URI=mongodb://localhost:27017/proofresponse
 # Or for MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database-name
+# MONGODB_URI=<Atlas connection string from MongoDB UI — do not commit>
 JWT_SECRET=your_jwt_secret_key_here_minimum_32_characters_long
 
 # Application URL

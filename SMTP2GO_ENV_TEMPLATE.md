@@ -20,7 +20,7 @@ SMTP2GO_FROM_NAME=Design n Dev
 2. **Navigate to API Keys**
    - Go to **Settings** → **API Keys** (or **SMTP Users** → **API Keys**)
    - If you don't have an API key, click **Create API Key** or **Add API Key**
-   - Copy the API key (it will look like: `api-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`)
+   - Copy the API key from the dashboard (SMTP2Go shows a value starting with `api-`)
 
 3. **Verify Your Sender Email**
    - Go to **Sending** → **Verified Senders** in the SMTP2Go dashboard
@@ -31,7 +31,7 @@ SMTP2GO_FROM_NAME=Design n Dev
 
 | Variable | Required | Description | Example |
 |----------|----------|-------------|---------|
-| `SMTP2GO_API_KEY` | ✅ **Yes** | Your SMTP2Go API key from the dashboard | `api-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` |
+| `SMTP2GO_API_KEY` | ✅ **Yes** | Your SMTP2Go API key from the dashboard | (paste from Settings → API Keys) |
 | `SMTP2GO_FROM_EMAIL` | ✅ **Yes** | The verified sender email address | `noreply@designndev.com` |
 | `SMTP2GO_FROM_NAME` | ❌ No | Display name for the sender (optional) | `Design n Dev` |
 
@@ -54,7 +54,7 @@ NEXT_PUBLIC_BASE_URL=http://localhost:8000
 NODE_ENV=development
 
 # SMTP2GO API Configuration (for email verification)
-SMTP2GO_API_KEY=api-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+SMTP2GO_API_KEY=
 SMTP2GO_FROM_EMAIL=noreply@designndev.com
 SMTP2GO_FROM_NAME=Design n Dev
 
