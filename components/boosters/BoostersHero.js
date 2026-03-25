@@ -129,9 +129,6 @@ export default function BoostersHero() {
                   </div>
                 </div>
               </div>
-              <p className="mt-3 text-center lg:text-right text-xs text-stone-500 font-subheading">
-                Stock imagery for layout — swap for your town, school, or book photos anytime.
-              </p>
             </motion.div>
           </div>
         </div>

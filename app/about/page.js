@@ -34,7 +34,7 @@ export default function AboutPage() {
               <div className="lg:col-span-5">
                 <div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0 rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80">
                   <Image
-                    src={marketingImages.pageAbout}
+                    src={marketingImages.pageAboutBody}
                     alt="Research and archives for community books"
                     fill
                     className="object-cover"

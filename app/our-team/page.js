@@ -11,25 +11,25 @@ const team = [
   {
     name: 'Team member one',
     role: 'Role title',
-    bio: 'Replace with a short bio. Swap the photo URL in the team array when you have real headshots.',
+    bio: 'Short bio introducing this person’s role and background.',
     image: marketingImages.teamPortrait1,
   },
   {
     name: 'Team member two',
     role: 'Role title',
-    bio: 'Another placeholder bio. Keep entries consistent in length for a balanced grid.',
+    bio: 'Short bio—keep length similar across cards for a balanced layout.',
     image: marketingImages.teamPortrait2,
   },
   {
     name: 'Team member three',
     role: 'Role title',
-    bio: 'Use real names and titles when you are ready; this file is the single source for the Our Team page.',
+    bio: 'Names, titles, and bios are edited in this page’s team array.',
     image: marketingImages.teamPortrait3,
   },
   {
     name: 'Team member four',
     role: 'Role title',
-    bio: 'Optional fourth slot. Remove or duplicate the map in the team array as needed.',
+    bio: 'Optional fourth card; add or remove entries in the team array as needed.',
     image: marketingImages.teamPortrait4,
   },
 ]
@@ -55,7 +55,7 @@ export default function OurTeamPage() {
       <div className="pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
           <p className="text-stone-600 text-lg mb-12 max-w-3xl font-subheading">
-            This layout uses a photo card grid—swap placeholder portraits and bios when you launch.
+            Meet the people behind {siteName}.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10">
             {team.map((member, index) => (
