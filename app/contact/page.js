@@ -24,7 +24,10 @@ export default function ContactPage() {
         imageAlt="Reach out to plan your fundraiser"
       />
 
-      <div id="free-fundraising-plan" className="pb-20 scroll-mt-28">
+      <div className="pb-20 scroll-mt-28">
+        <div id="free-fundraising-plan" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
+        <div id="sample-page" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
+        <div id="book-demo" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
             <aside className="lg:col-span-4 space-y-8 order-2 lg:order-1">

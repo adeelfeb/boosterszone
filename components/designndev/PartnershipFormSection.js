@@ -7,7 +7,10 @@ import FreeConsultationSection from './FreeConsultationSection'
  */
 export default function PartnershipFormSection() {
   return (
-    <section id="free-fundraising-plan" className="py-16 md:py-24 relative overflow-hidden scroll-mt-28 bg-gradient-to-b from-parchment-200/65 via-parchment-100/90 to-parchment-50 border-t border-parchment-300/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]">
+    <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-parchment-200/65 via-parchment-100/90 to-parchment-50 border-t border-parchment-300/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]">
+      <div id="free-fundraising-plan" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
+      <div id="sample-page" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
+      <div id="book-demo" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <FreeConsultationSection animated />
       </div>

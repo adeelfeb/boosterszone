@@ -134,10 +134,10 @@ export default function Navbar() {
             {/* Right: CTA */}
             <div className="hidden sm:flex justify-end items-center min-w-[2.75rem] pl-1">
               <Link
-                href="/contact"
+                href="/contact#free-fundraising-plan"
                 className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-4 no-underline"
               >
-                Start a fundraiser
+                Get your plan
               </Link>
             </div>
           </div>
@@ -160,11 +160,11 @@ export default function Navbar() {
               {/* Mobile: CTA inside menu as full-width button */}
               <div className="sm:hidden mb-8">
                 <Link
-                  href="/contact"
+                  href="/contact#free-fundraising-plan"
                   className="btn-fc-primary font-heading w-full justify-center text-base py-3.5 no-underline"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Start a fundraiser
+                  Get your plan
                 </Link>
               </div>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 w-full max-w-[1200px]">

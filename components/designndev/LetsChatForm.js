@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Loader2, ChevronRight } from 'lucide-react'
 import { useRecaptcha } from '../../utils/useRecaptcha'
 import { safeParseJsonResponse } from '../../utils/safeJsonResponse'
@@ -16,6 +16,22 @@ export default function LetsChatForm() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const raw = window.location.hash.replace(/^#/, '')
+    const prefills = {
+      'sample-page': "I'd like a free sample page for our school (school name + town).",
+      'free-fundraising-plan': "I'd like a free fundraising plan for our school.",
+      'book-demo': "I'd like to book a 10-minute demo.",
+    }
+    const text = prefills[raw]
+    if (!text) return
+    setFormData((prev) => {
+      if (prev.message.trim()) return prev
+      return { ...prev, message: text }
+    })
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target

@@ -3,16 +3,16 @@ import { sourceSans, sourceSerif } from '../lib/fonts'
 import { siteName, siteTagline, siteUrl } from '../lib/siteConfig'
 
 export const metadata = {
-  title: `${siteName} | Fundraising books for schools & communities`,
+  title: `${siteName} | Fundraising parents actually want to buy`,
   description: siteTagline,
   keywords:
-    'fundraising, school fundraiser, custom books, coloring books, local history books, booster club, PTO, PTA',
+    'elementary school fundraiser, custom books, coloring books, local history books, booster club, PTO, PTA, cookie dough alternative',
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: `${siteName} | Fundraising books for schools & communities`,
+    title: `${siteName} | Fundraising parents actually want to buy`,
     description: siteTagline,
     url: siteUrl,
     siteName,
