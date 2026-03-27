@@ -28,7 +28,7 @@ export default function BoostersHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-14 md:pb-20 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-center">
           {/* Copy + CTAs + stats */}
-          <div className="lg:col-span-5 xl:col-span-5 order-2 lg:order-1">
+          <div className="min-w-0 lg:col-span-5 xl:col-span-5 order-2 lg:order-1">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -83,13 +83,13 @@ export default function BoostersHero() {
             >
               <Link
                 href="/contact#free-fundraising-plan"
-                className="btn-fc-primary text-base px-7 py-3.5 no-underline inline-flex items-center justify-center"
+                className="btn-fc-primary text-base px-7 py-3.5 no-underline inline-flex items-center justify-center w-full sm:w-auto min-w-0 text-center"
               >
                 Get Your Fundraising Plan
               </Link>
               <Link
                 href="/contact#sample-page"
-                className="btn-fc-secondary text-base px-7 py-3.5 no-underline inline-flex items-center justify-center"
+                className="btn-fc-secondary text-base px-7 py-3.5 no-underline inline-flex items-center justify-center w-full sm:w-auto min-w-0 text-center"
               >
                 See Your School’s Book (Free)
               </Link>
@@ -105,17 +105,17 @@ export default function BoostersHero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.18 }}
-              className="grid grid-cols-3 gap-3 sm:gap-4 pt-8 border-t border-parchment-300/80"
+              className="grid grid-cols-1 min-[400px]:grid-cols-3 gap-3 sm:gap-4 pt-8 border-t border-parchment-300/80"
             >
               {stats.map((s) => (
                 <div
                   key={s.label}
-                  className="text-center sm:text-left rounded-sm bg-white/60 border border-parchment-300/70 px-3 py-3 shadow-sm backdrop-blur-sm"
+                  className="min-w-0 text-center sm:text-left rounded-sm bg-white/60 border border-parchment-300/70 px-2.5 sm:px-3 py-3 shadow-sm backdrop-blur-sm"
                 >
-                  <p className="font-subheading text-[0.65rem] sm:text-xs uppercase tracking-wider text-stone-500 mb-1">
+                  <p className="font-subheading text-[0.65rem] sm:text-xs uppercase tracking-wider text-stone-500 mb-1 leading-snug break-words">
                     {s.label}
                   </p>
-                  <p className="font-heading text-xl sm:text-2xl text-amber-900">{s.value}</p>
+                  <p className="font-heading text-lg min-[400px]:text-xl sm:text-2xl text-amber-900 break-words">{s.value}</p>
                   {s.sub && (
                     <p className="font-subheading text-[0.65rem] text-stone-500 mt-0.5 mb-0">{s.sub}</p>
                   )}
@@ -125,41 +125,41 @@ export default function BoostersHero() {
           </div>
 
           {/* Image collage */}
-          <div className="lg:col-span-7 xl:col-span-7 order-1 lg:order-2">
+          <div className="min-w-0 lg:col-span-7 xl:col-span-7 order-1 lg:order-2">
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.65, delay: 0.08, ease: 'easeOut' }}
               className="relative mx-auto w-full max-w-xl lg:max-w-none"
             >
-              <div className="grid grid-cols-1 gap-3 md:gap-4 lg:grid-cols-12 lg:grid-rows-2 lg:min-h-[420px]">
-                <div className="relative aspect-[16/10] lg:col-span-7 lg:row-span-2 lg:aspect-auto lg:min-h-[300px] rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-100">
+              <div className="grid min-h-0 grid-cols-1 gap-3 md:gap-4 lg:grid-cols-12 lg:grid-rows-2 lg:min-h-[420px]">
+                <div className="relative aspect-[16/11] sm:aspect-[16/10] lg:col-span-7 lg:row-span-2 lg:aspect-auto lg:min-h-[300px] rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-100">
                   <Image
                     src={marketingImages.heroMain}
                     alt="Custom book cover and stack — real printed school fundraiser editions"
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 58vw"
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-stone-900/25 via-transparent to-transparent pointer-events-none" aria-hidden />
                 </div>
-                <div className="grid grid-cols-2 gap-3 md:gap-4 lg:contents">
-                  <div className="relative aspect-[4/3] lg:col-span-5 lg:row-start-1 lg:min-h-[200px] rounded-md overflow-hidden shadow-bz-soft border border-parchment-300/80 bg-parchment-100">
+                <div className="grid min-h-0 grid-cols-2 gap-3 md:gap-4 lg:contents">
+                  <div className="relative aspect-[4/3] min-h-0 lg:col-span-5 lg:row-start-1 lg:min-h-[200px] rounded-md overflow-hidden shadow-bz-soft border border-parchment-300/80 bg-parchment-100">
                     <Image
                       src={marketingImages.heroSchool}
                       alt="Kids with books — school usage and classroom connection"
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                       sizes="(max-width: 1024px) 50vw, 28vw"
                     />
                   </div>
-                  <div className="relative aspect-[4/3] lg:col-span-5 lg:row-start-2 lg:min-h-[200px] rounded-md overflow-hidden shadow-bz-soft border border-parchment-300/80 bg-parchment-100">
+                  <div className="relative aspect-[4/3] min-h-0 lg:col-span-5 lg:row-start-2 lg:min-h-[200px] rounded-md overflow-hidden shadow-bz-soft border border-parchment-300/80 bg-parchment-100">
                     <Image
                       src={marketingImages.heroCommunity}
                       alt="Community — local history and pride"
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                       sizes="(max-width: 1024px) 50vw, 28vw"
                     />
                   </div>

@@ -29,7 +29,7 @@ export default function MarketingPageHero({
       <div className="absolute top-0 right-0 w-1/2 max-w-xl h-full opacity-[0.07] pointer-events-none bg-[url('/images/bz-texture.svg')] bg-repeat mix-blend-multiply" style={{ backgroundSize: '240px' }} aria-hidden />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 md:pb-16 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          <div className="lg:col-span-6 xl:col-span-5">
+          <div className="min-w-0 lg:col-span-6 xl:col-span-5">
             {eyebrow && (
               <p className="text-amber-800 font-subheading text-xs sm:text-sm tracking-[0.18em] uppercase mb-4">
                 {eyebrow}
@@ -45,13 +45,13 @@ export default function MarketingPageHero({
             )}
             {children}
           </div>
-          <div className="lg:col-span-6 xl:col-span-7">
+          <div className="min-w-0 lg:col-span-6 xl:col-span-7">
             <div className="relative aspect-[16/11] sm:aspect-[5/3] w-full max-w-2xl lg:max-w-none mx-auto rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
               <Image
                 src={src}
                 alt={imageAlt || `${title} — Boosters Zone`}
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 55vw"
                 priority
               />

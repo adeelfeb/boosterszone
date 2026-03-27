@@ -65,7 +65,7 @@ export default function BoostersHomeContent() {
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/95`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-5 order-2 lg:order-1">
+            <div className="min-w-0 lg:col-span-5 order-2 lg:order-1">
               <div className="h-1 w-16 bg-gradient-to-r from-amber-500 to-amber-600 mb-6 rounded-full opacity-90" aria-hidden />
               <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-6 normal-case">
                 Built for Elementary Schools (First)
@@ -86,14 +86,14 @@ export default function BoostersHomeContent() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.5 }}
-              className="lg:col-span-7 order-1 lg:order-2"
+              className="min-w-0 lg:col-span-7 order-1 lg:order-2"
             >
-              <div className="relative aspect-[16/11] rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
+              <div className="relative aspect-[16/11] sm:aspect-[16/10] w-full rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
                 <Image
                   src={marketingImages.sectionBooks}
                   alt="Books and reading — fundraising products people keep"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 58vw"
                 />
               </div>
@@ -126,7 +126,7 @@ export default function BoostersHomeContent() {
                 body: 'You approve → we print → you sell. Families get something they keep—not a one-night treat.',
               },
             ].map((item) => (
-              <div key={item.title} className="fc-card p-8 border border-parchment-300/70 shadow-bz-card">
+              <div key={item.title} className="fc-card min-w-0 p-6 sm:p-8 border border-parchment-300/70 shadow-bz-card">
                 <h3 className="font-heading text-xl md:text-2xl text-stone-900 mb-4">{item.title}</h3>
                 <p className="text-stone-600 font-subheading leading-relaxed m-0">{item.body}</p>
               </div>
@@ -150,10 +150,16 @@ export default function BoostersHomeContent() {
             {products.map((p) => (
               <div
                 key={p.title}
-                className="group flex flex-col border border-parchment-300/80 bg-white/80 overflow-hidden hover:border-amber-400/70 transition-all duration-300 shadow-bz-soft hover:shadow-bz-card"
+                className="group flex min-w-0 flex-col border border-parchment-300/80 bg-white/80 overflow-hidden hover:border-amber-400/70 transition-all duration-300 shadow-bz-soft hover:shadow-bz-card"
               >
-                <div className="relative aspect-[16/10] shrink-0 bg-parchment-200">
-                  <Image src={p.image} alt={p.alt} fill className="object-cover group-hover:scale-[1.02] transition-transform duration-500" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw" />
+                <div className="relative aspect-[16/10] w-full shrink-0 bg-parchment-200">
+                  <Image
+                    src={p.image}
+                    alt={p.alt}
+                    fill
+                    className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                  />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="font-heading text-lg md:text-xl text-stone-900 mb-2 group-hover:text-amber-900 transition-colors">
@@ -169,31 +175,31 @@ export default function BoostersHomeContent() {
               Real books—not a mockup pitch
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <figure className="m-0">
-                <div className="relative aspect-[16/10] rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
+              <figure className="m-0 min-w-0">
+                <div className="relative aspect-[16/11] sm:aspect-[16/10] w-full rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
                   <Image
                     src={marketingImages.productHistory}
                     alt="Printed book cover — custom school fundraiser edition"
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
                   />
                 </div>
-                <figcaption className="text-stone-600 font-subheading text-sm mt-3 text-center">
+                <figcaption className="text-stone-600 font-subheading text-sm mt-3 text-center px-1">
                   Cover &amp; branding with your school
                 </figcaption>
               </figure>
-              <figure className="m-0">
-                <div className="relative aspect-[16/10] rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
+              <figure className="m-0 min-w-0">
+                <div className="relative aspect-[16/11] sm:aspect-[16/10] w-full rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
                   <Image
                     src={marketingImages.productTrivia}
                     alt="Inside pages — stories and activities families keep"
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
                   />
                 </div>
-                <figcaption className="text-stone-600 font-subheading text-sm mt-3 text-center">
+                <figcaption className="text-stone-600 font-subheading text-sm mt-3 text-center px-1">
                   Inside pages kids and parents actually read
                 </figcaption>
               </figure>
@@ -215,19 +221,19 @@ export default function BoostersHomeContent() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.5 }}
-              className="lg:col-span-5"
+              className="min-w-0 lg:col-span-5"
             >
-              <div className="relative aspect-[4/5] max-h-[420px] mx-auto lg:mx-0 rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
+              <div className="relative mx-auto w-full max-w-[min(100%,22rem)] sm:max-w-md lg:max-w-none aspect-[4/5] rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
                 <Image
                   src={marketingImages.sectionHeart}
                   alt="Reading together — meaningful fundraising"
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>
             </motion.div>
-            <div className="lg:col-span-7">
+            <div className="min-w-0 lg:col-span-7">
               <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-6 normal-case">
                 Fundraising People Feel Good About
               </h2>
@@ -265,9 +271,11 @@ export default function BoostersHomeContent() {
             {testimonials.map((t) => (
               <blockquote
                 key={t.name + t.detail}
-                className="fc-card p-8 border border-parchment-300/80 shadow-bz-soft m-0"
+                className="fc-card min-w-0 p-5 sm:p-8 border border-parchment-300/80 shadow-bz-soft m-0"
               >
-                <p className="text-stone-700 font-subheading text-lg leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
+                <p className="text-stone-700 font-subheading text-base sm:text-lg leading-relaxed mb-6 break-words">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
                 <footer className="text-stone-500 font-subheading text-sm">
                   <cite className="not-italic font-heading font-medium text-stone-800">{t.name}</cite>
                   <span className="block text-stone-500 mt-1">{t.detail}</span>
@@ -302,7 +310,9 @@ export default function BoostersHomeContent() {
                 }`}
               >
                 <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-2">{cell.label}</p>
-                <p className={`font-heading text-3xl md:text-4xl ${cell.highlight ? 'text-amber-900' : 'text-stone-900'}`}>
+                <p
+                  className={`font-heading text-2xl sm:text-3xl md:text-4xl break-words ${cell.highlight ? 'text-amber-900' : 'text-stone-900'}`}
+                >
                   {cell.value}
                 </p>
                 {cell.highlight && <p className="text-stone-500 font-subheading text-sm mt-2 mb-0">per book (typical)</p>}
@@ -390,10 +400,16 @@ export default function BoostersHomeContent() {
             fundraising plan; same form.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
-            <Link href="/contact#sample-page" className="btn-fc-primary text-base px-8 py-3.5 no-underline inline-flex justify-center">
+            <Link
+              href="/contact#sample-page"
+              className="btn-fc-primary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
+            >
               See your school’s book (free)
             </Link>
-            <Link href="/contact#free-fundraising-plan" className="btn-fc-secondary text-base px-8 py-3.5 no-underline inline-flex justify-center">
+            <Link
+              href="/contact#free-fundraising-plan"
+              className="btn-fc-secondary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
+            >
               Get your fundraising plan
             </Link>
           </div>
@@ -411,11 +427,14 @@ export default function BoostersHomeContent() {
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link
               href="/contact#free-fundraising-plan"
-              className="btn-fc-primary text-base px-8 py-3.5 no-underline inline-flex justify-center"
+              className="btn-fc-primary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
             >
               Get your fundraising plan
             </Link>
-            <Link href="/contact#book-demo" className="btn-fc-secondary text-base px-8 py-3.5 no-underline inline-flex justify-center">
+            <Link
+              href="/contact#book-demo"
+              className="btn-fc-secondary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
+            >
               Book a 10-min demo
             </Link>
           </div>
