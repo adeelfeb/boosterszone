@@ -49,12 +49,12 @@ export default function FundraisingPage() {
                 </ul>
               </div>
               <div className="lg:col-span-5">
-                <div className="relative aspect-[4/3] rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80">
+                <div className="relative aspect-[4/3] rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-100">
                   <Image
                     src={marketingImages.heroMain}
                     alt="Custom books for fundraising"
                     fill
-                    className="object-cover"
+                    className="object-contain object-center"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />
                 </div>
@@ -65,12 +65,12 @@ export default function FundraisingPage() {
           <section className="py-16 md:py-20 border-t border-parchment-300/70 bg-parchment-50/50 rounded-sm px-4 sm:px-8 -mx-4 sm:-mx-6 lg:-mx-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-5 order-2 lg:order-1">
-                <div className="relative aspect-[16/11] rounded-md overflow-hidden shadow-bz-soft border border-parchment-300/80">
+                <div className="relative aspect-[16/11] rounded-md overflow-hidden shadow-bz-soft border border-parchment-300/80 bg-parchment-100">
                   <Image
                     src={marketingImages.sectionHeart}
                     alt="Community reading"
                     fill
-                    className="object-cover"
+                    className="object-contain object-center"
                     sizes="(max-width: 1024px) 100vw, 42vw"
                   />
                 </div>
@@ -117,12 +117,12 @@ export default function FundraisingPage() {
                 </div>
               </div>
               <div className="lg:col-span-4">
-                <div className="relative aspect-square max-w-xs mx-auto lg:max-w-none rounded-md overflow-hidden border border-parchment-300/80 shadow-bz-soft">
+                <div className="relative aspect-square max-w-xs mx-auto lg:max-w-none rounded-md overflow-hidden border border-parchment-300/80 shadow-bz-soft bg-parchment-100">
                   <Image
                     src={marketingImages.heroCommunity}
                     alt="School community"
                     fill
-                    className="object-cover"
+                    className="object-contain object-center"
                     sizes="(max-width: 1024px) 280px, 320px"
                   />
                 </div>

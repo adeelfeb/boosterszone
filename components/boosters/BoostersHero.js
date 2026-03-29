@@ -138,7 +138,7 @@ export default function BoostersHero() {
                     src={marketingImages.heroMain}
                     alt="Custom book cover and stack — real printed school fundraiser editions"
                     fill
-                    className="object-cover object-center"
+                    className="object-contain object-center"
                     sizes="(max-width: 1024px) 100vw, 58vw"
                     priority
                   />
@@ -150,7 +150,7 @@ export default function BoostersHero() {
                       src={marketingImages.heroSchool}
                       alt="Kids with books — school usage and classroom connection"
                       fill
-                      className="object-cover object-center"
+                      className="object-contain object-center"
                       sizes="(max-width: 1024px) 50vw, 28vw"
                     />
                   </div>
@@ -159,7 +159,7 @@ export default function BoostersHero() {
                       src={marketingImages.heroCommunity}
                       alt="Community — local history and pride"
                       fill
-                      className="object-cover object-center"
+                      className="object-contain object-center"
                       sizes="(max-width: 1024px) 50vw, 28vw"
                     />
                   </div>

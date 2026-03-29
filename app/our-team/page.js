@@ -68,7 +68,7 @@ export default function OurTeamPage() {
                     src={member.image}
                     alt={`${member.name} portrait`}
                     fill
-                    className="object-cover"
+                    className="object-contain object-top"
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
                   />
                 </div>

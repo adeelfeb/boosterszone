@@ -65,7 +65,7 @@ export default function BooksPage() {
                 }`}
               >
                 <div className="relative w-full sm:w-[220px] shrink-0 aspect-[4/3] sm:aspect-[5/4] rounded-md overflow-hidden border border-parchment-300/60 bg-parchment-100">
-                  <Image src={item.image} alt={item.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 220px" />
+                  <Image src={item.image} alt={item.alt} fill className="object-contain object-center" sizes="(max-width: 768px) 100vw, 220px" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-4">{item.title}</h2>

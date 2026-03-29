@@ -93,7 +93,7 @@ export default function BoostersHomeContent() {
                   src={marketingImages.sectionBooks}
                   alt="Books and reading — fundraising products people keep"
                   fill
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                   sizes="(max-width: 1024px) 100vw, 58vw"
                 />
               </div>
@@ -157,7 +157,7 @@ export default function BoostersHomeContent() {
                     src={p.image}
                     alt={p.alt}
                     fill
-                    className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-500"
+                    className="object-contain object-center group-hover:scale-[1.02] transition-transform duration-500"
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
                   />
                 </div>
@@ -181,7 +181,7 @@ export default function BoostersHomeContent() {
                     src={marketingImages.productHistory}
                     alt="Printed book cover — custom school fundraiser edition"
                     fill
-                    className="object-cover object-center"
+                    className="object-contain object-center"
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
                   />
                 </div>
@@ -195,7 +195,7 @@ export default function BoostersHomeContent() {
                     src={marketingImages.productTrivia}
                     alt="Inside pages — stories and activities families keep"
                     fill
-                    className="object-cover object-center"
+                    className="object-contain object-center"
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
                   />
                 </div>
@@ -228,7 +228,7 @@ export default function BoostersHomeContent() {
                   src={marketingImages.sectionHeart}
                   alt="Reading together — meaningful fundraising"
                   fill
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>

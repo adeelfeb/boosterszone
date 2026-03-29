@@ -37,7 +37,7 @@ export default function AboutPage() {
                     src={marketingImages.pageAboutBody}
                     alt="Research and archives for community books"
                     fill
-                    className="object-cover"
+                    className="object-contain object-center"
                     sizes="(max-width: 1024px) 100vw, 38vw"
                   />
                 </div>
@@ -80,7 +80,7 @@ export default function AboutPage() {
                     src={marketingImages.heroSchool}
                     alt="Schools and students"
                     fill
-                    className="object-cover"
+                    className="object-contain object-center"
                     sizes="(max-width: 1024px) 100vw, 42vw"
                   />
                 </div>

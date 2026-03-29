@@ -51,7 +51,7 @@ export default function MarketingPageHero({
                 src={src}
                 alt={imageAlt || `${title} — Boosters Zone`}
                 fill
-                className="object-cover object-center"
+                className="object-contain object-center"
                 sizes="(max-width: 1024px) 100vw, 55vw"
                 priority
               />

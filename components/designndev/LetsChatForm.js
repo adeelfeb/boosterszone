@@ -75,12 +75,15 @@ export default function LetsChatForm() {
     }
   }
 
-  const inputClass = 'w-full px-4 py-3 bg-white/95 border border-parchment-400/90 rounded-md text-stone-900 placeholder-stone-400 focus:ring-2 focus:ring-amber-400/45 focus:border-amber-600 outline-none transition-all shadow-sm'
-  const labelClass = 'block text-sm font-medium text-stone-700 mb-2'
+  const fieldBase =
+    'w-full min-w-0 px-4 sm:px-5 py-3.5 text-base leading-normal bg-white/95 border border-parchment-400/90 rounded-md text-stone-900 placeholder-stone-400 focus:ring-2 focus:ring-amber-400/45 focus:border-amber-600 outline-none transition-all shadow-sm'
+  const inputClass = `${fieldBase} min-h-[3rem]`
+  const textareaClass = `${fieldBase} min-h-[10rem] resize-y py-4`
+  const labelClass = 'block text-base font-medium text-stone-700 mb-2.5'
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-5 relative">
+    <div className="w-full">
+      <form onSubmit={handleSubmit} className="space-y-6 relative">
         {isSubmitting && (
           <div className="absolute inset-0 rounded-2xl bg-white/70 backdrop-blur-sm z-10 pointer-events-auto" aria-hidden />
         )}
@@ -131,8 +134,8 @@ export default function LetsChatForm() {
             value={formData.message}
             onChange={handleChange}
             required
-            rows={4}
-            className={`${inputClass} resize-y min-h-[100px]`}
+            rows={6}
+            className={textareaClass}
             placeholder="Type additional information which will help us to contact you."
           />
         </div>
@@ -141,7 +144,7 @@ export default function LetsChatForm() {
           disabled={isSubmitting}
           whileHover={!isSubmitting ? { scale: 1.01 } : {}}
           whileTap={!isSubmitting ? { scale: 0.99 } : {}}
-          className="w-full py-2.5 px-4 text-sm font-medium text-stone-900 bg-gradient-to-b from-amber-400 to-amber-500 border border-amber-700/40 rounded-md hover:from-amber-300 hover:to-amber-400 transition-all flex items-center justify-center gap-1.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-bz-soft"
+          className="w-full py-3.5 px-6 text-base font-medium text-stone-900 bg-gradient-to-b from-amber-400 to-amber-500 border border-amber-700/40 rounded-md hover:from-amber-300 hover:to-amber-400 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-bz-soft min-h-[3rem]"
         >
           {isSubmitting ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Submitting…</>
