@@ -48,7 +48,7 @@ export default function BoostersHero() {
               transition={{ duration: 0.5 }}
               className="text-amber-800 font-subheading text-sm md:text-base tracking-[0.18em] uppercase mb-3"
             >
-              The alternative to cookie-dough fundraisers
+              School &amp; PTO fundraising
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ export default function BoostersHero() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="font-heading text-4xl sm:text-5xl md:text-[2.65rem] lg:text-5xl xl:text-6xl font-medium text-stone-900 mb-4 leading-[1.1]"
             >
-              Fundraising Parents Actually Want to Buy
+              Raise real money—sell books parents actually want
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -64,38 +64,59 @@ export default function BoostersHero() {
               transition={{ duration: 0.55, delay: 0.06 }}
               className="text-stone-700 text-lg md:text-xl font-heading font-medium mb-3 max-w-xl"
             >
-              A fundraiser families keep forever.
+              Strong margins (~$9–11 typical profit per book) · we handle ~90% of the work
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.08 }}
-              className="text-stone-600 text-base md:text-lg font-subheading leading-relaxed mb-8 max-w-xl"
+              className="text-stone-600 text-base md:text-lg font-subheading leading-relaxed mb-6 max-w-xl"
             >
-              Custom local-history and coloring books for elementary schools and PTOs—real keepsakes, strong margins,
-              and we do about 90% of the work.
+              Custom local-history and coloring books for elementary schools and PTOs—keepsakes families keep, not
+              closet clutter.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-stone-500 font-subheading text-sm mb-8 max-w-xl"
+            >
+              Trusted by schools and PTOs in the Merrimack Valley—created by public historian E. Philip Brown.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.12 }}
-              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-10"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-4"
             >
               <Link
                 href="/contact#free-fundraising-plan"
                 className="btn-fc-primary text-base px-7 py-3.5 no-underline inline-flex items-center justify-center w-full sm:w-auto min-w-0 text-center"
               >
-                Get Your Fundraising Plan
+                Start a fundraiser
               </Link>
               <Link
-                href="/contact#sample-page"
+                href="/books"
                 className="btn-fc-secondary text-base px-7 py-3.5 no-underline inline-flex items-center justify-center w-full sm:w-auto min-w-0 text-center"
               >
-                See Your School’s Book (Free)
+                Shop books
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.14 }}
+              className="flex flex-col sm:flex-row flex-wrap gap-x-6 gap-y-2 mb-10"
+            >
+              <Link
+                href="/contact#sample-page"
+                className="text-amber-900 font-subheading text-sm font-medium underline underline-offset-4 decoration-amber-600/50 hover:decoration-amber-700"
+              >
+                Free sample page for your school
               </Link>
               <Link
                 href="/contact#book-demo"
-                className="text-center sm:text-left text-amber-900 font-subheading text-sm font-medium underline underline-offset-4 decoration-amber-600/50 hover:decoration-amber-700 py-2 sm:py-3.5"
+                className="text-amber-900 font-subheading text-sm font-medium underline underline-offset-4 decoration-amber-600/50 hover:decoration-amber-700"
               >
                 Book a 10-min demo
               </Link>

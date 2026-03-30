@@ -105,29 +105,41 @@ export default function BoostersHomeContent() {
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-b from-parchment-100/90 to-parchment-200/40`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-4 text-center normal-case">
-            Simple. Profitable. Fast to launch.
+            How it works — 3 steps
           </h2>
           <p className="text-center text-stone-600 font-subheading text-lg max-w-2xl mx-auto mb-12">
-            We do about <strong className="text-stone-800 font-medium">90% of the work</strong>—you are not building a
-            book from scratch.
+            We do about <strong className="text-stone-800 font-medium">90% of the work</strong>. You review, we produce,
+            you sell.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             {[
               {
-                title: 'You approve',
-                body: 'We design from your town and school story—you sign off on the cover and key pages.',
+                step: '1',
+                title: 'Approve the book',
+                body: 'We design from your town and school—you sign off on the cover and key pages.',
               },
               {
+                step: '2',
                 title: 'We print',
-                body: 'Professional print run, ready in about 2–3 weeks once approved (timeline varies by season).',
+                body: 'Professional print run—often about 2–3 weeks after approval (varies by season).',
               },
               {
-                title: 'You sell',
-                body: 'You approve → we print → you sell. Families get something they keep—not a one-night treat.',
+                step: '3',
+                title: 'You sell and keep the margin',
+                body: 'Families buy something they keep. You set the price; typical profit is strong per copy.',
               },
             ].map((item) => (
-              <div key={item.title} className="fc-card min-w-0 p-6 sm:p-8 border border-parchment-300/70 shadow-bz-card">
-                <h3 className="font-heading text-xl md:text-2xl text-stone-900 mb-4">{item.title}</h3>
+              <div
+                key={item.step}
+                className="fc-card min-w-0 p-6 sm:p-8 border border-parchment-300/70 shadow-bz-card flex flex-col items-center text-center md:items-stretch md:text-left"
+              >
+                <div
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-amber-600 text-white font-heading text-xl mb-4 mx-auto md:mx-0"
+                  aria-hidden
+                >
+                  {item.step}
+                </div>
+                <h3 className="font-heading text-xl md:text-2xl text-stone-900 mb-3">{item.title}</h3>
                 <p className="text-stone-600 font-subheading leading-relaxed m-0">{item.body}</p>
               </div>
             ))}

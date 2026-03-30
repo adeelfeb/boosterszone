@@ -10,7 +10,7 @@ import { marketingImages } from '../../lib/marketingImages'
 export const metadata = {
   title: `Fundraising | ${siteName}`,
   description:
-    'A smarter school and community fundraiser: custom books people value, keep, and share—with strong margins.',
+    'Raise thousands with high-margin custom books for schools and booster clubs—clear profit examples, simple steps, keepsakes families buy.',
   keywords: 'school fundraiser, booster club fundraiser, custom book fundraiser, nonprofit fundraising',
 }
 
@@ -21,10 +21,10 @@ export default function FundraisingPage() {
       <Navbar />
       <MarketingPageHero
         eyebrow="Fundraising"
-        title="A better way to fundraise"
-        subtitle="Tired of selling products no one really wants? Boosters Zone helps you offer custom books—history, trivia, coloring—that families and neighbors are glad to buy."
+        title="Raise thousands with high-margin custom books"
+        subtitle="Schools and booster clubs need clear outcomes: profit per book, simple logistics, and products people actually want. We deliver custom history, trivia, and coloring books—families buy keepsakes; you keep strong margins."
         imageKey="fundraising"
-        imageAlt="Team collaborating on a project"
+        imageAlt="Team collaborating on a fundraising book project"
       />
 
       <div className="pb-20">
@@ -89,12 +89,54 @@ export default function FundraisingPage() {
           <section className="py-16 md:py-20 border-t border-parchment-300/70">
             <div className="max-w-3xl">
               <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-6">See the numbers</h2>
-              <p className="text-stone-600 leading-relaxed mb-4 text-lg font-subheading">
-                Example economics: cost around <strong className="text-stone-900">$5</strong>, sell at{' '}
-                <strong className="text-stone-900">$20</strong>, keep about <strong className="text-amber-800">$15</strong>{' '}
-                per book. Sell 200 copies for roughly <strong className="text-amber-800">$3,000</strong>, or 500 for about{' '}
-                <strong className="text-amber-800">$7,500</strong>—one of the easiest and most effective drives you’ll
-                run.
+              <p className="text-stone-600 leading-relaxed mb-8 text-lg font-subheading">
+                Example economics (illustrative—your rep confirms exact pricing for your run):
+              </p>
+              <div className="overflow-x-auto rounded-sm border border-parchment-300/80 bg-white/90 shadow-bz-soft mb-8">
+                <table className="w-full min-w-[280px] text-left font-subheading text-stone-700">
+                  <caption className="sr-only">Example profit per book and total profit by copies sold</caption>
+                  <thead>
+                    <tr className="border-b border-parchment-300/80 bg-parchment-50/95">
+                      <th scope="col" className="px-4 py-3 font-heading text-stone-900 text-sm uppercase tracking-wide">
+                        Line item
+                      </th>
+                      <th scope="col" className="px-4 py-3 font-heading text-stone-900 text-sm uppercase tracking-wide text-right">
+                        Amount
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-parchment-200/90">
+                    <tr>
+                      <td className="px-4 py-3">Sell price (example)</td>
+                      <td className="px-4 py-3 text-right font-medium text-stone-900">$20 / book</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3">Your cost (example)</td>
+                      <td className="px-4 py-3 text-right">~$5 / book</td>
+                    </tr>
+                    <tr className="bg-amber-50/80">
+                      <td className="px-4 py-3 font-medium text-amber-950">Profit per book</td>
+                      <td className="px-4 py-3 text-right font-heading text-lg text-amber-900">~$15</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                <div className="fc-card p-5 border border-parchment-300/70 shadow-bz-soft">
+                  <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-1">200 books sold</p>
+                  <p className="font-heading text-2xl text-stone-900 mb-0">
+                    ~<span className="text-amber-900">$3,000</span> total profit
+                  </p>
+                </div>
+                <div className="fc-card p-5 border border-parchment-300/70 shadow-bz-soft">
+                  <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-1">500 books sold</p>
+                  <p className="font-heading text-2xl text-stone-900 mb-0">
+                    ~<span className="text-amber-900">$7,500</span> total profit
+                  </p>
+                </div>
+              </div>
+              <p className="text-stone-600 leading-relaxed m-0 text-lg font-subheading">
+                One of the easiest drives you’ll run—clear math for principals and booster treasurers.
               </p>
             </div>
           </section>
@@ -108,11 +150,11 @@ export default function FundraisingPage() {
                   and community groups. We’re ready to bring the same model to your organization.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="btn-fc-primary no-underline inline-flex justify-center">
-                    Start a custom book project
+                  <Link href="/contact#free-fundraising-plan" className="btn-fc-primary no-underline inline-flex justify-center">
+                    Start a fundraiser
                   </Link>
                   <Link href="/books" className="btn-fc-secondary no-underline inline-flex justify-center">
-                    Browse products
+                    Shop books
                   </Link>
                 </div>
               </div>

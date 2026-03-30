@@ -55,8 +55,8 @@ export default function Navbar() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/fundraising', label: 'Fundraising' },
-    { href: '/books', label: 'Books' },
+    { href: '/fundraising', label: 'Start a fundraiser' },
+    { href: '/books', label: 'Shop books' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ]
@@ -102,13 +102,13 @@ export default function Navbar() {
                     href="/fundraising"
                     className="font-heading text-sm text-stone-700 hover:text-amber-800 no-underline transition-colors"
                   >
-                    Fundraising
+                    Start a fundraiser
                   </Link>
                   <Link
                     href="/books"
                     className="font-heading text-sm text-stone-700 hover:text-amber-800 no-underline transition-colors"
                   >
-                    Books
+                    Shop books
                   </Link>
                 </div>
               </div>
@@ -137,7 +137,7 @@ export default function Navbar() {
                 href="/contact#free-fundraising-plan"
                 className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-4 no-underline"
               >
-                Get your plan
+                Free fundraising plan
               </Link>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function Navbar() {
                   className="btn-fc-primary font-heading w-full justify-center text-base py-3.5 no-underline"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Get your plan
+                  Free fundraising plan
                 </Link>
               </div>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 w-full max-w-[1200px]">

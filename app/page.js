@@ -5,12 +5,12 @@ import Footer from '../components/designndev/Footer'
 import { siteName, siteTagline, siteUrl } from '../lib/siteConfig'
 
 export const metadata = {
-  title: `${siteName} | Fundraising parents actually want to buy`,
+  title: `${siteName} | Raise real money with books parents want`,
   description: siteTagline,
   keywords:
     'elementary school fundraiser, custom books, coloring books, local history, booster club, PTO, PTA, cookie dough alternative, Merrimack Valley',
   openGraph: {
-    title: `${siteName} | Fundraising parents actually want to buy`,
+    title: `${siteName} | Raise real money with books parents want`,
     description: siteTagline,
     url: siteUrl,
     siteName,
