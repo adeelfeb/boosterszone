@@ -66,8 +66,8 @@ export default function BoostersHomeContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="min-w-0 lg:col-span-5 order-2 lg:order-1">
-              <div className="h-1 w-16 bg-gradient-to-r from-amber-500 to-amber-600 mb-6 rounded-full opacity-90" aria-hidden />
-              <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-6 normal-case">
+              <div className="h-1 w-16 bg-gradient-to-r from-fc-highlight to-fc-highlight-dark mb-6 rounded-full opacity-90" aria-hidden />
+              <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 normal-case">
                 Built for Elementary Schools (First)
               </h2>
               <p className="text-stone-600 text-lg leading-relaxed font-subheading">
@@ -75,7 +75,7 @@ export default function BoostersHomeContent() {
                 coloring books parents{' '}
                 <strong className="text-stone-800 font-medium">want</strong>—keepsakes kids actually flip through. We
                 specialize in elementary schools and PTOs; teams and civic groups can{' '}
-                <Link href="/fundraising" className="text-amber-900 font-medium underline underline-offset-2 hover:text-amber-950">
+                <Link href="/fundraising" className="text-fc-action font-medium underline underline-offset-2 hover:text-fc-action-dark">
                   start here
                 </Link>
                 .
@@ -104,7 +104,7 @@ export default function BoostersHomeContent() {
 
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-b from-parchment-100/90 to-parchment-200/40`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-4 text-center normal-case">
+          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-4 text-center normal-case">
             How it works — 3 steps
           </h2>
           <p className="text-center text-stone-600 font-subheading text-lg max-w-2xl mx-auto mb-12">
@@ -134,7 +134,7 @@ export default function BoostersHomeContent() {
                 className="fc-card min-w-0 p-6 sm:p-8 border border-parchment-300/70 shadow-bz-card flex flex-col items-center text-center md:items-stretch md:text-left"
               >
                 <div
-                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-amber-600 text-white font-heading text-xl mb-4 mx-auto md:mx-0"
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-fc-highlight to-fc-highlight-dark text-white font-heading text-xl mb-4 mx-auto md:mx-0"
                   aria-hidden
                 >
                   {item.step}
@@ -150,8 +150,8 @@ export default function BoostersHomeContent() {
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/90`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
-            <div className="h-1 w-16 bg-gradient-to-r from-amber-500 to-amber-600 mb-6 rounded-full opacity-90" aria-hidden />
-            <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-4 normal-case">
+            <div className="h-1 w-16 bg-gradient-to-r from-fc-highlight to-fc-highlight-dark mb-6 rounded-full opacity-90" aria-hidden />
+            <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-4 normal-case">
               Products That Actually Sell
             </h2>
             <p className="text-stone-500 font-subheading text-lg">
@@ -162,7 +162,7 @@ export default function BoostersHomeContent() {
             {products.map((p) => (
               <div
                 key={p.title}
-                className="group flex min-w-0 flex-col border border-parchment-300/80 bg-white/80 overflow-hidden hover:border-amber-400/70 transition-all duration-300 shadow-bz-soft hover:shadow-bz-card"
+                className="group flex min-w-0 flex-col border border-parchment-300/80 bg-white/80 overflow-hidden hover:border-fc-highlight/55 transition-all duration-300 shadow-bz-soft hover:shadow-bz-card"
               >
                 <div className="relative aspect-[16/10] w-full shrink-0 bg-parchment-200">
                   <Image
@@ -174,7 +174,7 @@ export default function BoostersHomeContent() {
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
-                  <h3 className="font-heading text-lg md:text-xl text-stone-900 mb-2 group-hover:text-amber-900 transition-colors">
+                  <h3 className="font-heading text-lg md:text-xl text-stone-900 mb-2 group-hover:text-fc-action transition-colors">
                     {p.title}
                   </h3>
                   <p className="text-stone-600 font-subheading leading-relaxed text-base m-0">{p.body}</p>
@@ -183,7 +183,7 @@ export default function BoostersHomeContent() {
             ))}
           </div>
           <div className="mt-12 pt-10 border-t border-parchment-300/70">
-            <h3 className="font-heading text-xl md:text-2xl text-amber-900 mb-6 text-center normal-case">
+            <h3 className="font-heading text-xl md:text-2xl text-fc-structural mb-6 text-center normal-case">
               Real books—not a mockup pitch
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -225,7 +225,7 @@ export default function BoostersHomeContent() {
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-br from-amber-50/50 via-parchment-100/80 to-sky-50/30`}>
+      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-br from-[var(--fc-highlight-soft)] via-parchment-100/90 to-fc-structural/[0.06]`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <motion.div
@@ -246,7 +246,7 @@ export default function BoostersHomeContent() {
               </div>
             </motion.div>
             <div className="min-w-0 lg:col-span-7">
-              <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-6 normal-case">
+              <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 normal-case">
                 Fundraising People Feel Good About
               </h2>
               <p className="text-stone-600 text-lg mb-8 font-subheading leading-relaxed">
@@ -255,7 +255,7 @@ export default function BoostersHomeContent() {
               <ul className="space-y-4 text-stone-700 font-subheading text-lg list-none pl-0 m-0">
                 {['Celebrate your community', 'Educate students', 'Create lasting keepsakes'].map((line) => (
                   <li key={line} className="flex items-start gap-3">
-                    <span className="text-amber-700 mt-1 shrink-0 font-bold" aria-hidden>
+                    <span className="text-fc-highlight-dark mt-1 shrink-0 font-bold" aria-hidden>
                       ✔
                     </span>
                     <span>{line}</span>
@@ -273,7 +273,7 @@ export default function BoostersHomeContent() {
 
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/95`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-6 text-center md:text-left normal-case">
+          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 text-center md:text-left normal-case">
             Proven in the Merrimack Valley
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed font-subheading text-center md:text-left mb-12">
@@ -300,7 +300,7 @@ export default function BoostersHomeContent() {
 
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-100/70`}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-4 text-center normal-case">
+          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-4 text-center normal-case">
             The #1 question: what can we make?
           </h2>
           <p className="text-center text-stone-600 font-subheading text-lg max-w-2xl mx-auto mb-10">
@@ -317,13 +317,13 @@ export default function BoostersHomeContent() {
                 key={cell.label}
                 className={`p-6 text-center border rounded-sm backdrop-blur-[1px] ${
                   cell.highlight
-                    ? 'border-amber-400/60 bg-gradient-to-b from-amber-100/90 to-amber-50/95 shadow-bz-soft'
+                    ? 'border-fc-highlight/50 bg-gradient-to-b from-[var(--fc-highlight-soft)] to-white/95 shadow-bz-soft'
                     : 'border-parchment-300/90 bg-white/85 shadow-bz-soft'
                 }`}
               >
                 <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-2">{cell.label}</p>
                 <p
-                  className={`font-heading text-2xl sm:text-3xl md:text-4xl break-words ${cell.highlight ? 'text-amber-900' : 'text-stone-900'}`}
+                  className={`font-heading text-2xl sm:text-3xl md:text-4xl break-words ${cell.highlight ? 'text-fc-action' : 'text-stone-900'}`}
                 >
                   {cell.value}
                 </p>
@@ -331,25 +331,25 @@ export default function BoostersHomeContent() {
               </div>
             ))}
           </div>
-          <div className="max-w-xl mx-auto fc-card p-8 md:p-10 text-center border border-amber-300/50 bg-gradient-to-b from-amber-50/95 to-white/90 shadow-bz-card">
+          <div className="max-w-xl mx-auto fc-card p-8 md:p-10 text-center border border-fc-highlight/40 bg-gradient-to-b from-[var(--fc-highlight-soft)] to-white/90 shadow-bz-card">
             <p className="font-subheading text-stone-600 uppercase tracking-wider text-sm mb-2">Example drive</p>
             <p className="font-heading text-2xl md:text-3xl text-stone-900 mb-2">
-              Sell <strong className="text-amber-900">300</strong> books @ <strong className="text-amber-900">$15</strong>
+              Sell <strong className="text-fc-action">300</strong> books @ <strong className="text-fc-action">$15</strong>
             </p>
             <p className="text-stone-600 font-subheading text-lg mb-4">
               Cost about <strong className="text-stone-800">$4–6</strong> each → roughly{' '}
-              <strong className="text-amber-900 text-xl font-heading">~$3,000</strong> profit back to your school
+              <strong className="text-fc-action text-xl font-heading">~$3,000</strong> profit back to your school
             </p>
             <p className="text-stone-500 font-subheading text-sm m-0">Rounded; your rep will confirm exact numbers.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mt-10">
             <div className="fc-card p-6 text-center border border-parchment-300/70 shadow-bz-card">
               <p className="font-heading text-2xl text-stone-900 mb-1">Sell 200</p>
-              <p className="text-amber-700 font-heading text-3xl mb-0">~$2,000</p>
+              <p className="text-fc-highlight-dark font-heading text-3xl mb-0">~$2,000</p>
             </div>
             <div className="fc-card p-6 text-center border border-parchment-300/70 shadow-bz-card">
               <p className="font-heading text-2xl text-stone-900 mb-1">Sell 500</p>
-              <p className="text-amber-700 font-heading text-3xl mb-0">~$5,000</p>
+              <p className="text-fc-highlight-dark font-heading text-3xl mb-0">~$5,000</p>
             </div>
           </div>
           <p className="text-center text-stone-600 font-subheading text-lg mt-10 mb-0">
@@ -360,7 +360,7 @@ export default function BoostersHomeContent() {
 
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/95`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-4 text-center normal-case">
+          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-4 text-center normal-case">
             Perfect for (homepage focus)
           </h2>
           <p className="text-center text-stone-600 font-subheading text-lg mb-8 max-w-2xl mx-auto">
@@ -370,14 +370,14 @@ export default function BoostersHomeContent() {
             {perfectFor.map((label) => (
               <span
                 key={label}
-                className="inline-flex items-center px-4 py-2 rounded-full border border-amber-300/50 bg-gradient-to-br from-amber-50/95 to-orange-50/70 text-stone-800 font-subheading text-sm md:text-base shadow-sm"
+                className="inline-flex items-center px-4 py-2 rounded-full border border-fc-highlight/45 bg-gradient-to-br from-[var(--fc-highlight-soft)] to-white/90 text-stone-800 font-subheading text-sm md:text-base shadow-sm"
               >
                 {label}
               </span>
             ))}
           </div>
           <p className="text-center mt-8 mb-0">
-            <Link href="/fundraising" className="text-amber-900 font-subheading font-medium underline underline-offset-2">
+            <Link href="/fundraising" className="text-fc-action font-subheading font-medium underline underline-offset-2">
               Sports teams, clubs &amp; civic groups → Fundraising page
             </Link>
           </p>
@@ -386,7 +386,7 @@ export default function BoostersHomeContent() {
 
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-b from-parchment-200/50 to-parchment-100/90`}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-6 normal-case">
+          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 normal-case">
             About Boosters Zone
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-6">
@@ -404,7 +404,7 @@ export default function BoostersHomeContent() {
 
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/95`}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-amber-900 mb-6 normal-case">
+          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 normal-case">
             Get a free sample page for your school
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-8">
@@ -428,7 +428,7 @@ export default function BoostersHomeContent() {
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-br from-amber-100/55 via-parchment-100 to-sky-100/25`}>
+      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-br from-[var(--fc-highlight-soft)] via-parchment-100 to-fc-structural/[0.08]`}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-stone-900 mb-6 normal-case">
             Ready to Launch?

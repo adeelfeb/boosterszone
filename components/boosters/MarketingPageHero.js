@@ -25,17 +25,17 @@ export default function MarketingPageHero({
   const src = marketingImages[key]
 
   return (
-    <section className="relative border-b border-parchment-300/60 bg-gradient-to-b from-parchment-100/95 via-amber-50/40 to-parchment-50/90 overflow-hidden">
+    <section className="relative border-b border-parchment-300/60 bg-gradient-to-b from-parchment-100/95 via-[var(--fc-highlight-soft)] to-parchment-50/90 overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 max-w-xl h-full opacity-[0.07] pointer-events-none bg-[url('/images/bz-texture.svg')] bg-repeat mix-blend-multiply" style={{ backgroundSize: '240px' }} aria-hidden />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 md:pb-16 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="min-w-0 lg:col-span-6 xl:col-span-5">
             {eyebrow && (
-              <p className="text-amber-800 font-subheading text-xs sm:text-sm tracking-[0.18em] uppercase mb-4">
+              <p className="text-fc-structural font-subheading text-xs sm:text-sm tracking-[0.18em] uppercase mb-4">
                 {eyebrow}
               </p>
             )}
-            <h1 className="section-heading font-heading text-4xl sm:text-5xl md:text-[2.75rem] font-semibold text-amber-900 mb-5 normal-case leading-tight">
+            <h1 className="section-heading font-heading text-4xl sm:text-5xl md:text-[2.75rem] font-semibold text-fc-structural mb-5 normal-case leading-tight">
               {title}
             </h1>
             {subtitle && (

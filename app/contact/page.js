@@ -32,7 +32,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
             <aside className="lg:col-span-4 space-y-8 order-2 lg:order-1">
               <div className="fc-card p-6 border border-parchment-300/80 shadow-bz-soft">
-                <h2 className="font-heading text-lg text-amber-900 mb-3">What to include</h2>
+                <h2 className="font-heading text-lg text-fc-structural mb-3">What to include</h2>
                 <ul className="text-stone-600 font-subheading space-y-2 m-0 pl-4 list-disc text-base">
                   <li>Your school or organization name</li>
                   <li>Rough timeline for the drive</li>
@@ -40,14 +40,14 @@ export default function ContactPage() {
                 </ul>
               </div>
               <div className="fc-card p-6 border border-parchment-300/80 shadow-bz-soft">
-                <h2 className="font-heading text-lg text-amber-900 mb-3">Direct contact</h2>
+                <h2 className="font-heading text-lg text-fc-structural mb-3">Direct contact</h2>
                 <p className="text-stone-600 font-subheading text-base m-0 mb-2">
-                  <a href={`mailto:${contact.email}`} className="text-amber-900 hover:underline">
+                  <a href={`mailto:${contact.email}`} className="text-fc-action hover:underline">
                     {contact.email}
                   </a>
                 </p>
                 <p className="text-stone-600 font-subheading text-base m-0 mb-2">
-                  <a href={`tel:${contact.phoneTel}`} className="text-amber-900 hover:underline">
+                  <a href={`tel:${contact.phoneTel}`} className="text-fc-action hover:underline">
                     {contact.phoneDisplay}
                   </a>
                 </p>

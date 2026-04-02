@@ -74,7 +74,7 @@ export default function OurTeamPage() {
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h2 className="font-heading text-xl text-stone-900 mb-1">{member.name}</h2>
-                  <p className="text-amber-800 text-sm font-medium mb-4 font-subheading">{member.role}</p>
+                  <p className="text-fc-highlight-dark text-sm font-medium mb-4 font-subheading">{member.role}</p>
                   <p className="text-stone-600 leading-relaxed font-subheading text-base m-0 flex-1">{member.bio}</p>
                 </div>
               </article>

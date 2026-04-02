@@ -32,18 +32,18 @@ export default function FundraisingPage() {
           <section className="py-16 md:py-20 border-t border-parchment-300/70">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-7">
-                <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-8">Simple. Profitable. Proven.</h2>
+                <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-8">Simple. Profitable. Proven.</h2>
                 <ul className="space-y-6 text-stone-600 font-subheading list-none pl-0 m-0 text-lg">
                   <li>
-                    <strong className="text-amber-800 font-heading font-medium">We create</strong> — Custom books based on
+                    <strong className="text-fc-action font-heading font-medium">We create</strong> — Custom books based on
                     your town, school, or organization: history, trivia, coloring, and sponsored editions.
                   </li>
                   <li>
-                    <strong className="text-amber-800 font-heading font-medium">You sell</strong> — Families and community
+                    <strong className="text-fc-action font-heading font-medium">You sell</strong> — Families and community
                     members buy something meaningful that celebrates where they live or learn.
                   </li>
                   <li>
-                    <strong className="text-amber-800 font-heading font-medium">You profit</strong> — Low unit costs mean
+                    <strong className="text-fc-action font-heading font-medium">You profit</strong> — Low unit costs mean
                     strong margins on every copy.
                   </li>
                 </ul>
@@ -76,7 +76,7 @@ export default function FundraisingPage() {
                 </div>
               </div>
               <div className="lg:col-span-7 order-1 lg:order-2">
-                <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-6">Fundraising people feel good about</h2>
+                <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-6">Fundraising people feel good about</h2>
                 <p className="text-stone-600 leading-relaxed mb-6 text-lg font-subheading">
                   Most fundraisers push stuff people don’t need. Our books celebrate your community, educate students,
                   and become keepsakes on shelves and coffee tables—not clutter in a closet.
@@ -88,7 +88,7 @@ export default function FundraisingPage() {
 
           <section className="py-16 md:py-20 border-t border-parchment-300/70">
             <div className="max-w-3xl">
-              <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-6">See the numbers</h2>
+              <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-6">See the numbers</h2>
               <p className="text-stone-600 leading-relaxed mb-8 text-lg font-subheading">
                 Example economics (illustrative—your rep confirms exact pricing for your run):
               </p>
@@ -114,9 +114,9 @@ export default function FundraisingPage() {
                       <td className="px-4 py-3">Your cost (example)</td>
                       <td className="px-4 py-3 text-right">~$5 / book</td>
                     </tr>
-                    <tr className="bg-amber-50/80">
-                      <td className="px-4 py-3 font-medium text-amber-950">Profit per book</td>
-                      <td className="px-4 py-3 text-right font-heading text-lg text-amber-900">~$15</td>
+                    <tr className="bg-[var(--fc-highlight-soft)]">
+                      <td className="px-4 py-3 font-medium text-fc-structural">Profit per book</td>
+                      <td className="px-4 py-3 text-right font-heading text-lg text-fc-action">~$15</td>
                     </tr>
                   </tbody>
                 </table>
@@ -125,13 +125,13 @@ export default function FundraisingPage() {
                 <div className="fc-card p-5 border border-parchment-300/70 shadow-bz-soft">
                   <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-1">200 books sold</p>
                   <p className="font-heading text-2xl text-stone-900 mb-0">
-                    ~<span className="text-amber-900">$3,000</span> total profit
+                    ~<span className="text-fc-action">$3,000</span> total profit
                   </p>
                 </div>
                 <div className="fc-card p-5 border border-parchment-300/70 shadow-bz-soft">
                   <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-1">500 books sold</p>
                   <p className="font-heading text-2xl text-stone-900 mb-0">
-                    ~<span className="text-amber-900">$7,500</span> total profit
+                    ~<span className="text-fc-action">$7,500</span> total profit
                   </p>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function FundraisingPage() {
           <section className="py-16 md:py-20 border-t border-parchment-300/70">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-8">
-                <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-6">Proven in the Merrimack Valley</h2>
+                <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-6">Proven in the Merrimack Valley</h2>
                 <p className="text-stone-600 leading-relaxed mb-8 text-lg font-subheading">
                   Our books have been created and sold successfully across the region, with repeat interest from schools
                   and community groups. We’re ready to bring the same model to your organization.

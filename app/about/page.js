@@ -43,7 +43,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="lg:col-span-7">
-                <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-6">Our founder</h2>
+                <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-6">Our founder</h2>
                 <p className="text-stone-600 leading-relaxed font-subheading text-lg m-0 mb-6">
                   Boosters Zone was created by <strong className="text-stone-900">E. Philip Brown</strong>, a public historian
                   and award-winning filmmaker. His work centers on telling local stories with care and credibility—exactly
@@ -55,11 +55,11 @@ export default function AboutPage() {
 
           <section className="py-16 md:py-20 border-t border-parchment-300/70 bg-parchment-50/60 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-8 rounded-sm">
             <div className="max-w-3xl">
-              <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-6">Mission</h2>
+              <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-6">Mission</h2>
               <p className="text-stone-600 leading-relaxed font-subheading text-lg m-0">
-                Turn community stories into products that <strong className="text-amber-800">educate</strong>,{' '}
-                <strong className="text-amber-800">inspire</strong>, and{' '}
-                <strong className="text-amber-800">generate revenue</strong> for the schools and organizations that keep
+                Turn community stories into products that <strong className="text-fc-action">educate</strong>,{' '}
+                <strong className="text-fc-action">inspire</strong>, and{' '}
+                <strong className="text-fc-action">generate revenue</strong> for the schools and organizations that keep
                 those stories alive.
               </p>
             </div>
@@ -68,7 +68,7 @@ export default function AboutPage() {
           <section className="py-16 md:py-20 border-t border-parchment-300/70">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-7">
-                <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-6">Proven results</h2>
+                <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-6">Proven results</h2>
                 <p className="text-stone-600 leading-relaxed font-subheading text-lg m-0">
                   Books developed under this approach have sold successfully throughout the Merrimack Valley, sparking repeat
                   demand and real pride—not a one-off gimmick, but a fundraiser communities ask for again.

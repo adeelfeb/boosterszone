@@ -49,14 +49,14 @@ export default function FAQAccordion() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pt-12">
         <div className="lg:col-span-5">
           <div className="sticky top-28 space-y-6">
-            <h2 className="font-heading text-2xl text-amber-900">Browse topics</h2>
+            <h2 className="font-heading text-2xl text-fc-structural">Browse topics</h2>
             <p className="text-stone-600 font-subheading text-lg leading-relaxed m-0">
               Quick answers about using this template and rolling out your own content. Replace with real FAQs when you
               launch.
             </p>
             <p className="text-stone-600 font-subheading m-0">
               Still stuck?{' '}
-              <Link href="/contact" className="text-amber-800 hover:text-amber-900 underline-offset-2 hover:underline font-medium">
+              <Link href="/contact" className="text-fc-action hover:text-fc-action-dark underline-offset-2 hover:underline font-medium">
                 Contact us
               </Link>
               .
@@ -72,7 +72,7 @@ export default function FAQAccordion() {
                   <button
                     type="button"
                     onClick={() => toggle(index)}
-                    className="w-full flex items-center justify-between gap-4 text-left py-5 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/60 rounded-sm"
+                    className="w-full flex items-center justify-between gap-4 text-left py-5 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-fc-highlight/50 rounded-sm"
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${index}`}
                     id={`faq-question-${index}`}
@@ -80,7 +80,7 @@ export default function FAQAccordion() {
                     <span className="font-subheading text-lg md:text-xl font-medium text-stone-800 pr-4">
                       {item.question}
                     </span>
-                    <span className="shrink-0 w-9 h-9 flex items-center justify-center text-amber-800 bg-amber-50 border border-amber-200/80">
+                    <span className="shrink-0 w-9 h-9 flex items-center justify-center text-fc-structural bg-[var(--fc-highlight-soft)] border border-fc-highlight/35">
                       {isOpen ? (
                         <Minus className="w-4 h-4" strokeWidth={2.5} aria-hidden />
                       ) : (

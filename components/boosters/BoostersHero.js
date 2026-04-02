@@ -35,7 +35,7 @@ export default function BoostersHero() {
               transition={{ duration: 0.45 }}
               className="flex flex-wrap items-center gap-2 mb-4"
             >
-              <span className="inline-flex items-center rounded-full border border-amber-400/60 bg-amber-50/90 px-3 py-1 text-amber-900 font-subheading text-xs font-medium shadow-sm">
+              <span className="inline-flex items-center rounded-full border border-fc-highlight/55 bg-[var(--fc-highlight-soft)] px-3 py-1 text-fc-structural font-subheading text-xs font-medium shadow-sm">
                 Perfect for Fall fundraising
               </span>
               <span className="inline-flex items-center rounded-full border border-stone-300/80 bg-white/80 px-3 py-1 text-stone-700 font-subheading text-xs">
@@ -46,7 +46,7 @@ export default function BoostersHero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-amber-800 font-subheading text-sm md:text-base tracking-[0.18em] uppercase mb-3"
+              className="text-fc-structural font-subheading text-sm md:text-base tracking-[0.18em] uppercase mb-3"
             >
               School &amp; PTO fundraising
             </motion.p>
@@ -110,13 +110,13 @@ export default function BoostersHero() {
             >
               <Link
                 href="/contact#sample-page"
-                className="text-amber-900 font-subheading text-sm font-medium underline underline-offset-4 decoration-amber-600/50 hover:decoration-amber-700"
+                className="text-fc-action font-subheading text-sm font-medium underline underline-offset-4 decoration-fc-action/45 hover:brightness-95"
               >
                 Free sample page for your school
               </Link>
               <Link
                 href="/contact#book-demo"
-                className="text-amber-900 font-subheading text-sm font-medium underline underline-offset-4 decoration-amber-600/50 hover:decoration-amber-700"
+                className="text-fc-action font-subheading text-sm font-medium underline underline-offset-4 decoration-fc-action/45 hover:brightness-95"
               >
                 Book a 10-min demo
               </Link>
@@ -136,7 +136,7 @@ export default function BoostersHero() {
                   <p className="font-subheading text-[0.65rem] sm:text-xs uppercase tracking-wider text-stone-500 mb-1 leading-snug break-words">
                     {s.label}
                   </p>
-                  <p className="font-heading text-lg min-[400px]:text-xl sm:text-2xl text-amber-900 break-words">{s.value}</p>
+                  <p className="font-heading text-lg min-[400px]:text-xl sm:text-2xl text-fc-structural break-words">{s.value}</p>
                   {s.sub && (
                     <p className="font-subheading text-[0.65rem] text-stone-500 mt-0.5 mb-0">{s.sub}</p>
                   )}

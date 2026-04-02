@@ -71,7 +71,7 @@ export default function Navbar() {
       >
         {/* Slim bar only; logo can extend past it (previous size) without growing the strip */}
         <div
-          className="h-[var(--fc-navbar-height)] w-full bg-gradient-to-b from-parchment-50/82 via-parchment-50/78 to-parchment-100/70 backdrop-blur-2xl backdrop-saturate-150 border-b border-parchment-400/55 nav-gold-line supports-[backdrop-filter]:bg-parchment-50/68"
+          className="h-[var(--fc-navbar-height)] w-full bg-gradient-to-b from-fc-structural via-fc-structural to-fc-structural-deep backdrop-blur-xl backdrop-saturate-150 border-b border-white/10 nav-gold-line supports-[backdrop-filter]:from-fc-structural/95 supports-[backdrop-filter]:via-fc-structural/95 supports-[backdrop-filter]:to-fc-structural-deep/98"
           aria-hidden
         />
         <div className="absolute inset-x-0 top-0 z-[60] pointer-events-none">
@@ -82,7 +82,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 -ml-0.5 text-stone-800 hover:text-amber-700 rounded-lg transition-colors touch-manipulation"
+                className="p-2 -ml-0.5 text-white/90 hover:text-fc-highlight rounded-lg transition-colors touch-manipulation"
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMenuOpen}
               >
@@ -100,13 +100,13 @@ export default function Navbar() {
                 <div className="flex items-center gap-8">
                   <Link
                     href="/fundraising"
-                    className="font-heading text-sm text-stone-700 hover:text-amber-800 no-underline transition-colors"
+                    className="font-heading text-sm text-white/90 hover:text-fc-highlight no-underline transition-colors"
                   >
                     Start a fundraiser
                   </Link>
                   <Link
                     href="/books"
-                    className="font-heading text-sm text-stone-700 hover:text-amber-800 no-underline transition-colors"
+                    className="font-heading text-sm text-white/90 hover:text-fc-highlight no-underline transition-colors"
                   >
                     Shop books
                   </Link>
@@ -118,7 +118,7 @@ export default function Navbar() {
             <div className="flex justify-end sm:justify-center col-span-2 sm:col-span-1 min-h-0">
               <Link
                 href="/"
-                className="flex items-center leading-none no-underline hover:opacity-90 transition-opacity"
+                className="flex items-center leading-none no-underline hover:opacity-90 transition-opacity text-white"
               >
                 <Image
                   src={siteAssets.logo}
@@ -153,7 +153,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed left-0 right-0 bottom-0 z-40 bg-parchment-50/96 backdrop-blur-2xl backdrop-saturate-150 overflow-auto top-[var(--fc-navbar-height)] border-t border-parchment-400/50 shadow-bz-soft supports-[backdrop-filter]:bg-parchment-50/88"
+            className="fixed left-0 right-0 bottom-0 z-40 bg-[#f5f5f5]/98 backdrop-blur-2xl backdrop-saturate-150 overflow-auto top-[var(--fc-navbar-height)] border-t border-fc-structural/15 shadow-bz-soft supports-[backdrop-filter]:bg-[#f5f5f5]/92"
             aria-hidden="false"
           >
             <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pt-8 pb-16">
@@ -172,8 +172,8 @@ export default function Navbar() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className={`nav-link-glow font-heading block py-5 px-1 text-3xl md:text-5xl font-semibold no-underline transition-colors border-b border-parchment-200/80 hover:border-amber-400/50 ${
-                        isActive(item.href) ? 'text-amber-800' : 'text-stone-800 hover:text-stone-950'
+                      className={`nav-link-glow font-heading block py-5 px-1 text-3xl md:text-5xl font-semibold no-underline transition-colors border-b border-parchment-200/80 hover:border-fc-highlight/50 ${
+                        isActive(item.href) ? 'text-fc-action' : 'text-fc-structural hover:text-fc-structural-deep'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >

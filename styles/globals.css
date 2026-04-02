@@ -5,23 +5,30 @@
 /* Headings / body: Source Serif 4 + Source Sans 3 via next/font (app/layout.js, pages/_app.js) */
 
 :root {
-  --primary-color: #b45309;
-  --secondary-color: #666;
-  --border-color: #eaeaea;
-  --background-color: #fafafa;
+  /* Game Day Energy — semantic tokens (overridden by SchoolThemeProvider + SchoolColorCustomizer) */
+  --fc-action: #c62828;
+  --fc-action-dark: #9e1f1f;
+  --fc-structural: #1a237e;
+  --fc-structural-deep: #0d1642;
+  --fc-highlight: #f9a825;
+  --fc-highlight-dark: #c17900;
+  --fc-highlight-soft: rgba(249, 168, 37, 0.22);
+
+  --primary-color: var(--fc-action);
+  --secondary-color: var(--fc-structural);
+  --border-color: rgba(26, 35, 126, 0.12);
+  --background-color: #f5f5f5;
   --font-heading: var(--font-serif);
   --font-subheading: var(--font-sans);
-  /* Light theme — ink + amber */
-  --fc-ink: #0f172a;
-  --fc-forest-950: #fdfbf7;
-  --fc-forest-800: #e8dfd4;
-  --fc-forest-700: #ddd4c6;
-  --fc-forest-600: #c9bdae;
-  --fc-gold-50: #fffbeb;
-  --fc-gold-400: #f59e0b;
-  --fc-gold-500: #d97706;
-  --fc-gold-300: #fcd34d;
-  /* Fixed Navbar – menu overlay top; ≈ vertical padding + logo (see components/designndev/Navbar.js) */
+  --fc-ink: #1e293b;
+  --fc-surface: #f5f5f5;
+  --fc-surface-elevated: #ffffff;
+  /* Legacy forest-* aliases → neutral surfaces */
+  --fc-forest-950: #fafafa;
+  --fc-forest-800: #eeeeee;
+  --fc-forest-700: #e0e0e0;
+  --fc-forest-600: #bdbdbd;
+  /* Fixed Navbar */
   --fc-navbar-height: 3.5rem;
 }
 
@@ -44,22 +51,20 @@ body {
   padding: 0;
   min-height: 100%;
   overflow-x: hidden;
-  color: #3f3a36;
+  color: var(--fc-ink);
   line-height: 1.6;
   font-family: var(--font-sans), 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-/* Header: light bar shadow */
+/* Header: navy-tinted shadow */
 .nav-gold-line {
   box-shadow:
-    0 1px 0 0 rgba(201, 189, 174, 0.55),
-    0 8px 32px -8px rgba(45, 40, 35, 0.1);
+    0 1px 0 0 rgba(26, 35, 126, 0.12),
+    0 8px 32px -8px rgba(13, 22, 66, 0.18);
 }
 
-/* Header nav links: subtle white glow on hover */
 .nav-link-glow {
   text-shadow: none;
   transition: color 0.2s ease, text-shadow 0.2s ease;
@@ -68,31 +73,27 @@ body {
   text-shadow: none;
 }
 
-/* Headings: Source Serif 4 – preserve title case (no all-caps) */
 h1, h2,
 .font-heading {
   font-family: var(--font-heading);
   text-transform: none !important;
 }
 
-/* Section headings */
 main .section-heading {
   font-family: var(--font-heading), Georgia, Cambria, serif !important;
   text-transform: none !important;
 }
 
 .section-divider-gold {
-  border-top: 1px solid rgba(201, 189, 174, 0.65);
-  box-shadow: 0 -1px 0 0 rgba(255, 252, 248, 0.9);
+  border-top: 1px solid rgba(26, 35, 126, 0.12);
+  box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.9);
 }
 
-/* Subheadings and UI text: Source Sans 3 */
 h3, h4, h5, h6,
 .font-subheading {
   font-family: var(--font-subheading);
 }
 
-/* Main content paragraphs and lists */
 main p,
 main li {
   font-family: var(--font-sans), 'Source Sans 3', system-ui, sans-serif;
@@ -107,11 +108,10 @@ main li {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--fc-action);
   text-decoration: none;
 }
 
-/* Prevent underlines on navbar links and logo */
 nav a,
 nav a:hover,
 nav a:focus,
@@ -119,12 +119,10 @@ nav a:active {
   text-decoration: none !important;
 }
 
-/* Global link hover - only for non-nav, non-button links */
 a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   text-decoration: underline;
 }
 
-/* Utility Classes */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -147,7 +145,6 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   }
 }
 
-/* Header-specific overrides to neutralize global link styles */
 .page-header a,
 .page-header a:link,
 .page-header a:visited,
@@ -163,7 +160,7 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   color: inherit;
   text-decoration: none;
 }
-/* Dashboard button styles - must be global for Next.js Link */
+
 .page-header .nav-button,
 .page-header a.nav-button,
 .page-header a.nav-button:link,
@@ -172,7 +169,7 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
 .page-header a.nav-button:active,
 .page-header a.nav-button:focus {
   color: #fff !important;
-  background: #0070f3 !important;
+  background: linear-gradient(180deg, var(--fc-action) 0%, var(--fc-action-dark) 100%) !important;
   padding: 0.6rem 1rem !important;
   border-radius: 999px !important;
   text-decoration: none !important;
@@ -180,33 +177,30 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.4rem !important;
-  box-shadow: 0 8px 20px rgba(0,112,243,0.25) !important;
-  border: 1px solid rgba(0,0,0,0.06) !important;
+  box-shadow: 0 8px 20px rgba(198, 40, 40, 0.28) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
   transition: transform 0.08s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease !important;
   cursor: pointer !important;
 }
 
 .page-header a.nav-button:hover {
   transform: translateY(-1px) !important;
-  box-shadow: 0 12px 26px rgba(0,112,243,0.35) !important;
-  background: #0059c1 !important;
-  border-color: rgba(0,0,0,0.08) !important;
+  box-shadow: 0 12px 26px rgba(198, 40, 40, 0.35) !important;
+  filter: brightness(1.05);
   text-decoration: none !important;
   color: #fff !important;
 }
 
 .page-header a.nav-button:active {
   transform: translateY(0) !important;
-  box-shadow: 0 6px 16px rgba(0,112,243,0.25) !important;
-  background: #0059c1 !important;
+  box-shadow: 0 6px 16px rgba(198, 40, 40, 0.25) !important;
 }
 
 .page-header a.nav-button:visited {
   color: #fff !important;
-  background: #0070f3 !important;
 }
 
-/* ---------- Buttons & cards (no border-radius, clear borders) ---------- */
+/* Primary CTA — red, white text */
 .btn-fc-primary {
   display: inline-flex;
   align-items: center;
@@ -215,18 +209,18 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--fc-ink);
-  background-color: var(--fc-gold-400);
-  border: 2px solid #d97706;
+  color: #ffffff;
+  background: linear-gradient(180deg, var(--fc-action) 0%, var(--fc-action-dark) 100%);
+  border: 2px solid var(--fc-action-dark);
   border-radius: 0;
   text-decoration: none !important;
-  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.2);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 2px 12px rgba(198, 40, 40, 0.28);
 }
 .btn-fc-primary:hover {
-  background-color: #fbbf24;
-  border-color: #f59e0b;
-  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.28);
+  filter: brightness(1.06);
+  border-color: var(--fc-action-dark);
+  box-shadow: 0 4px 18px rgba(198, 40, 40, 0.38);
   text-decoration: none !important;
 }
 
@@ -238,20 +232,19 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: #b45309;
+  color: var(--fc-structural);
   background-color: transparent;
-  border: 2px solid #d97706;
+  border: 2px solid var(--fc-structural);
   border-radius: 0;
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .btn-fc-secondary:hover {
-  background-color: rgba(251, 191, 36, 0.15);
-  color: #92400e;
-  border-color: #b45309;
+  background-color: rgba(26, 35, 126, 0.06);
+  color: var(--fc-structural-deep);
+  border-color: var(--fc-highlight);
 }
 
-/* Nav bar: no border radius, clean borders */
 .btn-fc-nav {
   padding: 0.5rem 1rem;
   font-size: 0.8125rem;
@@ -260,31 +253,29 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   border-width: 2px;
 }
 .btn-fc-nav.btn-fc-primary {
-  background-color: var(--fc-gold-400);
-  color: var(--fc-ink);
-  border-color: #d97706;
+  background: linear-gradient(180deg, var(--fc-action) 0%, var(--fc-action-dark) 100%);
+  color: #ffffff;
+  border-color: var(--fc-action-dark);
 }
 .btn-fc-nav.btn-fc-primary:hover {
-  background-color: #fbbf24;
-  border-color: #b45309;
+  filter: brightness(1.06);
+  border-color: var(--fc-action-dark);
 }
 .btn-fc-nav.btn-fc-secondary {
-  color: #b45309;
-  border-color: #d97706;
+  color: var(--fc-structural);
+  border-color: var(--fc-structural);
 }
 
-/* Card/section panel – no border radius, clear border */
 .fc-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(253, 251, 247, 0.98) 100%);
-  border: 1px solid rgba(201, 189, 174, 0.55);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 245, 245, 0.96) 100%);
+  border: 1px solid rgba(26, 35, 126, 0.1);
   border-radius: 0;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.75) inset,
-    0 1px 2px rgba(45, 40, 35, 0.05),
-    0 14px 40px -18px rgba(45, 40, 35, 0.12);
+    0 1px 2px rgba(13, 22, 66, 0.05),
+    0 14px 40px -18px rgba(13, 22, 66, 0.1);
 }
 
-/* Skeleton loading animation */
 @keyframes skeleton-shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
@@ -300,4 +291,3 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.5s ease-in-out infinite;
 }
-

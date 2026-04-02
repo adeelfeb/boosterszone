@@ -68,7 +68,7 @@ export default function BooksPage() {
                   <Image src={item.image} alt={item.alt} fill className="object-contain object-center" sizes="(max-width: 768px) 100vw, 220px" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="font-heading text-2xl md:text-3xl text-stone-900 mb-4">{item.title}</h2>
+                  <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-4">{item.title}</h2>
                   <p className="text-stone-600 leading-relaxed font-subheading m-0 text-lg">{item.body}</p>
                 </div>
               </article>

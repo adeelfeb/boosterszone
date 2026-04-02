@@ -6,6 +6,8 @@ import { sourceSans, sourceSerif } from '../lib/fonts';
 import { ToastProvider } from '../components/ToastProvider';
 import ErrorBoundary from '../components/ErrorBoundary';
 import RecaptchaPreloader from '../components/RecaptchaPreloader';
+import SchoolThemeProvider from '../components/SchoolThemeProvider';
+import SchoolColorCustomizer from '../components/SchoolColorCustomizer';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -21,12 +23,15 @@ export default function App({ Component, pageProps }) {
           <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="" />
         </Head>
         <RecaptchaPreloader />
-        <div
-          className={`${sourceSans.variable} ${sourceSerif.variable} ${sourceSans.className}`}
-          style={{ minHeight: '100vh' }}
-        >
-          <Component {...pageProps} />
-        </div>
+        <SchoolThemeProvider>
+          <div
+            className={`${sourceSans.variable} ${sourceSerif.variable} ${sourceSans.className}`}
+            style={{ minHeight: '100vh' }}
+          >
+            <Component {...pageProps} />
+          </div>
+          <SchoolColorCustomizer />
+        </SchoolThemeProvider>
       </ToastProvider>
     </ErrorBoundary>
   );

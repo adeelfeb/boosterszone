@@ -14,7 +14,7 @@ export default function FreeConsultationSection({ animated = true }) {
         <p className="text-stone-500 text-sm md:text-base uppercase tracking-wider font-subheading mb-4">
           Free fundraising plan · sample page · demo
         </p>
-        <h2 className="section-heading font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-amber-900 mb-6 text-left normal-case leading-[1.15] break-words">
+        <h2 className="section-heading font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-fc-structural mb-6 text-left normal-case leading-[1.15] break-words">
           Get a <span className="text-stone-900">free fundraising plan</span>
         </h2>
         <p className="text-stone-600 text-lg sm:text-xl md:text-2xl leading-relaxed font-subheading max-w-lg break-words">
@@ -47,7 +47,7 @@ export default function FreeConsultationSection({ animated = true }) {
         <p className="text-stone-500 text-sm md:text-base uppercase tracking-wider font-subheading mb-4">
           Free fundraising plan · sample page · demo
         </p>
-        <h2 className="section-heading font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-amber-900 mb-6 text-left normal-case leading-[1.15] break-words">
+        <h2 className="section-heading font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-fc-structural mb-6 text-left normal-case leading-[1.15] break-words">
           Get a <span className="text-stone-900">free fundraising plan</span>
         </h2>
         <p className="text-stone-600 text-lg sm:text-xl md:text-2xl leading-relaxed font-subheading max-w-lg break-words">

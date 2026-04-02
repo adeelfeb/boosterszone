@@ -76,7 +76,7 @@ export default function LetsChatForm() {
   }
 
   const fieldBase =
-    'w-full min-w-0 px-4 sm:px-5 py-3.5 text-base leading-normal bg-white/95 border border-parchment-400/90 rounded-md text-stone-900 placeholder-stone-400 focus:ring-2 focus:ring-amber-400/45 focus:border-amber-600 outline-none transition-all shadow-sm'
+    'w-full min-w-0 px-4 sm:px-5 py-3.5 text-base leading-normal bg-white/95 border border-parchment-400/90 rounded-md text-stone-900 placeholder-stone-400 focus:ring-2 focus:ring-fc-action/35 focus:border-fc-action outline-none transition-all shadow-sm'
   const inputClass = `${fieldBase} min-h-[3rem]`
   const textareaClass = `${fieldBase} min-h-[10rem] resize-y py-4`
   const labelClass = 'block text-base font-medium text-stone-700 mb-2.5'
@@ -144,7 +144,7 @@ export default function LetsChatForm() {
           disabled={isSubmitting}
           whileHover={!isSubmitting ? { scale: 1.01 } : {}}
           whileTap={!isSubmitting ? { scale: 0.99 } : {}}
-          className="w-full py-3.5 px-6 text-base font-medium text-stone-900 bg-gradient-to-b from-amber-400 to-amber-500 border border-amber-700/40 rounded-md hover:from-amber-300 hover:to-amber-400 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-bz-soft min-h-[3rem]"
+          className="btn-fc-primary w-full py-3.5 px-6 text-base font-medium justify-center rounded-md flex items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed min-h-[3rem]"
         >
           {isSubmitting ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Submitting…</>
@@ -158,7 +158,7 @@ export default function LetsChatForm() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className={`p-4 rounded-lg border ${submitStatus.type === 'success' ? 'bg-amber-50 text-amber-900 border-amber-200' : 'bg-red-50 text-red-800 border-red-200'}`}
+              className={`p-4 rounded-lg border ${submitStatus.type === 'success' ? 'bg-[var(--fc-highlight-soft)] text-fc-structural border-fc-highlight/35' : 'bg-red-50 text-red-800 border-red-200'}`}
             >
               <p className="text-sm font-medium">{submitStatus.message}</p>
             </motion.div>

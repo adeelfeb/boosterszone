@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import { sourceSans, sourceSerif } from '../lib/fonts'
 import { siteName, siteTagline, siteUrl } from '../lib/siteConfig'
+import SchoolThemeProvider from '../components/SchoolThemeProvider'
+import SchoolColorCustomizer from '../components/SchoolColorCustomizer'
 
 export const metadata = {
   title: `${siteName} | Fundraising parents actually want to buy`,
@@ -35,9 +37,12 @@ export default function RootLayout({ children }) {
           className="fixed inset-0 z-0 pointer-events-none opacity-[0.14] bg-footer-pattern"
           aria-hidden
         />
-        <div className="relative z-10 min-h-screen">
-          {children}
-        </div>
+        <SchoolThemeProvider>
+          <div className="relative z-10 min-h-screen">
+            {children}
+          </div>
+          <SchoolColorCustomizer />
+        </SchoolThemeProvider>
       </body>
     </html>
   )
