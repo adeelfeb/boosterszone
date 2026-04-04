@@ -25,6 +25,7 @@ export default function ContactPage() {
       />
 
       <div className="pb-20 scroll-mt-28">
+        <div id="request-info" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
         <div id="free-fundraising-plan" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
         <div id="sample-page" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
         <div id="book-demo" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />

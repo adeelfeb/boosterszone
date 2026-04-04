@@ -21,8 +21,8 @@ export default function FundraisingPage() {
       <Navbar />
       <MarketingPageHero
         eyebrow="Fundraising"
-        title="Raise thousands with high-margin custom books"
-        subtitle="Schools and booster clubs need clear outcomes: profit per book, simple logistics, and products people actually want. We deliver custom history, trivia, and coloring books—families buy keepsakes; you keep strong margins."
+        title="Raise real money for schools and organizations—simply"
+        subtitle="Decision-makers need clear math: units sold, revenue, and profit. We design and print custom history, trivia, and coloring books—you set the price, families get keepsakes, and your group keeps strong margins with straightforward logistics."
         imageKey="fundraising"
         imageAlt="Team collaborating on a fundraising book project"
       />
@@ -107,32 +107,46 @@ export default function FundraisingPage() {
                   </thead>
                   <tbody className="divide-y divide-parchment-200/90">
                     <tr>
-                      <td className="px-4 py-3">Sell price (example)</td>
-                      <td className="px-4 py-3 text-right font-medium text-stone-900">$20 / book</td>
+                      <td className="px-4 py-3">Books sold (example)</td>
+                      <td className="px-4 py-3 text-right font-medium text-stone-900">300</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3">Sell price each (example)</td>
+                      <td className="px-4 py-3 text-right font-medium text-stone-900">$15</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3">Gross revenue</td>
+                      <td className="px-4 py-3 text-right font-medium text-stone-900">$4,500</td>
                     </tr>
                     <tr>
                       <td className="px-4 py-3">Your cost (example)</td>
-                      <td className="px-4 py-3 text-right">~$5 / book</td>
+                      <td className="px-4 py-3 text-right">~$4–6 / book</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3">Total cost (example)</td>
+                      <td className="px-4 py-3 text-right">~$1,200–$1,800</td>
                     </tr>
                     <tr className="bg-[var(--fc-highlight-soft)]">
-                      <td className="px-4 py-3 font-medium text-fc-structural">Profit per book</td>
-                      <td className="px-4 py-3 text-right font-heading text-lg text-fc-action">~$15</td>
+                      <td className="px-4 py-3 font-medium text-fc-structural">Estimated profit</td>
+                      <td className="px-4 py-3 text-right font-heading text-lg text-fc-action">~$2,700–$3,300</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div className="fc-card p-5 border border-parchment-300/70 shadow-bz-soft">
-                  <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-1">200 books sold</p>
+                  <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-1">200 books @ $15 (example)</p>
                   <p className="font-heading text-2xl text-stone-900 mb-0">
-                    ~<span className="text-fc-action">$3,000</span> total profit
+                    ~<span className="text-fc-action">$1,800–$2,200</span> profit
                   </p>
+                  <p className="text-stone-500 font-subheading text-xs mt-2 mb-0">Using ~$9–11 margin per copy</p>
                 </div>
                 <div className="fc-card p-5 border border-parchment-300/70 shadow-bz-soft">
-                  <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-1">500 books sold</p>
+                  <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-1">500 books @ $15 (example)</p>
                   <p className="font-heading text-2xl text-stone-900 mb-0">
-                    ~<span className="text-fc-action">$7,500</span> total profit
+                    ~<span className="text-fc-action">$4,500–$5,500</span> profit
                   </p>
+                  <p className="text-stone-500 font-subheading text-xs mt-2 mb-0">Same margin assumptions as above</p>
                 </div>
               </div>
               <p className="text-stone-600 leading-relaxed m-0 text-lg font-subheading">

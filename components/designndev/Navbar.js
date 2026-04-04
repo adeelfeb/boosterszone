@@ -95,23 +95,6 @@ export default function Navbar() {
                 </svg>
               </button>
 
-              {/* Desktop-only label + quick link */}
-              <div className="hidden lg:flex items-center gap-2 pl-3">
-                <div className="flex items-center gap-8">
-                  <Link
-                    href="/fundraising"
-                    className="font-heading text-sm text-white/90 hover:text-fc-highlight no-underline transition-colors"
-                  >
-                    Start a fundraiser
-                  </Link>
-                  <Link
-                    href="/books"
-                    className="font-heading text-sm text-white/90 hover:text-fc-highlight no-underline transition-colors"
-                  >
-                    Shop books
-                  </Link>
-                </div>
-              </div>
             </div>
 
             {/* Center: Logo – on mobile larger and pushed right; on sm+ centered */}
@@ -131,13 +114,25 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Right: CTA */}
-            <div className="hidden sm:flex justify-end items-center min-w-[2.75rem] pl-1">
+            {/* Right: primary paths + lead capture */}
+            <div className="hidden sm:flex justify-end items-center gap-2 min-w-0 pl-1 flex-wrap sm:flex-nowrap">
+              <Link
+                href="/fundraising"
+                className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-3 sm:px-4 no-underline shrink-0"
+              >
+                Start a fundraiser
+              </Link>
+              <Link
+                href="/books"
+                className="font-heading text-sm whitespace-nowrap py-2 px-3 sm:px-4 rounded-md border border-white/40 text-white/95 hover:bg-white/10 hover:border-white/55 no-underline transition-colors shrink-0"
+              >
+                Shop books
+              </Link>
               <Link
                 href="/contact#free-fundraising-plan"
-                className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-4 no-underline"
+                className="hidden md:inline font-subheading text-xs text-white/80 hover:text-fc-highlight underline underline-offset-4 decoration-white/35 hover:decoration-fc-highlight/70 whitespace-nowrap shrink-0"
               >
-                Free fundraising plan
+                Free plan
               </Link>
             </div>
           </div>
@@ -158,13 +153,27 @@ export default function Navbar() {
           >
             <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pt-8 pb-16">
               {/* Mobile: CTA inside menu as full-width button */}
-              <div className="sm:hidden mb-8">
+              <div className="sm:hidden mb-8 space-y-3">
                 <Link
-                  href="/contact#free-fundraising-plan"
+                  href="/fundraising"
                   className="btn-fc-primary font-heading w-full justify-center text-base py-3.5 no-underline"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Free fundraising plan
+                  Start a fundraiser
+                </Link>
+                <Link
+                  href="/books"
+                  className="font-heading w-full justify-center text-base py-3.5 rounded-md border-2 border-fc-structural/25 text-fc-structural no-underline inline-flex items-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Shop books
+                </Link>
+                <Link
+                  href="/contact#free-fundraising-plan"
+                  className="block text-center font-subheading text-sm text-fc-action font-medium underline underline-offset-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get a free fundraising plan
                 </Link>
               </div>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 w-full max-w-[1200px]">

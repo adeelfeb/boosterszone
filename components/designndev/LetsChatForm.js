@@ -24,6 +24,7 @@ export default function LetsChatForm() {
       'sample-page': "I'd like a free sample page for our school (school name + town).",
       'free-fundraising-plan': "I'd like a free fundraising plan for our school.",
       'book-demo': "I'd like to book a 10-minute demo.",
+      'request-info': "I'd like more information about fundraising with Boosters Zone (school/org name + town).",
     }
     const text = prefills[raw]
     if (!text) return

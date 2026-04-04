@@ -62,6 +62,65 @@ export default function BoostersHomeContent() {
     <>
       <BoostersHero />
 
+      <section className={`relative py-12 md:py-16 ${sectionBorder} bg-parchment-100/90`}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-3 normal-case">
+              Example fundraiser math (transparent breakdown)
+            </h2>
+            <p className="text-stone-600 font-subheading text-base md:text-lg m-0">
+              Leaders want to see <strong className="text-stone-800 font-medium">units</strong>,{' '}
+              <strong className="text-stone-800 font-medium">revenue</strong>, and{' '}
+              <strong className="text-stone-800 font-medium">profit</strong>—fast. Illustrative example; your rep
+              confirms exact numbers for your run.
+            </p>
+          </div>
+          <div className="overflow-x-auto rounded-sm border border-parchment-300/80 bg-white/95 shadow-bz-card">
+            <table className="w-full min-w-[300px] text-left font-subheading text-stone-700">
+              <caption className="sr-only">
+                Example books sold, sell price, gross revenue, estimated costs, and profit to your school
+              </caption>
+              <thead>
+                <tr className="border-b border-parchment-300/80 bg-parchment-50/95">
+                  <th scope="col" className="px-4 py-3 font-heading text-stone-900 text-sm">
+                    Line item
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-heading text-stone-900 text-sm text-right">
+                    Amount
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-parchment-200/90">
+                <tr>
+                  <td className="px-4 py-3">Books sold (example)</td>
+                  <td className="px-4 py-3 text-right font-medium text-stone-900">300</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3">Sell price each</td>
+                  <td className="px-4 py-3 text-right">$15</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3">Gross revenue</td>
+                  <td className="px-4 py-3 text-right font-medium text-stone-900">$4,500</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3">Your cost (about $4–6 each)</td>
+                  <td className="px-4 py-3 text-right">~$1,200–$1,800</td>
+                </tr>
+                <tr className="bg-[var(--fc-highlight-soft)]">
+                  <td className="px-4 py-3 font-medium text-fc-structural">Estimated profit to your school</td>
+                  <td className="px-4 py-3 text-right font-heading text-lg text-fc-action">~$2,700–$3,300</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-center text-stone-500 font-subheading text-sm mt-4 mb-0">
+            Partners we work with most often: elementary PTOs, PTA groups, and booster clubs—especially in the Merrimack
+            Valley.
+          </p>
+        </div>
+      </section>
+
       <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/95`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -186,7 +245,7 @@ export default function BoostersHomeContent() {
             <h3 className="font-heading text-xl md:text-2xl text-fc-structural mb-6 text-center normal-case">
               Real books—not a mockup pitch
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
               <figure className="m-0 min-w-0">
                 <div className="relative aspect-[16/11] sm:aspect-[16/10] w-full rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
                   <Image
@@ -194,11 +253,11 @@ export default function BoostersHomeContent() {
                     alt="Printed book cover — custom school fundraiser edition"
                     fill
                     className="object-contain object-center"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   />
                 </div>
                 <figcaption className="text-stone-600 font-subheading text-sm mt-3 text-center px-1">
-                  Cover &amp; branding with your school
+                  Printed covers with your school or town—looks like a real bookstore title, not a flyer
                 </figcaption>
               </figure>
               <figure className="m-0 min-w-0">
@@ -208,11 +267,25 @@ export default function BoostersHomeContent() {
                     alt="Inside pages — stories and activities families keep"
                     fill
                     className="object-contain object-center"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   />
                 </div>
                 <figcaption className="text-stone-600 font-subheading text-sm mt-3 text-center px-1">
-                  Inside pages kids and parents actually read
+                  Interior spreads—history, trivia, and activities families read together
+                </figcaption>
+              </figure>
+              <figure className="m-0 min-w-0 md:col-span-2 xl:col-span-1">
+                <div className="relative aspect-[16/11] sm:aspect-[16/10] w-full rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
+                  <Image
+                    src={marketingImages.heroSchool}
+                    alt="Students and schools with custom fundraiser books in the classroom"
+                    fill
+                    className="object-contain object-center"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  />
+                </div>
+                <figcaption className="text-stone-600 font-subheading text-sm mt-3 text-center px-1">
+                  Books in school settings—tangible proof families are buying something meaningful
                 </figcaption>
               </figure>
             </div>
@@ -304,8 +377,8 @@ export default function BoostersHomeContent() {
             The #1 question: what can we make?
           </h2>
           <p className="text-center text-stone-600 font-subheading text-lg max-w-2xl mx-auto mb-10">
-            Principals and PTOs care about profit first. Here is a straightforward example—actual pricing depends on page
-            count, quantity, and season.
+            Same logic as the table up top—here is the shorthand card view. Actual pricing depends on page count,
+            quantity, and season; we put the full line items in writing before you commit.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
             {[
@@ -336,11 +409,21 @@ export default function BoostersHomeContent() {
             <p className="font-heading text-2xl md:text-3xl text-stone-900 mb-2">
               Sell <strong className="text-fc-action">300</strong> books @ <strong className="text-fc-action">$15</strong>
             </p>
-            <p className="text-stone-600 font-subheading text-lg mb-4">
-              Cost about <strong className="text-stone-800">$4–6</strong> each → roughly{' '}
-              <strong className="text-fc-action text-xl font-heading">~$3,000</strong> profit back to your school
-            </p>
-            <p className="text-stone-500 font-subheading text-sm m-0">Rounded; your rep will confirm exact numbers.</p>
+            <ul className="text-left font-subheading text-stone-600 text-base space-y-2 max-w-sm mx-auto mb-4 list-none pl-0">
+              <li className="flex justify-between gap-4 border-b border-parchment-200/80 pb-2">
+                <span>Gross revenue</span>
+                <span className="font-medium text-stone-900">$4,500</span>
+              </li>
+              <li className="flex justify-between gap-4 border-b border-parchment-200/80 pb-2">
+                <span>Est. cost ($4–6 × 300)</span>
+                <span>~$1,200–$1,800</span>
+              </li>
+              <li className="flex justify-between gap-4 pt-1">
+                <span className="font-medium text-fc-structural">Est. profit</span>
+                <span className="font-heading text-fc-action text-lg">~$2,700–$3,300</span>
+              </li>
+            </ul>
+            <p className="text-stone-500 font-subheading text-sm m-0">Midpoint ~$3,000 to your school; your rep confirms exact numbers.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mt-10">
             <div className="fc-card p-6 text-center border border-parchment-300/70 shadow-bz-card">
@@ -390,11 +473,12 @@ export default function BoostersHomeContent() {
             About Boosters Zone
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-6">
-            Created by E. Philip Brown, a public historian and award-winning filmmaker.
+            Created by <strong className="text-stone-900 font-medium">E. Philip Brown</strong>, a public historian and
+            award-winning filmmaker—work rooted in archival research, local narrative, and classroom-ready storytelling.
           </p>
           <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-8">
             <strong className="text-stone-900 font-heading font-medium">Mission:</strong> turn community stories into
-            products that educate, inspire, and generate revenue.
+            products that educate, inspire, and generate revenue schools can plan around.
           </p>
           <Link href="/about" className="btn-fc-secondary no-underline inline-flex">
             Read more about us
@@ -423,6 +507,12 @@ export default function BoostersHomeContent() {
               className="btn-fc-secondary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
             >
               Get your fundraising plan
+            </Link>
+            <Link
+              href="/#request-info"
+              className="btn-fc-secondary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
+            >
+              Request info by email
             </Link>
           </div>
         </div>
