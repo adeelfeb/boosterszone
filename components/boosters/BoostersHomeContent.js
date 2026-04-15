@@ -56,11 +56,45 @@ const testimonials = [
 ]
 
 const sectionBorder = 'border-t border-parchment-300/80'
+const assemblyShowsUrl = 'http://assemblyshowsforschools.com/'
 
 export default function BoostersHomeContent() {
   return (
     <>
       <BoostersHero />
+
+      <section className={`relative py-12 md:py-14 ${sectionBorder} bg-parchment-50/95`}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <a
+            href={assemblyShowsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block mx-auto max-w-4xl rounded-md border border-parchment-300/80 bg-white shadow-bz-soft transition-all duration-300 hover:shadow-bz-card hover:border-fc-highlight/50"
+            aria-label="Visit Assembly Shows For Schools"
+          >
+            <div className="relative w-full aspect-[21/9] bg-parchment-100">
+              <Image
+                src="/images/home-page-link.png"
+                alt="Assembly Shows For Schools"
+                fill
+                className="object-contain object-center p-2 sm:p-3"
+                sizes="(max-width: 1024px) 100vw, 960px"
+                priority={false}
+              />
+            </div>
+          </a>
+          <div className="mt-5 text-center">
+            <a
+              href={assemblyShowsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-fc-primary no-underline inline-flex"
+            >
+              Visit Assembly Shows For Schools
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className={`relative py-12 md:py-16 ${sectionBorder} bg-parchment-100/90`}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
