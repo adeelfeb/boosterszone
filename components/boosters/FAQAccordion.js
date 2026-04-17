@@ -45,7 +45,7 @@ export default function FAQAccordion() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 pb-16">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pt-12">
         <div className="lg:col-span-5">
           <div className="sticky top-28 space-y-6">

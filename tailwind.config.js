@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        /** Align with navbar (~1800px); full-bleed feel on large screens */
+        'bz-wide': 'min(100%, 112.5rem)',
+        /** Slightly wider than 7xl for marketing sections */
+        'bz': 'min(100%, 90rem)',
+      },
       colors: {
         /* Semantic Game Day tokens (CSS vars — school theme aware) */
         fc: {

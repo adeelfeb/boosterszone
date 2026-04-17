@@ -75,7 +75,7 @@ export default function Navbar() {
           aria-hidden
         />
         <div className="absolute inset-x-0 top-0 z-[60] pointer-events-none">
-          <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pointer-events-auto">
+          <div className="w-full max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 pointer-events-auto">
             <div className="grid grid-cols-3 items-center gap-3 sm:gap-6 lg:gap-10 h-[var(--fc-navbar-height)] py-0">
             {/* Left: Menu toggle – generous tap target */}
             <div className="flex justify-start min-w-[2.75rem] items-center gap-2.5 sm:gap-3">
@@ -151,7 +151,7 @@ export default function Navbar() {
             className="fixed left-0 right-0 bottom-0 z-40 bg-[#f5f5f5]/98 backdrop-blur-2xl backdrop-saturate-150 overflow-auto top-[var(--fc-navbar-height)] border-t border-fc-structural/15 shadow-bz-soft supports-[backdrop-filter]:bg-[#f5f5f5]/92"
             aria-hidden="false"
           >
-            <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pt-8 pb-16">
+            <div className="w-full max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 pt-8 pb-16">
               {/* Mobile: CTA inside menu as full-width button */}
               <div className="sm:hidden mb-8 space-y-3">
                 <Link
@@ -176,7 +176,7 @@ export default function Navbar() {
                   Get a free fundraising plan
                 </Link>
               </div>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 w-full max-w-[1200px]">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 w-full max-w-bz-wide">
                 {navItems.map((item) => (
                   <li key={item.label}>
                     <Link

@@ -28,12 +28,12 @@ export default function FundraisingPage() {
       />
 
       <div className="pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-0">
-          <section className="py-16 md:py-20 border-t border-parchment-300/70">
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 space-y-0">
+          <section className="py-12 md:py-16 border-t border-parchment-300/70">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-7">
-                <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-8">Simple. Profitable. Proven.</h2>
-                <ul className="space-y-6 text-stone-600 font-subheading list-none pl-0 m-0 text-lg">
+                <h2 className="font-heading text-xl md:text-2xl text-fc-structural mb-6">Simple. Profitable. Proven.</h2>
+                <ul className="space-y-4 text-stone-600 font-subheading list-none pl-0 m-0 text-base">
                   <li>
                     <strong className="text-fc-action font-heading font-medium">We create</strong> — Custom books based on
                     your town, school, or organization: history, trivia, coloring, and sponsored editions.
@@ -62,7 +62,7 @@ export default function FundraisingPage() {
             </div>
           </section>
 
-          <section className="py-16 md:py-20 border-t border-parchment-300/70 bg-parchment-50/50 rounded-sm px-4 sm:px-8 -mx-4 sm:-mx-6 lg:-mx-8">
+          <section className="py-12 md:py-16 border-t border-parchment-300/70 bg-parchment-50/50 rounded-sm px-4 sm:px-8 -mx-4 sm:-mx-5 lg:-mx-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-5 order-2 lg:order-1">
                 <div className="relative aspect-[16/11] rounded-md overflow-hidden shadow-bz-soft border border-parchment-300/80 bg-parchment-100">
@@ -76,20 +76,20 @@ export default function FundraisingPage() {
                 </div>
               </div>
               <div className="lg:col-span-7 order-1 lg:order-2">
-                <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-6">Fundraising people feel good about</h2>
-                <p className="text-stone-600 leading-relaxed mb-6 text-lg font-subheading">
+                <h2 className="font-heading text-xl md:text-2xl text-fc-structural mb-4">Fundraising people feel good about</h2>
+                <p className="text-stone-600 leading-relaxed mb-4 text-base font-subheading">
                   Most fundraisers push stuff people don’t need. Our books celebrate your community, educate students,
                   and become keepsakes on shelves and coffee tables—not clutter in a closet.
                 </p>
-                <p className="text-stone-600 leading-relaxed m-0 text-lg font-subheading">{siteTagline}</p>
+                <p className="text-stone-600 leading-relaxed m-0 text-base font-subheading">{siteTagline}</p>
               </div>
             </div>
           </section>
 
-          <section className="py-16 md:py-20 border-t border-parchment-300/70">
-            <div className="max-w-3xl">
-              <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-6">See the numbers</h2>
-              <p className="text-stone-600 leading-relaxed mb-8 text-lg font-subheading">
+          <section className="py-12 md:py-16 border-t border-parchment-300/70">
+            <div className="max-w-4xl">
+              <h2 className="font-heading text-xl md:text-2xl text-fc-structural mb-4">See the numbers</h2>
+              <p className="text-stone-600 leading-relaxed mb-6 text-base font-subheading">
                 Example economics (illustrative—your rep confirms exact pricing for your run):
               </p>
               <div className="overflow-x-auto rounded-sm border border-parchment-300/80 bg-white/90 shadow-bz-soft mb-8">
@@ -149,17 +149,17 @@ export default function FundraisingPage() {
                   <p className="text-stone-500 font-subheading text-xs mt-2 mb-0">Same margin assumptions as above</p>
                 </div>
               </div>
-              <p className="text-stone-600 leading-relaxed m-0 text-lg font-subheading">
+              <p className="text-stone-600 leading-relaxed m-0 text-base font-subheading">
                 One of the easiest drives you’ll run—clear math for principals and booster treasurers.
               </p>
             </div>
           </section>
 
-          <section className="py-16 md:py-20 border-t border-parchment-300/70">
+          <section className="py-12 md:py-16 border-t border-parchment-300/70">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-8">
-                <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-6">Proven in the Merrimack Valley</h2>
-                <p className="text-stone-600 leading-relaxed mb-8 text-lg font-subheading">
+                <h2 className="font-heading text-xl md:text-2xl text-fc-structural mb-4">Proven in the Merrimack Valley</h2>
+                <p className="text-stone-600 leading-relaxed mb-6 text-base font-subheading">
                   Our books have been created and sold successfully across the region, with repeat interest from schools
                   and community groups. We’re ready to bring the same model to your organization.
                 </p>

@@ -55,8 +55,8 @@ export default function BooksPage() {
       />
 
       <div className="pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {products.map((item, i) => (
               <article
                 key={item.title}
@@ -68,16 +68,16 @@ export default function BooksPage() {
                   <Image src={item.image} alt={item.alt} fill className="object-contain object-center" sizes="(max-width: 768px) 100vw, 220px" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="font-heading text-2xl md:text-3xl text-fc-structural mb-4">{item.title}</h2>
-                  <p className="text-stone-600 leading-relaxed font-subheading m-0 text-lg">{item.body}</p>
+                  <h2 className="font-heading text-xl md:text-2xl text-fc-structural mb-3">{item.title}</h2>
+                  <p className="text-stone-600 leading-relaxed font-subheading m-0 text-base">{item.body}</p>
                 </div>
               </article>
             ))}
           </div>
 
-          <section className="mt-16 md:mt-20 pt-12 border-t border-parchment-300/70">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-stone-600 text-lg font-subheading mb-8">
+          <section className="mt-12 md:mt-16 pt-10 border-t border-parchment-300/70">
+            <div className="max-w-5xl mx-auto text-center">
+              <p className="text-stone-600 text-base font-subheading mb-6">
                 Ready to see what a book could look like for your group? Request a free fundraising plan—no obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

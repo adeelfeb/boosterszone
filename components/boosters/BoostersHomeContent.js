@@ -4,7 +4,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import BoostersHero from './BoostersHero'
+import FreeFundraisingLeadForm from './FreeFundraisingLeadForm'
 import { marketingImages } from '../../lib/marketingImages'
+
+const planCtaHref = '/#get-free-fundraising-plan'
 
 const products = [
   {
@@ -64,7 +67,7 @@ export default function BoostersHomeContent() {
       <BoostersHero />
 
       <section className={`relative py-12 md:py-14 ${sectionBorder} bg-parchment-50/95`}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
           <a
             href={assemblyShowsUrl}
             target="_blank"
@@ -96,17 +99,27 @@ export default function BoostersHomeContent() {
         </div>
       </section>
 
+      <section className={`relative py-10 md:py-12 ${sectionBorder} bg-gradient-to-r from-fc-structural/[0.06] via-[var(--fc-highlight-soft)]/80 to-parchment-50/95`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 text-center">
+          <p className="font-heading text-lg md:text-xl text-fc-structural m-0 mb-2 normal-case">
+            Perfect for America&apos;s 250th Anniversary (2026)
+          </p>
+          <p className="text-stone-600 font-subheading text-base md:text-lg m-0 max-w-3xl mx-auto leading-relaxed">
+            Tie your fundraiser to local history, civics, and community pride—books families shelve instead of toss. Plan
+            early; peak school seasons book up.
+          </p>
+        </div>
+      </section>
+
       <section className={`relative py-12 md:py-16 ${sectionBorder} bg-parchment-100/90`}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
           <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-3 normal-case">
-              Example fundraiser math (transparent breakdown)
+              See the math—before you commit
             </h2>
             <p className="text-stone-600 font-subheading text-base md:text-lg m-0">
-              Leaders want to see <strong className="text-stone-800 font-medium">units</strong>,{' '}
-              <strong className="text-stone-800 font-medium">revenue</strong>, and{' '}
-              <strong className="text-stone-800 font-medium">profit</strong>—fast. Illustrative example; your rep
-              confirms exact numbers for your run.
+              Transparent units, revenue, and profit so your PTO can decide fast. Illustrative example; your rep confirms
+              exact numbers for your run.
             </p>
           </div>
           <div className="overflow-x-auto rounded-sm border border-parchment-300/80 bg-white/95 shadow-bz-card">
@@ -148,31 +161,80 @@ export default function BoostersHomeContent() {
               </tbody>
             </table>
           </div>
-          <p className="text-center text-stone-500 font-subheading text-sm mt-4 mb-0">
-            Partners we work with most often: elementary PTOs, PTA groups, and booster clubs—especially in the Merrimack
-            Valley.
+          <p className="text-center text-stone-500 font-subheading text-sm mt-4 mb-6">
+            Most partners: elementary PTOs, PTAs, and booster clubs—especially in the Merrimack Valley.
+          </p>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center">
+            <Link href={planCtaHref} className="btn-fc-primary no-underline inline-flex justify-center text-center">
+              Start Your School Fundraiser Today
+            </Link>
+            <Link href={planCtaHref} className="btn-fc-secondary no-underline inline-flex justify-center text-center">
+              Get Your Free Fundraising Plan
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="get-free-fundraising-plan"
+        className={`relative scroll-mt-28 py-16 md:py-20 ${sectionBorder} bg-parchment-50/95`}
+      >
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 text-center">
+          <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-3 normal-case">
+            Get a Free Fundraising Plan
+          </h2>
+          <p className="text-stone-600 font-subheading text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+            Name, school, and email—we send a written plan you can share with your board. No pressure; we reply within
+            one business day.
+          </p>
+          <FreeFundraisingLeadForm />
+          <p className="mt-8 mb-0 text-stone-500 font-subheading text-sm">
+            Want a sample page or a call?{' '}
+            <Link href="/#free-fundraising-plan" className="text-fc-action font-medium underline underline-offset-2">
+              Use the full form below
+            </Link>
+            .
           </p>
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/95`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-parchment-50/95`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="min-w-0 lg:col-span-5 order-2 lg:order-1">
               <div className="h-1 w-16 bg-gradient-to-r from-fc-highlight to-fc-highlight-dark mb-6 rounded-full opacity-90" aria-hidden />
-              <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 normal-case">
-                Built for Elementary Schools (First)
+              <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-6 normal-case">
+                Why this works (better than candy &amp; gift wrap)
               </h2>
-              <p className="text-stone-600 text-lg leading-relaxed font-subheading">
-                Tired of cookie dough and coupon books? Boosters Zone is the alternative: custom local-history and
-                coloring books parents{' '}
-                <strong className="text-stone-800 font-medium">want</strong>—keepsakes kids actually flip through. We
-                specialize in elementary schools and PTOs; teams and civic groups can{' '}
-                <Link href="/fundraising" className="text-fc-action font-medium underline underline-offset-2 hover:text-fc-action-dark">
-                  start here
-                </Link>
-                .
+              <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-6">
+                Catalog fundraisers burn volunteer time on logistics. Candy and gift wrap sell guilt, not value. Custom
+                books are{' '}
+                <strong className="text-stone-800 font-medium">educational, local, and keepable</strong>—so parents
+                feel good opening their wallets.
               </p>
+              <ul className="space-y-3 text-stone-700 font-subheading text-base m-0 pl-0 list-none">
+                {[
+                  'No freezer inventory or last-minute pickup chaos',
+                  'No cheap trinkets—families get something they read and keep',
+                  'Strong per-unit margin with pricing you control',
+                  'Built for elementary PTOs; teams &amp; civic groups can start on our fundraising page',
+                ].map((line) => (
+                  <li key={line} className="flex gap-3">
+                    <span className="text-fc-highlight-dark font-bold shrink-0" aria-hidden>
+                      ✓
+                    </span>
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <Link href={planCtaHref} className="btn-fc-primary no-underline inline-flex justify-center text-center">
+                  Start Your School Fundraiser Today
+                </Link>
+                <Link href="/fundraising" className="btn-fc-secondary no-underline inline-flex justify-center text-center">
+                  Non-school groups
+                </Link>
+              </div>
             </div>
             <motion.div
               initial={{ opacity: 0, x: 16 }}
@@ -195,31 +257,33 @@ export default function BoostersHomeContent() {
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-b from-parchment-100/90 to-parchment-200/40`}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-4 text-center normal-case">
+      <section
+        id="how-it-works-home"
+        className={`relative scroll-mt-28 py-12 md:py-16 ${sectionBorder} bg-gradient-to-b from-parchment-100/90 to-parchment-200/40`}
+      >
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
+          <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-4 text-center normal-case">
             How it works — 3 steps
           </h2>
-          <p className="text-center text-stone-600 font-subheading text-lg max-w-2xl mx-auto mb-12">
-            We do about <strong className="text-stone-800 font-medium">90% of the work</strong>. You review, we produce,
-            you sell.
+          <p className="text-center text-stone-600 font-subheading text-base md:text-lg max-w-3xl mx-auto mb-10">
+            We handle design and production—you focus on one clear job: getting books into families&apos; hands.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             {[
               {
                 step: '1',
-                title: 'Approve the book',
-                body: 'We design from your town and school—you sign off on the cover and key pages.',
+                title: 'We create your book',
+                body: 'Local history, trivia, or coloring—custom to your school and town. You approve the cover and key pages before we print.',
               },
               {
                 step: '2',
-                title: 'We print',
-                body: 'Professional print run—often about 2–3 weeks after approval (varies by season).',
+                title: 'You sell to families',
+                body: 'Simple order window; no warehouses of cookie dough. You set the sell price and run the drive the way your PTO already communicates.',
               },
               {
                 step: '3',
-                title: 'You sell and keep the margin',
-                body: 'Families buy something they keep. You set the price; typical profit is strong per copy.',
+                title: 'You keep the profits',
+                body: 'Strong margin per book (often about $9–11 typical). Money stays with your school for what you need most.',
               },
             ].map((item) => (
               <div
@@ -237,18 +301,26 @@ export default function BoostersHomeContent() {
               </div>
             ))}
           </div>
+          <div className="mt-12 flex flex-col sm:flex-row flex-wrap gap-3 justify-center">
+            <Link href={planCtaHref} className="btn-fc-primary no-underline inline-flex justify-center text-center">
+              Start Your School Fundraiser Today
+            </Link>
+            <Link href={planCtaHref} className="btn-fc-secondary no-underline inline-flex justify-center text-center">
+              Get Your Free Fundraising Plan
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/90`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-parchment-50/90`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
           <div className="max-w-3xl mb-12">
             <div className="h-1 w-16 bg-gradient-to-r from-fc-highlight to-fc-highlight-dark mb-6 rounded-full opacity-90" aria-hidden />
-            <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-4 normal-case">
-              Products That Actually Sell
+            <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-4 normal-case">
+              Products parents actually buy
             </h2>
             <p className="text-stone-500 font-subheading text-lg">
-              Materials designed for schools and community groups—not another catalog nobody asked for.
+              Keepsakes tied to your town and school—not another catalog cluttering the kitchen counter.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -279,7 +351,7 @@ export default function BoostersHomeContent() {
             <h3 className="font-heading text-xl md:text-2xl text-fc-structural mb-6 text-center normal-case">
               Real books—not a mockup pitch
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-bz-wide mx-auto">
               <figure className="m-0 min-w-0">
                 <div className="relative aspect-[16/11] sm:aspect-[16/10] w-full rounded-md overflow-hidden shadow-bz-card border border-parchment-300/80 bg-parchment-200">
                   <Image
@@ -324,16 +396,19 @@ export default function BoostersHomeContent() {
               </figure>
             </div>
           </div>
-          <div className="mt-10">
-            <Link href="/books" className="btn-fc-secondary no-underline inline-flex">
-              Explore all products
+          <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link href={planCtaHref} className="btn-fc-primary no-underline inline-flex justify-center">
+              Start Your School Fundraiser Today
+            </Link>
+            <Link href="/books" className="btn-fc-secondary no-underline inline-flex justify-center">
+              Browse printed books
             </Link>
           </div>
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-br from-[var(--fc-highlight-soft)] via-parchment-100/90 to-fc-structural/[0.06]`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-gradient-to-br from-[var(--fc-highlight-soft)] via-parchment-100/90 to-fc-structural/[0.06]`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <motion.div
               initial={{ opacity: 0, x: -14 }}
@@ -353,7 +428,7 @@ export default function BoostersHomeContent() {
               </div>
             </motion.div>
             <div className="min-w-0 lg:col-span-7">
-              <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 normal-case">
+              <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-6 normal-case">
                 Fundraising People Feel Good About
               </h2>
               <p className="text-stone-600 text-lg mb-8 font-subheading leading-relaxed">
@@ -373,18 +448,24 @@ export default function BoostersHomeContent() {
                 <strong className="text-stone-800 font-medium">A fundraiser families keep forever</strong>—not something
                 they forget in the pantry.
               </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <Link href={planCtaHref} className="btn-fc-primary no-underline inline-flex justify-center">
+                  Get Your Free Fundraising Plan
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/95`}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 text-center md:text-left normal-case">
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-parchment-50/95`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
+          <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-6 text-center md:text-left normal-case">
             Proven in the Merrimack Valley
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed font-subheading text-center md:text-left mb-12">
-            Our books have been created and sold locally with strong repeat interest. Here is what school leaders say.
+            Local schools have run these drives with strong repeat interest. Here is what leaders say—then see a sample
+            outcome snapshot.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((t) => (
@@ -405,14 +486,55 @@ export default function BoostersHomeContent() {
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-100/70`}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-4 text-center normal-case">
-            The #1 question: what can we make?
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-gradient-to-b from-parchment-100/90 to-parchment-50/95`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
+          <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-4 text-center normal-case">
+            Real results (example case)
           </h2>
           <p className="text-center text-stone-600 font-subheading text-lg max-w-2xl mx-auto mb-10">
-            Same logic as the table up top—here is the shorthand card view. Actual pricing depends on page count,
-            quantity, and season; we put the full line items in writing before you commit.
+            Illustrative numbers based on typical elementary runs—your rep confirms pricing and timeline for your school.
+          </p>
+          <div className="fc-card border border-parchment-300/80 shadow-bz-card p-8 md:p-10">
+            <p className="font-subheading text-stone-500 text-sm uppercase tracking-wider mb-2 m-0">Placeholder case study</p>
+            <p className="font-heading text-xl text-stone-900 mb-6 m-0">Elementary PTO · single-town history book · fall window</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+              <div>
+                <p className="font-subheading text-stone-500 text-sm mb-1 m-0">Books sold</p>
+                <p className="font-heading text-3xl text-fc-action m-0">~300</p>
+              </div>
+              <div>
+                <p className="font-subheading text-stone-500 text-sm mb-1 m-0">Est. profit to school</p>
+                <p className="font-heading text-3xl text-fc-action m-0">~$2.7k–$3.3k</p>
+              </div>
+              <div>
+                <p className="font-subheading text-stone-500 text-sm mb-1 m-0">Volunteer lift</p>
+                <p className="font-heading text-2xl text-stone-900 m-0">Low vs. catalog</p>
+              </div>
+            </div>
+            <p className="text-stone-600 font-subheading text-sm mt-8 mb-0 text-center">
+              Replace with your school&apos;s story when you have permission to share—we help you capture metrics that
+              boards care about.
+            </p>
+          </div>
+          <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href={planCtaHref} className="btn-fc-primary no-underline inline-flex justify-center">
+              Start Your School Fundraiser Today
+            </Link>
+            <Link href={planCtaHref} className="btn-fc-secondary no-underline inline-flex justify-center">
+              Get Your Free Fundraising Plan
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-parchment-100/70`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
+          <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-4 text-center normal-case">
+            What can your school earn?
+          </h2>
+          <p className="text-center text-stone-600 font-subheading text-lg max-w-2xl mx-auto mb-10">
+            Same logic as the table above—quick view. Final pricing depends on page count, quantity, and season; you get
+            line items in writing before you commit.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
             {[
@@ -430,7 +552,7 @@ export default function BoostersHomeContent() {
               >
                 <p className="text-stone-500 font-subheading text-sm uppercase tracking-wider mb-2">{cell.label}</p>
                 <p
-                  className={`font-heading text-2xl sm:text-3xl md:text-4xl break-words ${cell.highlight ? 'text-fc-action' : 'text-stone-900'}`}
+                  className={`font-heading text-2xl sm:text-2xl md:text-3xl break-words ${cell.highlight ? 'text-fc-action' : 'text-stone-900'}`}
                 >
                   {cell.value}
                 </p>
@@ -469,19 +591,28 @@ export default function BoostersHomeContent() {
               <p className="text-fc-highlight-dark font-heading text-3xl mb-0">~$5,000</p>
             </div>
           </div>
-          <p className="text-center text-stone-600 font-subheading text-lg mt-10 mb-0">
-            One of the easiest and most effective fundraisers you’ll run—without the junk-food hangover.
+          <p className="text-center text-stone-600 font-subheading text-lg mt-10 mb-6">
+            One of the easiest, highest-trust fundraisers you can run—without the junk-food hangover.
           </p>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center">
+            <Link href={planCtaHref} className="btn-fc-primary no-underline inline-flex justify-center">
+              Start Your School Fundraiser Today
+            </Link>
+            <Link href={planCtaHref} className="btn-fc-secondary no-underline inline-flex justify-center">
+              Get Your Free Fundraising Plan
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/95`}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-4 text-center normal-case">
-            Perfect for (homepage focus)
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-parchment-50/95`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
+          <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-4 text-center normal-case">
+            Who we work with first
           </h2>
           <p className="text-center text-stone-600 font-subheading text-lg mb-8 max-w-2xl mx-auto">
-            We lead with elementary schools and parent groups—other orgs get the same playbook on a dedicated page.
+            Elementary schools and parent groups are our sweet spot—other organizations use the same model on our
+            fundraising page.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {perfectFor.map((label) => (
@@ -501,9 +632,9 @@ export default function BoostersHomeContent() {
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-b from-parchment-200/50 to-parchment-100/90`}>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 normal-case">
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-gradient-to-b from-parchment-200/50 to-parchment-100/90`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
+          <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-6 normal-case">
             About Boosters Zone
           </h2>
           <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-6">
@@ -514,62 +645,74 @@ export default function BoostersHomeContent() {
             <strong className="text-stone-900 font-heading font-medium">Mission:</strong> turn community stories into
             products that educate, inspire, and generate revenue schools can plan around.
           </p>
-          <Link href="/about" className="btn-fc-secondary no-underline inline-flex">
-            Read more about us
-          </Link>
-        </div>
-      </section>
-
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-parchment-50/95`}>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-fc-structural mb-6 normal-case">
-            Get a free sample page for your school
-          </h2>
-          <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-8">
-            Send your school name and town—we’ll show you what a cover or sample spread could look like. Or ask for a full
-            fundraising plan; same form.
-          </p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
-            <Link
-              href="/contact#sample-page"
-              className="btn-fc-primary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
-            >
-              See your school’s book (free)
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+            <Link href={planCtaHref} className="btn-fc-primary no-underline inline-flex justify-center">
+              Get Your Free Fundraising Plan
             </Link>
-            <Link
-              href="/contact#free-fundraising-plan"
-              className="btn-fc-secondary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
-            >
-              Get your fundraising plan
-            </Link>
-            <Link
-              href="/#request-info"
-              className="btn-fc-secondary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
-            >
-              Request info by email
+            <Link href="/about" className="btn-fc-secondary no-underline inline-flex justify-center">
+              Read more about us
             </Link>
           </div>
         </div>
       </section>
 
-      <section className={`relative py-16 md:py-24 ${sectionBorder} bg-gradient-to-br from-[var(--fc-highlight-soft)] via-parchment-100 to-fc-structural/[0.08]`}>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-stone-900 mb-6 normal-case">
-            Ready to Launch?
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-parchment-50/95`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 text-center">
+          <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-fc-structural mb-6 normal-case">
+            Want a free sample page?
           </h2>
-          <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-10">
-            Let’s create something your community will be proud of—and that raises real money.
+          <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-8">
+            Send your school name and town—we&apos;ll mock up a cover or sample spread. Or start with the free plan above;
+            the full form below covers demos and detailed requests too.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Link
-              href="/contact#free-fundraising-plan"
-              className="btn-fc-primary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
+              href={planCtaHref}
+              className="btn-fc-primary no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center text-sm py-2.5 px-4"
             >
-              Get your fundraising plan
+              Start Your School Fundraiser Today
+            </Link>
+            <Link
+              href="/contact#sample-page"
+              className="btn-fc-secondary no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center text-sm py-2.5 px-4"
+            >
+              Request a sample page
+            </Link>
+            <Link
+              href="/#free-fundraising-plan"
+              className="btn-fc-secondary no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center text-sm py-2.5 px-4"
+            >
+              Full contact form
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={`relative py-12 md:py-18 ${sectionBorder} bg-gradient-to-br from-[var(--fc-highlight-soft)] via-parchment-100 to-fc-structural/[0.08]`}>
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 text-center">
+          <h2 className="section-heading font-heading text-2xl md:text-3xl font-medium text-stone-900 mb-6 normal-case">
+            Ready to raise real money?
+          </h2>
+          <p className="text-stone-600 text-lg leading-relaxed font-subheading mb-10">
+            Lock in your 2026 window before calendars fill. Get your free plan now—or book a short call if you prefer to
+            walk through options live.
+          </p>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+            <Link
+              href={planCtaHref}
+              className="btn-fc-primary no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center text-sm py-2.5 px-4"
+            >
+              Start Your School Fundraiser Today
+            </Link>
+            <Link
+              href={planCtaHref}
+              className="btn-fc-secondary no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center text-sm py-2.5 px-4"
+            >
+              Get Your Free Fundraising Plan
             </Link>
             <Link
               href="/contact#book-demo"
-              className="btn-fc-secondary text-base px-6 sm:px-8 py-3.5 no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center"
+              className="btn-fc-secondary no-underline inline-flex justify-center w-full sm:w-auto min-w-0 text-center text-sm py-2.5 px-4"
             >
               Book a 10-min demo
             </Link>

@@ -5,13 +5,13 @@ import Footer from '../components/designndev/Footer'
 import { siteName, siteTagline, siteUrl } from '../lib/siteConfig'
 
 export const metadata = {
-  title: `${siteName} | Raise thousands for your school or PTO`,
-  description: siteTagline,
+  title: `${siteName} | School fundraisers that families actually want`,
+  description: `${siteTagline} Custom books, strong margins, minimal volunteer lift. Free fundraising plan for schools and PTOs.`,
   keywords:
-    'elementary school fundraiser, custom books, coloring books, local history, booster club, PTO, PTA, cookie dough alternative, Merrimack Valley',
+    'elementary school fundraiser, custom books, coloring books, local history, booster club, PTO, PTA, cookie dough alternative, Merrimack Valley, America 250',
   openGraph: {
-    title: `${siteName} | Raise thousands for your school or PTO`,
-    description: siteTagline,
+    title: `${siteName} | School fundraisers that families actually want`,
+    description: `${siteTagline} Request a free fundraising plan—reply within one business day.`,
     url: siteUrl,
     siteName,
     type: 'website',

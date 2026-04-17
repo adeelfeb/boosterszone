@@ -14,8 +14,8 @@ export default function PartnershipFormSection() {
       <div id="free-fundraising-plan" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
       <div id="sample-page" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
       <div id="book-demo" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FreeConsultationSection animated />
+      <div className="relative max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
+        <FreeConsultationSection animated variant="home" />
       </div>
     </section>
   )

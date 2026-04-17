@@ -111,7 +111,7 @@ export default function Footer() {
   return (
     <footer className="relative text-stone-700 border-t-[3px] border-fc-structural/25 bg-gradient-to-b from-parchment-100/98 via-parchment-200/85 to-fc-structural/[0.07] shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
       <section className="py-8 md:py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-12 lg:justify-between lg:items-start">
             {/* Logo + email capture */}
             <div className="max-w-md shrink-0">
@@ -177,7 +177,7 @@ export default function Footer() {
       </section>
 
       <section className="py-3 md:py-4 border-t border-parchment-400/50 bg-stone-900/[0.04]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10">
           <p className="text-center text-stone-500 text-xs font-subheading">
             © {currentYear} {siteName}. All rights reserved.
           </p>

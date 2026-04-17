@@ -53,8 +53,8 @@ export default function OurTeamPage() {
         imageAlt="Team collaboration"
       />
       <div className="pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-          <p className="text-stone-600 text-lg mb-12 max-w-3xl font-subheading">
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 pt-4">
+          <p className="text-stone-600 text-base mb-10 max-w-4xl font-subheading">
             Meet the people behind {siteName}.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10">
@@ -80,8 +80,8 @@ export default function OurTeamPage() {
               </article>
             ))}
           </div>
-          <div className="mt-16 pt-10 border-t border-parchment-300/70 max-w-3xl">
-            <p className="text-stone-600 mb-6 font-subheading text-lg">
+          <div className="mt-12 pt-8 border-t border-parchment-300/70 max-w-4xl">
+            <p className="text-stone-600 mb-4 font-subheading text-base">
               Add a closing line about how you collaborate, then send people to contact.
             </p>
             <Link href="/contact" className="btn-fc-primary inline-flex no-underline">

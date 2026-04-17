@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div id="free-fundraising-plan" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
         <div id="sample-page" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
         <div id="book-demo" className="h-0 w-full scroll-mt-28 overflow-hidden" aria-hidden />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16">
+        <div className="max-w-bz-wide mx-auto px-4 sm:px-5 lg:px-8 xl:px-10 pt-10 lg:pt-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
             <aside className="lg:col-span-4 space-y-8 order-2 lg:order-1">
               <div className="fc-card p-6 border border-parchment-300/80 shadow-bz-soft">
